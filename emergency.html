@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Emergency Help | Digital Emergency Assistant</title>
+
+    <link rel="stylesheet" href="css/common.css">
+
+    <link rel="stylesheet" href="css/emergency.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         NAVBAR
+    ====================================================== -->
+
+    <nav class="navbar">
+
+        <a href="index.html" class="logo">
+
+            <span class="logo-icon">+</span>
+
+            Digital Emergency Assistant
+
+        </a>
+
+
+        <ul class="nav-links">
+
+            <li>
+                <a href="index.html">
+                    Home
+                </a>
+            </li>
+
+            <li>
+                <a href="emergency.html" class="active">
+                    Emergency
+                </a>
+            </li>
+
+            <li>
+                <a href="first-aid.html">
+                    First Aid
+                </a>
+            </li>
+
+            <li>
+                <a href="contacts.html">
+                    Contacts
+                </a>
+            </li>
+
+            <li>
+                <a href="guide.html">
+                    Safety Guide
+                </a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+
+
+    <!-- =====================================================
+         EMERGENCY HEADER
+    ====================================================== -->
+
+    <section class="emergency-header">
+
+        <p class="emergency-label">
+            EMERGENCY ASSISTANCE
+        </p>
+
+        <h1>
+            Get Help <span>Quickly.</span>
+        </h1>
+
+        <p>
+            Choose the appropriate emergency service
+            and contact them immediately.
+        </p>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         IMPORTANT WARNING
+    ====================================================== -->
+
+    <section class="emergency-warning">
+
+        <div class="warning-box">
+
+            <div class="warning-icon">
+                ⚠️
+            </div>
+
+            <div>
+
+                <h3>
+                    In a Life-Threatening Emergency
+                </h3>
+
+                <p>
+                    Call the appropriate emergency service
+                    immediately. Do not depend only on this
+                    website for emergency assistance.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         EMERGENCY SERVICES
+    ====================================================== -->
+
+    <section class="emergency-services">
+
+        <div class="section-header">
+
+            <span class="section-label">
+                QUICK CALL
+            </span>
+
+            <h2>
+                Emergency Services
+            </h2>
+
+            <p>
+                Tap the call button to contact the service
+                you need.
+            </p>
+
+        </div>
+
+
+        <div class="service-grid">
+
+
+            <!-- POLICE -->
+
+            <div class="service-card">
+
+                <div class="service-icon">
+                    👮
+                </div>
+
+                <h3>
+                    Police
+                </h3>
+
+                <p>
+                    For crimes, threats, accidents,
+                    violence and other law-enforcement
+                    emergencies.
+                </p>
+
+                <div class="service-number">
+                    100
+                </div>
+
+                <a href="tel:100"
+                   class="service-call">
+
+                    📞 Call Police
+
+                </a>
+
+            </div>
+
+
+
+            <!-- AMBULANCE -->
+
+            <div class="service-card">
+
+                <div class="service-icon">
+                    🚑
+                </div>
+
+                <h3>
+                    Ambulance
+                </h3>
+
+                <p>
+                    For medical emergencies requiring
+                    immediate medical transportation
+                    and assistance.
+                </p>
+
+                <div class="service-number">
+                    108
+                </div>
+
+                <a href="tel:108"
+                   class="service-call">
+
+                    📞 Call Ambulance
+
+                </a>
+
+            </div>
+
+
+
+            <!-- FIRE -->
+
+            <div class="service-card">
+
+                <div class="service-icon">
+                    🚒
+                </div>
+
+                <h3>
+                    Fire & Rescue
+                </h3>
+
+                <p>
+                    For fires, rescue operations and
+                    other fire-related emergencies.
+                </p>
+
+                <div class="service-number">
+                    101
+                </div>
+
+                <a href="tel:101"
+                   class="service-call">
+
+                    📞 Call Fire Service
+
+                </a>
+
+            </div>
+
+
+
+            <!-- UNIFIED -->
+
+            <div class="service-card service-card-highlight">
+
+                <div class="service-icon">
+                    🆘
+                </div>
+
+                <h3>
+                    Unified Emergency
+                </h3>
+
+                <p>
+                    A single emergency number for
+                    accessing multiple emergency services.
+                </p>
+
+                <div class="service-number">
+                    112
+                </div>
+
+                <a href="tel:112"
+                   class="service-call">
+
+                    📞 Call 112
+
+                </a>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         SOS SECTION
+    ====================================================== -->
+
+    <section class="sos-section">
+
+        <div class="sos-container">
+
+
+            <div class="sos-content">
+
+                <span class="sos-label">
+                    QUICK ACTION
+                </span>
+
+                <h2>
+                    Need Immediate Help?
+                </h2>
+
+                <p>
+                    Use the emergency action buttons below
+                    to quickly access emergency services.
+                </p>
+
+
+                <div class="sos-buttons">
+
+                    <button
+                        class="sos-button"
+                        onclick="callEmergency()">
+
+                        🆘 Emergency Call
+
+                    </button>
+
+
+                    <button
+                        class="location-button"
+                        onclick="shareLocation()">
+
+                        📍 Get My Location
+
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <div class="sos-visual">
+
+                <div class="sos-circle">
+
+                    <span>
+                        SOS
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         EMERGENCY STEPS
+    ====================================================== -->
+
+    <section class="emergency-steps">
+
+        <div class="section-header">
+
+            <span class="section-label">
+                STAY CALM
+            </span>
+
+            <h2>
+                What To Do During an Emergency
+            </h2>
+
+        </div>
+
+
+        <div class="emergency-step-grid">
+
+
+            <div class="emergency-step-card">
+
+                <div class="emergency-step-number">
+                    01
+                </div>
+
+                <h3>
+                    Stay Calm
+                </h3>
+
+                <p>
+                    Take a breath and assess the situation
+                    before taking action.
+                </p>
+
+            </div>
+
+
+            <div class="emergency-step-card">
+
+                <div class="emergency-step-number">
+                    02
+                </div>
+
+                <h3>
+                    Call for Help
+                </h3>
+
+                <p>
+                    Contact the appropriate emergency
+                    service as soon as possible.
+                </p>
+
+            </div>
+
+
+            <div class="emergency-step-card">
+
+                <div class="emergency-step-number">
+                    03
+                </div>
+
+                <h3>
+                    Follow Instructions
+                </h3>
+
+                <p>
+                    Clearly explain the situation and
+                    follow instructions from professionals.
+                </p>
+
+            </div>
+
+
+            <div class="emergency-step-card">
+
+                <div class="emergency-step-number">
+                    04
+                </div>
+
+                <h3>
+                    Stay Safe
+                </h3>
+
+                <p>
+                    Move to a safe location if possible
+                    and avoid unnecessary risks.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+
+    <footer class="footer">
+
+        <p>
+
+            © <span class="current-year"></span>
+
+            <strong>
+                Digital Emergency Assistant
+            </strong>.
+
+            Stay safe, stay prepared.
+
+        </p>
+
+    </footer>
+
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+    ====================================================== -->
+
+    <script src="js/app.js"></script>
+
+    <script src="js/emergency.js"></script>
+
+
+</body>
+
+</html>

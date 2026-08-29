@@ -1,0 +1,607 @@
+/* =========================================================
+   DIGITAL EMERGENCY ASSISTANT
+   EMERGENCY PAGE CSS
+========================================================= */
+
+
+/* =========================================================
+   1. EMERGENCY HEADER
+========================================================= */
+
+.emergency-header {
+    padding: 70px 7% 55px;
+
+    text-align: center;
+
+    background: #fff5f5;
+}
+
+.emergency-label {
+    margin-bottom: 10px;
+
+    color: #dc2626;
+
+    font-size: 11px;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+}
+
+.emergency-header h1 {
+    margin-bottom: 12px;
+
+    color: #111827;
+
+    font-size: 48px;
+
+    line-height: 1.2;
+}
+
+.emergency-header h1 span {
+    color: #dc2626;
+}
+
+.emergency-header p:last-child {
+    color: #6b7280;
+
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   2. WARNING
+========================================================= */
+
+.emergency-warning {
+    padding: 30px 7%;
+
+    background: #ffffff;
+}
+
+.warning-box {
+    max-width: 1000px;
+
+    margin: auto;
+
+    padding: 20px 25px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    background: #fff7ed;
+
+    border: 1px solid #fed7aa;
+
+    border-radius: 12px;
+}
+
+.warning-icon {
+    font-size: 30px;
+
+    flex-shrink: 0;
+}
+
+.warning-box h3 {
+    margin-bottom: 4px;
+
+    color: #9a3412;
+
+    font-size: 16px;
+}
+
+.warning-box p {
+    color: #6b7280;
+
+    font-size: 13px;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   3. EMERGENCY SERVICES
+========================================================= */
+
+.emergency-services {
+    padding: 70px 7%;
+
+    background: #f7f9fc;
+}
+
+.service-grid {
+    max-width: 1100px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 20px;
+
+    align-items: start;
+}
+
+
+/* =========================================================
+   4. SERVICE CARD
+========================================================= */
+
+.service-card {
+    padding: 28px;
+
+    background: #ffffff;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 16px;
+
+    text-align: center;
+
+    transition: all 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+
+    border-color: #fecaca;
+
+    box-shadow:
+        0 15px 30px rgba(0, 0, 0, 0.08);
+}
+
+
+/* =========================================================
+   5. SERVICE ICON
+========================================================= */
+
+.service-icon {
+    width: 65px;
+
+    height: 65px;
+
+    margin: 0 auto 18px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 14px;
+
+    background: #fee2e2;
+
+    font-size: 32px;
+
+    transition: all 0.3s ease;
+}
+
+.service-card:hover .service-icon {
+    background: #dc2626;
+
+    transform: scale(1.08);
+}
+
+
+/* =========================================================
+   6. SERVICE CONTENT
+========================================================= */
+
+.service-card h3 {
+    margin-bottom: 10px;
+
+    color: #111827;
+
+    font-size: 19px;
+}
+
+.service-card p {
+    min-height: 85px;
+
+    margin-bottom: 15px;
+
+    color: #6b7280;
+
+    font-size: 12px;
+
+    line-height: 1.7;
+}
+
+.service-number {
+    margin-bottom: 18px;
+
+    color: #dc2626;
+
+    font-size: 28px;
+
+    font-weight: 800;
+}
+
+
+/* =========================================================
+   7. SERVICE CALL BUTTON
+========================================================= */
+
+.service-call {
+    display: block;
+
+    padding: 11px;
+
+    border-radius: 8px;
+
+    background: #111827;
+
+    color: #ffffff;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    transition: all 0.3s ease;
+}
+
+.service-call:hover {
+    background: #dc2626;
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   8. HIGHLIGHT CARD
+========================================================= */
+
+.service-card-highlight {
+    border-color: #fecaca;
+
+    background: #fffafa;
+}
+
+
+/* =========================================================
+   9. SOS SECTION
+========================================================= */
+
+.sos-section {
+    padding: 75px 7%;
+
+    background: #ffffff;
+}
+
+.sos-container {
+    max-width: 1100px;
+
+    margin: auto;
+
+    padding: 45px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 40px;
+
+    background: #111827;
+
+    border-radius: 18px;
+
+    color: #ffffff;
+}
+
+.sos-content {
+    max-width: 650px;
+}
+
+.sos-label {
+    display: inline-block;
+
+    margin-bottom: 10px;
+
+    color: #fca5a5;
+
+    font-size: 10px;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+}
+
+.sos-content h2 {
+    margin-bottom: 10px;
+
+    font-size: 30px;
+}
+
+.sos-content p {
+    margin-bottom: 25px;
+
+    color: #d1d5db;
+
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   10. SOS BUTTONS
+========================================================= */
+
+.sos-buttons {
+    display: flex;
+
+    gap: 12px;
+
+    flex-wrap: wrap;
+}
+
+.sos-button {
+    padding: 12px 20px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background: #dc2626;
+
+    color: #ffffff;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+}
+
+.sos-button:hover {
+    background: #ef4444;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 8px 20px rgba(220, 38, 38, 0.3);
+}
+
+.location-button {
+    padding: 12px 20px;
+
+    border: 1px solid #4b5563;
+
+    border-radius: 8px;
+
+    background: transparent;
+
+    color: #ffffff;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+}
+
+.location-button:hover {
+    background: #374151;
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   11. SOS VISUAL
+========================================================= */
+
+.sos-visual {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+.sos-circle {
+    width: 160px;
+
+    height: 160px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #dc2626;
+
+    border: 10px solid #374151;
+
+    box-shadow:
+        0 0 0 10px #1f2937;
+
+    animation: sos-pulse 2s infinite;
+}
+
+.sos-circle span {
+    font-size: 35px;
+
+    font-weight: 900;
+}
+
+
+@keyframes sos-pulse {
+
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+
+}
+
+
+/* =========================================================
+   12. EMERGENCY STEPS
+========================================================= */
+
+.emergency-steps {
+    padding: 75px 7%;
+
+    background: #f7f9fc;
+}
+
+.emergency-step-grid {
+    max-width: 1100px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 20px;
+}
+
+.emergency-step-card {
+    padding: 25px;
+
+    background: #ffffff;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 14px;
+
+    transition: all 0.3s ease;
+}
+
+.emergency-step-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 12px 25px rgba(0, 0, 0, 0.07);
+}
+
+.emergency-step-number {
+    margin-bottom: 15px;
+
+    color: #dc2626;
+
+    font-size: 25px;
+
+    font-weight: 800;
+}
+
+.emergency-step-card h3 {
+    margin-bottom: 8px;
+
+    color: #111827;
+
+    font-size: 16px;
+}
+
+.emergency-step-card p {
+    color: #6b7280;
+
+    font-size: 12px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   13. TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
+
+    .service-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .emergency-step-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+/* =========================================================
+   14. MOBILE
+========================================================= */
+
+@media (max-width: 650px) {
+
+    .emergency-header {
+        padding: 55px 6% 40px;
+    }
+
+    .emergency-header h1 {
+        font-size: 38px;
+    }
+
+    .emergency-warning {
+        padding: 20px 6%;
+    }
+
+    .warning-box {
+        align-items: flex-start;
+
+        padding: 18px;
+    }
+
+    .emergency-services {
+        padding: 55px 6%;
+    }
+
+    .service-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .service-card p {
+        min-height: auto;
+    }
+
+    .sos-section {
+        padding: 45px 6%;
+    }
+
+    .sos-container {
+        padding: 30px;
+
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+    .sos-content h2 {
+        font-size: 25px;
+    }
+
+    .sos-visual {
+        width: 100%;
+    }
+
+    .emergency-steps {
+        padding: 55px 6%;
+    }
+
+    .emergency-step-grid {
+        grid-template-columns: 1fr;
+    }
+
+}

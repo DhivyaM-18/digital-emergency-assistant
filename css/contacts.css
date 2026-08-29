@@ -1,0 +1,689 @@
+/* =========================================================
+   DIGITAL EMERGENCY ASSISTANT
+   CONTACTS PAGE
+========================================================= */
+
+
+/* =========================================================
+   1. HEADER
+========================================================= */
+
+.contacts-header {
+
+    padding: 70px 7% 55px;
+
+    text-align: center;
+
+    background: #fff5f5;
+
+}
+
+.contacts-label {
+
+    margin-bottom: 10px;
+
+    color: #dc2626;
+
+    font-size: 11px;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+
+}
+
+.contacts-header h1 {
+
+    margin-bottom: 12px;
+
+    color: #111827;
+
+    font-size: 48px;
+
+}
+
+.contacts-header h1 span {
+
+    color: #dc2626;
+
+}
+
+.contacts-header p:last-child {
+
+    color: #6b7280;
+
+    font-size: 14px;
+
+}
+
+
+/* =========================================================
+   2. MAIN SECTION
+========================================================= */
+
+.contacts-section {
+
+    padding: 65px 7%;
+
+    background: #f7f9fc;
+
+}
+
+.contacts-layout {
+
+    max-width: 1150px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: 360px 1fr;
+
+    gap: 35px;
+
+    align-items: start;
+
+}
+
+
+/* =========================================================
+   3. FORM CARD
+========================================================= */
+
+.contact-form-card {
+
+    padding: 30px;
+
+    background: #ffffff;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 16px;
+
+    box-shadow:
+        0 5px 15px rgba(0, 0, 0, 0.05);
+
+}
+
+.form-icon {
+
+    width: 60px;
+
+    height: 60px;
+
+    margin-bottom: 18px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 14px;
+
+    background: #fee2e2;
+
+    font-size: 30px;
+
+}
+
+.contact-form-card h2 {
+
+    margin-bottom: 8px;
+
+    color: #111827;
+
+    font-size: 21px;
+
+}
+
+.contact-form-card > p {
+
+    margin-bottom: 25px;
+
+    color: #6b7280;
+
+    font-size: 12px;
+
+    line-height: 1.6;
+
+}
+
+
+/* =========================================================
+   4. FORM
+========================================================= */
+
+.form-group {
+
+    margin-bottom: 17px;
+
+}
+
+.form-group label {
+
+    display: block;
+
+    margin-bottom: 7px;
+
+    color: #374151;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+}
+
+.form-group input,
+.form-group select {
+
+    width: 100%;
+
+    padding: 11px 13px;
+
+    border: 1px solid #d1d5db;
+
+    border-radius: 8px;
+
+    outline: none;
+
+    background: #ffffff;
+
+    color: #111827;
+
+    font-size: 13px;
+
+    transition: 0.3s;
+
+}
+
+.form-group input:focus,
+.form-group select:focus {
+
+    border-color: #dc2626;
+
+    box-shadow:
+        0 0 0 3px rgba(220, 38, 38, 0.08);
+
+}
+
+
+/* =========================================================
+   5. ADD BUTTON
+========================================================= */
+
+.add-contact-btn {
+
+    width: 100%;
+
+    padding: 12px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background: #dc2626;
+
+    color: #ffffff;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+
+}
+
+.add-contact-btn:hover {
+
+    background: #b91c1c;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 8px 18px rgba(220, 38, 38, 0.2);
+
+}
+
+
+/* =========================================================
+   6. CONTACT LIST
+========================================================= */
+
+.contact-list-area {
+
+    min-width: 0;
+
+}
+
+.list-heading {
+
+    margin-bottom: 20px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+}
+
+.list-heading span {
+
+    color: #dc2626;
+
+    font-size: 10px;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+
+}
+
+.list-heading h2 {
+
+    margin-top: 5px;
+
+    color: #111827;
+
+    font-size: 25px;
+
+}
+
+.contact-count {
+
+    width: 40px;
+
+    height: 40px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #fee2e2;
+
+    color: #dc2626;
+
+    font-size: 14px;
+
+    font-weight: 800;
+
+}
+
+
+/* =========================================================
+   7. CONTACT GRID
+========================================================= */
+
+.contacts-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 18px;
+
+}
+
+
+/* =========================================================
+   8. CONTACT CARD
+========================================================= */
+
+.contact-card {
+
+    padding: 22px;
+
+    background: #ffffff;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 14px;
+
+    transition: all 0.3s ease;
+
+}
+
+.contact-card:hover {
+
+    transform: translateY(-5px);
+
+    border-color: #fecaca;
+
+    box-shadow:
+        0 12px 25px rgba(0, 0, 0, 0.08);
+
+}
+
+
+/* =========================================================
+   9. CONTACT TOP
+========================================================= */
+
+.contact-top {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 13px;
+
+    margin-bottom: 17px;
+
+}
+
+.contact-avatar {
+
+    width: 48px;
+
+    height: 48px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #fee2e2;
+
+    color: #dc2626;
+
+    font-size: 18px;
+
+    font-weight: 800;
+
+}
+
+.contact-name {
+
+    color: #111827;
+
+    font-size: 16px;
+
+    font-weight: 800;
+
+}
+
+.contact-relation {
+
+    margin-top: 3px;
+
+    color: #6b7280;
+
+    font-size: 11px;
+
+}
+
+
+/* =========================================================
+   10. PHONE
+========================================================= */
+
+.contact-phone {
+
+    margin-bottom: 17px;
+
+    padding: 10px;
+
+    border-radius: 8px;
+
+    background: #f9fafb;
+
+    color: #374151;
+
+    font-size: 13px;
+
+}
+
+
+/* =========================================================
+   11. CONTACT ACTIONS
+========================================================= */
+
+.contact-actions {
+
+    display: flex;
+
+    gap: 8px;
+
+}
+
+.call-contact {
+
+    flex: 1;
+
+    padding: 9px;
+
+    border-radius: 7px;
+
+    background: #111827;
+
+    color: #ffffff;
+
+    text-align: center;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    transition: 0.3s;
+
+}
+
+.call-contact:hover {
+
+    background: #dc2626;
+
+}
+
+.delete-contact {
+
+    padding: 9px 12px;
+
+    border: 1px solid #fecaca;
+
+    border-radius: 7px;
+
+    background: #fff5f5;
+
+    color: #dc2626;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+
+}
+
+.delete-contact:hover {
+
+    background: #dc2626;
+
+    color: #ffffff;
+
+}
+
+
+/* =========================================================
+   12. EMPTY STATE
+========================================================= */
+
+.empty-contacts {
+
+    grid-column: 1 / -1;
+
+    padding: 50px 25px;
+
+    text-align: center;
+
+    background: #ffffff;
+
+    border: 1px dashed #d1d5db;
+
+    border-radius: 14px;
+
+}
+
+.empty-icon {
+
+    margin-bottom: 12px;
+
+    font-size: 38px;
+
+}
+
+.empty-contacts h3 {
+
+    margin-bottom: 6px;
+
+    color: #374151;
+
+    font-size: 17px;
+
+}
+
+.empty-contacts p {
+
+    color: #9ca3af;
+
+    font-size: 12px;
+
+}
+
+
+/* =========================================================
+   13. SAFETY TIP
+========================================================= */
+
+.contact-tip {
+
+    padding: 35px 7%;
+
+    background: #ffffff;
+
+}
+
+.tip-box {
+
+    max-width: 1000px;
+
+    margin: auto;
+
+    padding: 20px 25px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    background: #eff6ff;
+
+    border: 1px solid #bfdbfe;
+
+    border-radius: 12px;
+
+}
+
+.tip-icon {
+
+    flex-shrink: 0;
+
+    font-size: 28px;
+
+}
+
+.tip-box h3 {
+
+    margin-bottom: 4px;
+
+    color: #1e40af;
+
+    font-size: 15px;
+
+}
+
+.tip-box p {
+
+    color: #6b7280;
+
+    font-size: 12px;
+
+    line-height: 1.6;
+
+}
+
+
+/* =========================================================
+   14. MOBILE
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .contacts-layout {
+
+        grid-template-columns: 1fr;
+
+    }
+
+}
+
+
+@media (max-width: 650px) {
+
+    .contacts-header {
+
+        padding: 55px 6% 40px;
+
+    }
+
+    .contacts-header h1 {
+
+        font-size: 38px;
+
+    }
+
+    .contacts-section {
+
+        padding: 45px 6%;
+
+    }
+
+    .contacts-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .list-heading h2 {
+
+        font-size: 21px;
+
+    }
+
+    .contact-tip {
+
+        padding: 25px 6%;
+
+    }
+
+    .tip-box {
+
+        align-items: flex-start;
+
+        padding: 18px;
+
+    }
+
+}

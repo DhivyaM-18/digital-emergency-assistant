@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>First Aid | Digital Emergency Assistant</title>
+
+    <link rel="stylesheet" href="css/common.css">
+
+    <link rel="stylesheet" href="css/firstaid.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         NAVBAR
+    ====================================================== -->
+
+    <nav class="navbar">
+
+        <a href="index.html" class="logo">
+
+            <span class="logo-icon">+</span>
+
+            Digital Emergency Assistant
+
+        </a>
+
+
+        <ul class="nav-links">
+
+            <li>
+                <a href="index.html">
+                    Home
+                </a>
+            </li>
+
+            <li>
+                <a href="emergency.html">
+                    Emergency
+                </a>
+            </li>
+
+            <li>
+                <a href="first-aid.html" class="active">
+                    First Aid
+                </a>
+            </li>
+
+            <li>
+                <a href="contacts.html">
+                    Contacts
+                </a>
+            </li>
+
+            <li>
+                <a href="guide.html">
+                    Safety Guide
+                </a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+
+
+    <!-- =====================================================
+         FIRST AID HEADER
+    ====================================================== -->
+
+    <section class="firstaid-header">
+
+        <p>
+            FIRST AID INFORMATION
+        </p>
+
+        <h1>
+            Learn. Respond. <span>Stay Safe.</span>
+        </h1>
+
+        <span>
+            Simple first-aid information for common
+            emergency situations.
+        </span>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         IMPORTANT NOTICE
+    ====================================================== -->
+
+    <section class="firstaid-notice">
+
+        <div class="notice-content">
+
+            <div class="notice-icon">
+                ⚠️
+            </div>
+
+            <div>
+
+                <h3>
+                    Important Safety Notice
+                </h3>
+
+                <p>
+                    First-aid information is provided for
+                    general guidance only. In a serious
+                    emergency, contact qualified medical
+                    professionals immediately.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         SEARCH AND FILTER
+    ====================================================== -->
+
+    <section class="firstaid-tools">
+
+        <div class="search-box">
+
+            <input
+                type="text"
+                id="firstAidSearch"
+                placeholder="🔎 Search first aid topics..."
+                onkeyup="searchFirstAid()">
+
+        </div>
+
+
+        <div class="category-buttons">
+
+            <button
+                class="category-btn active-category"
+                onclick="filterFirstAid('all', this)">
+
+                All
+
+            </button>
+
+
+            <button
+                class="category-btn"
+                onclick="filterFirstAid('injury', this)">
+
+                Injuries
+
+            </button>
+
+
+            <button
+                class="category-btn"
+                onclick="filterFirstAid('burn', this)">
+
+                Burns
+
+            </button>
+
+
+            <button
+                class="category-btn"
+                onclick="filterFirstAid('medical', this)">
+
+                Medical
+
+            </button>
+
+
+            <button
+                class="category-btn"
+                onclick="filterFirstAid('bite', this)">
+
+                Bites & Stings
+
+            </button>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         FIRST AID CARDS
+    ====================================================== -->
+
+    <section class="firstaid-container">
+
+        <div class="firstaid-grid">
+
+
+            <!-- =================================================
+                 BURNS
+            ================================================== -->
+
+            <div class="firstaid-card"
+                 data-category="burn">
+
+                <div class="firstaid-icon">
+                    🔥
+                </div>
+
+                <h2>
+                    Burns
+                </h2>
+
+                <p>
+                    Basic first-aid steps for minor burns
+                    caused by heat or hot objects.
+                </p>
+
+
+                <button
+                    class="learn-button"
+                    onclick="toggleAid(this)">
+
+                    View Instructions
+
+                </button>
+
+
+                <div class="aid-details">
+
+                    <h4>
+                        What to do
+                    </h4>
+
+                    <ol>
+
+                        <li>
+                            Move away from the source of heat.
+                        </li>
+
+                        <li>
+                            Cool the affected area with
+                            clean running water.
+                        </li>
+
+                        <li>
+                            Remove tight items near the
+                            affected area if possible.
+                        </li>
+
+                        <li>
+                            Cover the burn with a clean
+                            non-stick dressing.
+                        </li>
+
+                    </ol>
+
+
+                    <div class="aid-warning">
+
+                        Seek medical help for serious,
+                        deep or extensive burns.
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 CUTS
+            ================================================== -->
+
+            <div class="firstaid-card"
+                 data-category="injury">
+
+                <div class="firstaid-icon">
+                    🩹
+                </div>
+
+                <h2>
+                    Cuts & Wounds
+                </h2>
+
+                <p>
+                    Basic care for minor cuts, scratches
+                    and small wounds.
+                </p>
+
+
+                <button
+                    class="learn-button"
+                    onclick="toggleAid(this)">
+
+                    View Instructions
+
+                </button>
+
+
+                <div class="aid-details">
+
+                    <h4>
+                        What to do
+                    </h4>
+
+                    <ol>
+
+                        <li>
+                            Wash your hands before helping.
+                        </li>
+
+                        <li>
+                            Rinse the wound gently with
+                            clean water.
+                        </li>
+
+                        <li>
+                            Apply gentle pressure with
+                            clean gauze to control bleeding.
+                        </li>
+
+                        <li>
+                            Cover the wound with a clean
+                            dressing.
+                        </li>
+
+                    </ol>
+
+
+                    <div class="aid-warning">
+
+                        Get medical attention if bleeding
+                        does not stop or the wound is deep.
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 FRACTURES
+            ================================================== -->
+
+            <div class="firstaid-card"
+                 data-category="injury">
+
+                <div class="firstaid-icon">
+                    🦴
+                </div>
+
+                <h2>
+                    Fractures
+                </h2>
+
+                <p>
+                    Basic guidance for suspected broken
+                    bones or serious injuries.
+                </p>
+
+
+                <button
+                    class="learn-button"
+                    onclick="toggleAid(this)">
+
+                    View Instructions
+
+                </button>
+
+
+                <div class="aid-details">
+
+                    <h4>
+                        What to do
+                    </h4>
+
+                    <ol>
+
+                        <li>
+                            Keep the injured person as still
+                            as possible.
+                        </li>
+
+                        <li>
+                            Do not try to straighten the
+                            injured body part.
+                        </li>
+
+                        <li>
+                            Support the injured area without
+                            moving it unnecessarily.
+                        </li>
+
+                        <li>
+                            Contact emergency medical
+                            services.
+                        </li>
+
+                    </ol>
+
+
+                    <div class="aid-warning">
+
+                        Suspected fractures require
+                        professional medical evaluation.
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 BLEEDING
+            ================================================== -->
+
+            <div class="firstaid-card"
+                 data-category="medical">
+
+                <div class="firstaid-icon">
+                    🩸
+                </div>
+
+                <h2>
+                    Severe Bleeding
+                </h2>
+
+                <p>
+                    Basic actions to take when someone has
+                    significant external bleeding.
+                </p>
+
+
+                <button
+                    class="learn-button"
+                    onclick="toggleAid(this)">
+
+                    View Instructions
+
+                </button>
+
+
+                <div class="aid-details">
+
+                    <h4>
+                        What to do
+                    </h4>
+
+                    <ol>
+
+                        <li>
+                            Call emergency medical services.
+                        </li>
+
+                        <li>
+                            Apply firm, direct pressure
+                            using clean cloth or gauze.
+                        </li>
+
+                        <li>
+                            Keep pressure on the wound
+                            until help arrives.
+                        </li>
+
+                        <li>
+                            Keep the person as calm and
+                            still as possible.
+                        </li>
+
+                    </ol>
+
+
+                    <div class="aid-warning">
+
+                        Severe bleeding is a medical emergency.
+                        Get professional help immediately.
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 FAINTING
+            ================================================== -->
+
+            <div class="firstaid-card"
+                 data-category="medical">
+
+                <div class="firstaid-icon">
+                    😵
+                </div>
+
+                <h2>
+                    Fainting
+                </h2>
+
+                <p>
+                    Basic steps for helping someone who has
+                    briefly lost consciousness.
+                </p>
+
+
+                <button
+                    class="learn-button"
+                    onclick="toggleAid(this)">
+
+                    View Instructions
+
+                </button>
+
+
+                <div class="aid-details">
+
+                    <h4>
+                        What to do
+                    </h4>
+
+                    <ol>
+
+                        <li>
+                            Check whether the person is
+                            breathing normally.
+                        </li>
+
+                        <li>
+                            Help them lie down safely.
+                        </li>
+
+                        <li>
+                            Loosen tight clothing around
+                            the neck.
+                        </li>
+
+                        <li>
+                            Allow them to recover calmly.
+                        </li>
+
+                    </ol>
+
+
+                    <div class="aid-warning">
+
+                        If the person does not regain
+                        consciousness or is not breathing
+                        normally, call emergency services.
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 INSECT BITES
+            ================================================== -->
+
+            <div class="firstaid-card"
+                 data-category="bite">
+
+                <div class="firstaid-icon">
+                    🐝
+                </div>
+
+                <h2>
+                    Bites & Stings
+                </h2>
+
+                <p>
+                    Basic care for common insect bites
+                    and stings.
+                </p>
+
+
+                <button
+                    class="learn-button"
+                    onclick="toggleAid(this)">
+
+                    View Instructions
+
+                </button>
+
+
+                <div class="aid-details">
+
+                    <h4>
+                        What to do
+                    </h4>
+
+                    <ol>
+
+                        <li>
+                            Move away from the source of
+                            the bite or sting.
+                        </li>
+
+                        <li>
+                            Wash the affected area gently.
+                        </li>
+
+                        <li>
+                            Apply a cool compress to reduce
+                            swelling.
+                        </li>
+
+                        <li>
+                            Monitor for signs of a serious
+                            allergic reaction.
+                        </li>
+
+                    </ol>
+
+
+                    <div class="aid-warning">
+
+                        Seek emergency help if there is
+                        difficulty breathing or severe
+                        swelling.
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+        </div>
+
+
+        <!-- NO RESULTS -->
+
+        <div class="no-results" id="noResults">
+
+            <div>
+                🔎
+            </div>
+
+            <h3>
+                No results found
+            </h3>
+
+            <p>
+                Try searching for another first-aid topic.
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+
+    <footer class="footer">
+
+        <p>
+
+            © <span class="current-year"></span>
+
+            <strong>
+                Digital Emergency Assistant
+            </strong>.
+
+            Stay safe, stay prepared.
+
+        </p>
+
+    </footer>
+
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+    ====================================================== -->
+
+    <script src="js/app.js"></script>
+
+    <script src="js/firstaid.js"></script>
+
+
+</body>
+
+</html>

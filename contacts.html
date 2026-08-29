@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Emergency Contacts | Digital Emergency Assistant</title>
+
+    <link rel="stylesheet" href="css/common.css">
+
+    <link rel="stylesheet" href="css/contacts.css">
+
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <nav class="navbar">
+
+        <a href="index.html" class="logo">
+
+            <span class="logo-icon">+</span>
+
+            Digital Emergency Assistant
+
+        </a>
+
+        <ul class="nav-links">
+
+            <li>
+                <a href="index.html">Home</a>
+            </li>
+
+            <li>
+                <a href="emergency.html">Emergency</a>
+            </li>
+
+            <li>
+                <a href="first-aid.html">First Aid</a>
+            </li>
+
+            <li>
+                <a href="contacts.html" class="active">
+                    Contacts
+                </a>
+            </li>
+
+            <li>
+                <a href="guide.html">Safety Guide</a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+
+    <!-- ================= HEADER ================= -->
+
+    <section class="contacts-header">
+
+        <p class="contacts-label">
+            PERSONAL SAFETY
+        </p>
+
+        <h1>
+            Emergency <span>Contacts</span>
+        </h1>
+
+        <p>
+            Keep important people close when you need
+            help quickly.
+        </p>
+
+    </section>
+
+
+    <!-- ================= MAIN CONTENT ================= -->
+
+    <section class="contacts-section">
+
+        <div class="contacts-layout">
+
+
+            <!-- ================= ADD CONTACT ================= -->
+
+            <div class="contact-form-card">
+
+                <div class="form-icon">
+                    👤
+                </div>
+
+                <h2>
+                    Add Emergency Contact
+                </h2>
+
+                <p>
+                    Save a trusted person who can be contacted
+                    during an emergency.
+                </p>
+
+
+                <form id="contactForm">
+
+                    <div class="form-group">
+
+                        <label for="contactName">
+                            Contact Name
+                        </label>
+
+                        <input
+                            type="text"
+                            id="contactName"
+                            placeholder="Enter name"
+                            required>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="contactRelation">
+                            Relationship
+                        </label>
+
+                        <select id="contactRelation" required>
+
+                            <option value="">
+                                Select relationship
+                            </option>
+
+                            <option value="Parent">
+                                Parent
+                            </option>
+
+                            <option value="Sibling">
+                                Sibling
+                            </option>
+
+                            <option value="Friend">
+                                Friend
+                            </option>
+
+                            <option value="Relative">
+                                Relative
+                            </option>
+
+                            <option value="Other">
+                                Other
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="contactPhone">
+                            Phone Number
+                        </label>
+
+                        <input
+                            type="tel"
+                            id="contactPhone"
+                            placeholder="Enter phone number"
+                            required>
+
+                    </div>
+
+
+                    <button
+                        type="submit"
+                        class="add-contact-btn">
+
+                        + Add Contact
+
+                    </button>
+
+                </form>
+
+            </div>
+
+
+            <!-- ================= CONTACT LIST ================= -->
+
+            <div class="contact-list-area">
+
+                <div class="list-heading">
+
+                    <div>
+
+                        <span>
+                            SAVED CONTACTS
+                        </span>
+
+                        <h2>
+                            Your Trusted People
+                        </h2>
+
+                    </div>
+
+                    <div
+                        class="contact-count"
+                        id="contactCount">
+
+                        0
+
+                    </div>
+
+                </div>
+
+
+                <div
+                    class="contacts-grid"
+                    id="contactsGrid">
+
+
+                    <!-- DEFAULT CONTACT -->
+
+                    <div class="empty-contacts"
+                         id="emptyContacts">
+
+                        <div class="empty-icon">
+                            📱
+                        </div>
+
+                        <h3>
+                            No contacts added
+                        </h3>
+
+                        <p>
+                            Add a trusted emergency contact
+                            using the form.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= SAFETY TIP ================= -->
+
+    <section class="contact-tip">
+
+        <div class="tip-box">
+
+            <div class="tip-icon">
+                💡
+            </div>
+
+            <div>
+
+                <h3>
+                    Safety Tip
+                </h3>
+
+                <p>
+                    Add people you trust and make sure
+                    they know they are listed as your
+                    emergency contacts.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="footer">
+
+        <p>
+
+            © <span class="current-year"></span>
+
+            <strong>
+                Digital Emergency Assistant
+            </strong>.
+
+            Stay safe, stay prepared.
+
+        </p>
+
+    </footer>
+
+
+    <script src="js/app.js"></script>
+
+    <script src="js/contacts.js"></script>
+
+</body>
+
+</html>
