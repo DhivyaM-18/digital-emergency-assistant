@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", function () {
 /* =========================================================
    2. MOBILE NAVIGATION
 ========================================================= */
-
+ 
 function toggleMenu() {
 
     const navLinks = document.querySelector(".nav-links");

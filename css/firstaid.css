@@ -1,420 +1,298 @@
 /* =========================================================
    DIGITAL EMERGENCY ASSISTANT
-   FIRST AID PAGE
+   FIRST AID
+   firstaid.css
 ========================================================= */
 
 
 /* =========================================================
-   1. HEADER
+   PAGE
 ========================================================= */
 
-.firstaid-header {
-    padding: 70px 7% 55px;
+.firstaid-page {
+    width: 86%;
+    max-width: 1250px;
 
-    text-align: center;
+    margin: 0 auto;
 
-    background: #fff5f5;
+    padding: 70px 0 80px;
 }
 
-.firstaid-header p {
-    margin-bottom: 10px;
 
-    color: #dc2626;
+/* =========================================================
+   INTRODUCTION
+========================================================= */
 
-    font-size: 11px;
+.firstaid-intro {
+    max-width: 850px;
 
-    font-weight: 800;
-
-    letter-spacing: 2px;
+    margin-bottom: 40px;
 }
 
-.firstaid-header h1 {
-    margin-bottom: 12px;
+.firstaid-intro h1 {
+    margin: 22px 0 18px;
 
     color: #111827;
 
-    font-size: 48px;
+    font-size: 50px;
 
-    line-height: 1.2;
+    line-height: 1.15;
 }
 
-.firstaid-header h1 span {
+.firstaid-intro h1 span {
     color: #dc2626;
 }
 
-.firstaid-header > span {
-    color: #6b7280;
+.firstaid-intro p {
+    max-width: 780px;
 
-    font-size: 14px;
-}
+    margin: 0;
 
+    color: #526b88;
 
-/* =========================================================
-   2. SAFETY NOTICE
-========================================================= */
-
-.firstaid-notice {
-    padding: 30px 7%;
-
-    background: #ffffff;
-}
-
-.notice-content {
-    max-width: 1000px;
-
-    margin: auto;
-
-    padding: 20px 25px;
-
-    display: flex;
-
-    align-items: center;
-
-    gap: 15px;
-
-    background: #fff7ed;
-
-    border: 1px solid #fed7aa;
-
-    border-radius: 12px;
-}
-
-.notice-icon {
-    flex-shrink: 0;
-
-    font-size: 30px;
-}
-
-.notice-content h3 {
-    margin-bottom: 5px;
-
-    color: #9a3412;
-
-    font-size: 16px;
-}
-
-.notice-content p {
-    color: #6b7280;
-
-    font-size: 13px;
-
-    line-height: 1.6;
-}
-
-
-/* =========================================================
-   3. SEARCH
-========================================================= */
-
-.firstaid-tools {
-    padding: 35px 7%;
-
-    background: #ffffff;
-}
-
-.search-box {
-    max-width: 650px;
-
-    margin: 0 auto 25px;
-}
-
-.search-box input {
-    width: 100%;
-
-    padding: 14px 18px;
-
-    border: 1px solid #d1d5db;
-
-    border-radius: 10px;
-
-    outline: none;
-
-    color: #111827;
-
-    font-size: 14px;
-
-    transition: 0.3s;
-}
-
-.search-box input:focus {
-    border-color: #dc2626;
-
-    box-shadow:
-        0 0 0 3px rgba(220, 38, 38, 0.08);
-}
-
-
-/* =========================================================
-   4. CATEGORY BUTTONS
-========================================================= */
-
-.category-buttons {
-    display: flex;
-
-    justify-content: center;
-
-    align-items: center;
-
-    gap: 10px;
-
-    flex-wrap: wrap;
-}
-
-.category-btn {
-    padding: 9px 17px;
-
-    border: 1px solid #d1d5db;
-
-    border-radius: 20px;
-
-    background: #ffffff;
-
-    color: #4b5563;
-
-    font-size: 12px;
-
-    font-weight: 700;
-
-    cursor: pointer;
-
-    transition: all 0.3s ease;
-}
-
-.category-btn:hover {
-    border-color: #dc2626;
-
-    color: #dc2626;
-
-    transform: translateY(-2px);
-}
-
-.category-btn.active-category {
-    background: #dc2626;
-
-    border-color: #dc2626;
-
-    color: #ffffff;
-}
-
-
-/* =========================================================
-   5. MAIN CONTAINER
-========================================================= */
-
-.firstaid-container {
-    padding: 60px 7%;
-
-    background: #f7f9fc;
-}
-
-
-/* =========================================================
-   6. CARD GRID
-========================================================= */
-
-.firstaid-grid {
-    max-width: 1200px;
-
-    margin: auto;
-
-    display: grid;
-
-    grid-template-columns: repeat(3, 1fr);
-
-    gap: 25px;
-
-    align-items: start;
-}
-
-
-/* =========================================================
-   7. FIRST AID CARD
-========================================================= */
-
-.firstaid-card {
-    padding: 28px;
-
-    background: #ffffff;
-
-    border: 1px solid #e5e7eb;
-
-    border-radius: 16px;
-
-    box-shadow:
-        0 4px 12px rgba(0, 0, 0, 0.05);
-
-    position: relative;
-
-    overflow: hidden;
-
-    transition: all 0.3s ease;
-}
-
-.firstaid-card:hover {
-    transform: translateY(-8px);
-
-    border-color: #dc2626;
-
-    box-shadow:
-        0 15px 35px rgba(220, 38, 38, 0.15);
-}
-
-
-/* =========================================================
-   8. ICON
-========================================================= */
-
-.firstaid-icon {
-    width: 65px;
-
-    height: 65px;
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: center;
-
-    margin-bottom: 20px;
-
-    border-radius: 14px;
-
-    background: #fee2e2;
-
-    font-size: 32px;
-
-    transition: all 0.3s ease;
-}
-
-.firstaid-card:hover .firstaid-icon {
-    background: #dc2626;
-
-    transform: scale(1.08);
-}
-
-
-/* =========================================================
-   9. TITLE
-========================================================= */
-
-.firstaid-card h2 {
-    margin-bottom: 10px;
-
-    color: #111827;
-
-    font-size: 20px;
-
-    transition: color 0.3s ease;
-}
-
-.firstaid-card:hover h2 {
-    color: #dc2626;
-}
-
-
-/* =========================================================
-   10. DESCRIPTION
-========================================================= */
-
-.firstaid-card > p {
-    margin-bottom: 18px;
-
-    color: #6b7280;
-
-    font-size: 13px;
+    font-size: 17px;
 
     line-height: 1.7;
 }
 
 
 /* =========================================================
-   11. VIEW BUTTON
+   IMPORTANT NOTICE
 ========================================================= */
 
-.learn-button {
-    padding: 10px 16px;
+.firstaid-notice {
+    display: flex;
 
-    border: none;
+    align-items: flex-start;
 
-    border-radius: 8px;
+    gap: 10px;
 
-    background: #111827;
+    margin-bottom: 60px;
 
-    color: #ffffff;
+    padding: 18px 20px;
+
+    background: #fff7ed;
+
+    border: 1px solid #fed7aa;
+
+    border-left: 4px solid #f97316;
+
+    border-radius: 9px;
+
+    color: #7c2d12;
+
+    font-size: 14px;
+
+    line-height: 1.6;
+}
+
+.firstaid-notice strong {
+    flex-shrink: 0;
+
+    color: #c2410c;
+}
+
+
+/* =========================================================
+   SECTION HEADING
+========================================================= */
+
+.section-heading {
+    margin-bottom: 30px;
+}
+
+.card-label {
+    display: inline-block;
+
+    color: #dc2626;
 
     font-size: 12px;
 
-    font-weight: 700;
+    font-weight: 800;
 
-    cursor: pointer;
-
-    transition: all 0.3s ease;
+    letter-spacing: 1.5px;
 }
 
-.learn-button:hover {
-    background: #dc2626;
-
-    transform: translateY(-2px);
-
-    box-shadow:
-        0 5px 15px rgba(220, 38, 38, 0.2);
-}
-
-
-/* =========================================================
-   12. INSTRUCTIONS
-========================================================= */
-
-.aid-details {
-    display: none;
-
-    margin-top: 20px;
-
-    padding-top: 20px;
-
-    border-top: 1px solid #e5e7eb;
-}
-
-.aid-details.show {
-    display: block;
-}
-
-
-/* =========================================================
-   13. INSTRUCTION CONTENT
-========================================================= */
-
-.aid-details h4 {
-    margin-bottom: 12px;
+.section-heading h2 {
+    margin: 9px 0 10px;
 
     color: #111827;
 
-    font-size: 17px;
+    font-size: 30px;
 }
 
-.aid-details ol {
-    padding-left: 22px;
+.section-heading p {
+    max-width: 700px;
+
+    margin: 0;
+
+    color: #526b88;
+
+    font-size: 15px;
+
+    line-height: 1.7;
 }
 
-.aid-details li {
-    margin-bottom: 9px;
 
-    color: #4b5563;
+/* =========================================================
+   FIRST AID GRID
+========================================================= */
+
+.firstaid-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 24px;
+}
+
+
+/* =========================================================
+   FIRST AID CARD
+========================================================= */
+
+.firstaid-card {
+    position: relative;
+
+    padding: 32px;
+
+    background: #ffffff;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 14px;
+
+    box-shadow:
+        0 7px 22px rgba(17, 24, 39, 0.06);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        border-color 0.25s ease;
+}
+
+.firstaid-card:hover {
+    transform: translateY(-4px);
+
+    border-color: #fecaca;
+
+    box-shadow:
+        0 12px 30px rgba(17, 24, 39, 0.09);
+}
+
+
+/* =========================================================
+   NUMBER
+========================================================= */
+
+.firstaid-number {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    width: 38px;
+    height: 38px;
+
+    margin-bottom: 20px;
+
+    background: #fef2f2;
+
+    color: #dc2626;
+
+    border-radius: 8px;
+
+    font-size: 12px;
+
+    font-weight: 800;
+}
+
+
+/* =========================================================
+   CARD TITLE
+========================================================= */
+
+.firstaid-card h3 {
+    margin: 0 0 12px;
+
+    color: #111827;
+
+    font-size: 22px;
+
+    line-height: 1.3;
+}
+
+
+/* =========================================================
+   CARD DESCRIPTION
+========================================================= */
+
+.firstaid-card > p {
+    margin: 0 0 24px;
+
+    color: #526b88;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   WHAT TO DO
+========================================================= */
+
+.firstaid-card h4 {
+    margin: 0 0 12px;
+
+    color: #111827;
+
+    font-size: 15px;
+
+    font-weight: 800;
+}
+
+
+/* =========================================================
+   NUMBERED STEPS
+========================================================= */
+
+.firstaid-card ol {
+    margin: 0 0 24px;
+
+    padding-left: 21px;
+}
+
+.firstaid-card ol li {
+    margin-bottom: 10px;
+
+    padding-left: 4px;
+
+    color: #374151;
 
     font-size: 13px;
 
     line-height: 1.6;
 }
 
+.firstaid-card ol li:last-child {
+    margin-bottom: 0;
+}
+
 
 /* =========================================================
-   14. WARNING
+   AVOID BOX
 ========================================================= */
 
-.aid-warning {
-    margin-top: 18px;
+.avoid-box {
+    display: flex;
 
-    padding: 13px 15px;
+    align-items: flex-start;
+
+    gap: 10px;
+
+    padding: 14px 16px;
 
     background: #fef2f2;
 
@@ -422,133 +300,264 @@
 
     border-radius: 8px;
 
-    color: #991b1b;
+    color: #7f1d1d;
 
-    font-size: 12px;
+    font-size: 13px;
+
+    line-height: 1.55;
+}
+
+.avoid-box strong {
+    flex-shrink: 0;
+
+    color: #b91c1c;
+}
+
+
+/* =========================================================
+   GENERAL FIRST AID
+========================================================= */
+
+.general-firstaid {
+    margin-top: 70px;
+
+    padding: 38px;
+
+    background: #f8fafc;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 18px;
+}
+
+.general-firstaid h2 {
+    margin: 9px 0 28px;
+
+    color: #111827;
+
+    font-size: 30px;
+}
+
+
+/* =========================================================
+   GENERAL GRID
+========================================================= */
+
+.general-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 20px;
+}
+
+.general-grid > div {
+    padding: 22px;
+
+    background: #ffffff;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 10px;
+}
+
+.general-grid strong {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: #111827;
+
+    font-size: 15px;
+}
+
+.general-grid p {
+    margin: 0;
+
+    color: #526b88;
+
+    font-size: 13px;
 
     line-height: 1.6;
 }
 
 
 /* =========================================================
-   15. HIDDEN CARD
+   EMERGENCY SECTION
 ========================================================= */
 
-.firstaid-card.hidden {
-    display: none;
-}
+.firstaid-emergency {
+    margin-top: 40px;
 
+    padding: 38px 30px;
 
-/* =========================================================
-   16. NO RESULTS
-========================================================= */
+    background: #fff5f5;
 
-.no-results {
-    display: none;
+    border: 1px solid #fecaca;
 
-    max-width: 500px;
-
-    margin: 35px auto;
+    border-radius: 14px;
 
     text-align: center;
-
-    color: #6b7280;
 }
 
-.no-results.show {
-    display: block;
+.firstaid-emergency h2 {
+    margin: 0 0 10px;
+
+    color: #111827;
+
+    font-size: 27px;
 }
 
-.no-results div {
-    margin-bottom: 10px;
+.firstaid-emergency p {
+    max-width: 650px;
 
-    font-size: 35px;
-}
+    margin: 0 auto 22px;
 
-.no-results h3 {
-    margin-bottom: 5px;
+    color: #526b88;
 
-    color: #374151;
+    font-size: 15px;
 
-    font-size: 18px;
-}
-
-.no-results p {
-    font-size: 13px;
+    line-height: 1.7;
 }
 
 
 /* =========================================================
-   17. TABLET
+   EMERGENCY BUTTON
+========================================================= */
+
+.firstaid-emergency-button {
+    display: inline-block;
+
+    padding: 13px 23px;
+
+    background: #dc2626;
+
+    color: #ffffff;
+
+    border-radius: 8px;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    transition:
+        background 0.3s ease,
+        transform 0.2s ease;
+}
+
+.firstaid-emergency-button:hover {
+    background: #b91c1c;
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   TABLET
 ========================================================= */
 
 @media (max-width: 1000px) {
 
+    .firstaid-intro h1 {
+        font-size: 44px;
+    }
+
     .firstaid-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 1fr;
     }
 
 }
 
 
 /* =========================================================
-   18. MOBILE
+   MOBILE
 ========================================================= */
 
-@media (max-width: 650px) {
+@media (max-width: 700px) {
 
-    .firstaid-header {
-        padding: 55px 6% 40px;
+    .firstaid-page {
+        width: 90%;
+
+        padding: 50px 0 60px;
     }
 
-    .firstaid-header h1 {
-        font-size: 38px;
+
+    .firstaid-intro {
+        margin-bottom: 35px;
     }
 
-    .firstaid-header > span {
-        font-size: 13px;
+    .firstaid-intro h1 {
+        font-size: 36px;
     }
+
+    .firstaid-intro p {
+        font-size: 15px;
+    }
+
 
     .firstaid-notice {
-        padding: 20px 6%;
+        flex-direction: column;
+
+        gap: 4px;
+
+        margin-bottom: 45px;
     }
 
-    .notice-content {
-        align-items: flex-start;
 
-        padding: 18px;
+    .firstaid-card {
+        padding: 25px;
     }
 
-    .firstaid-tools {
-        padding: 25px 6%;
+
+    .general-firstaid {
+        margin-top: 50px;
+
+        padding: 25px;
     }
 
-    .category-buttons {
-        justify-content: flex-start;
-
-        overflow-x: auto;
-
-        flex-wrap: nowrap;
-
-        padding-bottom: 5px;
+    .general-firstaid h2 {
+        font-size: 26px;
     }
 
-    .category-btn {
-        white-space: nowrap;
-    }
 
-    .firstaid-container {
-        padding: 45px 6%;
-    }
-
-    .firstaid-grid {
+    .general-grid {
         grid-template-columns: 1fr;
+    }
 
-        gap: 18px;
+
+    .firstaid-emergency {
+        padding: 30px 20px;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 420px) {
+
+    .firstaid-intro h1 {
+        font-size: 31px;
     }
 
     .firstaid-card {
-        padding: 23px;
+        padding: 22px;
+    }
+
+    .firstaid-card h3 {
+        font-size: 20px;
+    }
+
+    .general-firstaid {
+        padding: 20px;
+    }
+
+    .firstaid-emergency h2 {
+        font-size: 24px;
     }
 
 }

@@ -2,491 +2,636 @@
 <html lang="en">
 
 <head>
-
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
-
-    <title>Emergency Help | Digital Emergency Assistant</title>
+    <title>Emergency | Digital Emergency Assistant</title>
 
     <link rel="stylesheet" href="css/common.css">
-
     <link rel="stylesheet" href="css/emergency.css">
-
 </head>
-
 
 <body>
 
+    <!-- ==============================
+         NAVIGATION
+    =============================== -->
 
-    <!-- =====================================================
-         NAVBAR
-    ====================================================== -->
+<header class="navbar">
 
-    <nav class="navbar">
+        <div class="logo">
+            <div class="logo-icon">+</div>
+            <span>Digital Emergency Assistant</span>
+        </div>    
+    <nav class="nav-links">
 
-        <a href="index.html" class="logo">
+    <a href="index.html">
+        Home
+    </a>
 
-            <span class="logo-icon">+</span>
+    <a href="emergency.html" class="active">
+        Emergency
+    </a>
 
-            Digital Emergency Assistant
+    <a href="first-aid.html">
+        First Aid
+    </a>
 
-        </a>
+    <a href="contacts.html">
+        Contacts
+    </a>
 
+    <a href="guide.html">
+        Safety Guide
+    </a>
 
-        <ul class="nav-links">
+    <a href="shelters.html">
+        Nearby Help
+    </a>
+     <a href="sos.html">SOS</a>
 
-            <li>
-                <a href="index.html">
-                    Home
-                </a>
-            </li>
+</nav>
+</header>
+    
+  
+    <!-- ==============================
+         MAIN CONTENT
+    =============================== -->
 
-            <li>
-                <a href="emergency.html" class="active">
-                    Emergency
-                </a>
-            </li>
-
-            <li>
-                <a href="first-aid.html">
-                    First Aid
-                </a>
-            </li>
-
-            <li>
-                <a href="contacts.html">
-                    Contacts
-                </a>
-            </li>
-
-            <li>
-                <a href="guide.html">
-                    Safety Guide
-                </a>
-            </li>
-
-        </ul>
-
-    </nav>
+    <main class="emergency-page">
 
 
+        <!-- ==============================
+             INTRODUCTION
+        =============================== -->
 
-    <!-- =====================================================
-         EMERGENCY HEADER
-    ====================================================== -->
-
-    <section class="emergency-header">
-
-        <p class="emergency-label">
-            EMERGENCY ASSISTANCE
-        </p>
-
-        <h1>
-            Get Help <span>Quickly.</span>
-        </h1>
-
-        <p>
-            Choose the appropriate emergency service
-            and contact them immediately.
-        </p>
-
-    </section>
-
-
-
-    <!-- =====================================================
-         IMPORTANT WARNING
-    ====================================================== -->
-
-    <section class="emergency-warning">
-
-        <div class="warning-box">
-
-            <div class="warning-icon">
-                ⚠️
-            </div>
-
-            <div>
-
-                <h3>
-                    In a Life-Threatening Emergency
-                </h3>
-
-                <p>
-                    Call the appropriate emergency service
-                    immediately. Do not depend only on this
-                    website for emergency assistance.
-                </p>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-
-    <!-- =====================================================
-         EMERGENCY SERVICES
-    ====================================================== -->
-
-    <section class="emergency-services">
-
-        <div class="section-header">
+        <section class="emergency-intro">
 
             <span class="section-label">
-                QUICK CALL
+                IMMEDIATE ASSISTANCE
             </span>
 
-            <h2>
-                Emergency Services
-            </h2>
+            <h1>
+                Emergency<br>
+                <span>Helplines</span>
+            </h1>
 
             <p>
-                Tap the call button to contact the service
-                you need.
+                Important emergency numbers for immediate
+                assistance in India. Select the appropriate
+                service when urgent help is required.
             </p>
 
-        </div>
+        </section>
 
 
-        <div class="service-grid">
+        <!-- ==============================
+             IMPORTANT NOTICE
+        =============================== -->
+
+        <section class="emergency-notice">
+
+            <strong>
+                Important:
+            </strong>
+
+            <span>
+                If you are in immediate danger or someone is
+                seriously injured, contact emergency services
+                immediately. Stay calm and clearly provide
+                your location.
+            </span>
+
+        </section>
 
 
-            <!-- POLICE -->
+        <!-- ==============================
+             IMPORTANT HELPLINES
+        =============================== -->
 
-            <div class="service-card">
+        <section class="emergency-services">
 
-                <div class="service-icon">
-                    👮
-                </div>
+            <div class="section-heading">
 
-                <h3>
-                    Police
-                </h3>
-
-                <p>
-                    For crimes, threats, accidents,
-                    violence and other law-enforcement
-                    emergencies.
-                </p>
-
-                <div class="service-number">
-                    100
-                </div>
-
-                <a href="tel:100"
-                   class="service-call">
-
-                    📞 Call Police
-
-                </a>
-
-            </div>
-
-
-
-            <!-- AMBULANCE -->
-
-            <div class="service-card">
-
-                <div class="service-icon">
-                    🚑
-                </div>
-
-                <h3>
-                    Ambulance
-                </h3>
-
-                <p>
-                    For medical emergencies requiring
-                    immediate medical transportation
-                    and assistance.
-                </p>
-
-                <div class="service-number">
-                    108
-                </div>
-
-                <a href="tel:108"
-                   class="service-call">
-
-                    📞 Call Ambulance
-
-                </a>
-
-            </div>
-
-
-
-            <!-- FIRE -->
-
-            <div class="service-card">
-
-                <div class="service-icon">
-                    🚒
-                </div>
-
-                <h3>
-                    Fire & Rescue
-                </h3>
-
-                <p>
-                    For fires, rescue operations and
-                    other fire-related emergencies.
-                </p>
-
-                <div class="service-number">
-                    101
-                </div>
-
-                <a href="tel:101"
-                   class="service-call">
-
-                    📞 Call Fire Service
-
-                </a>
-
-            </div>
-
-
-
-            <!-- UNIFIED -->
-
-            <div class="service-card service-card-highlight">
-
-                <div class="service-icon">
-                    🆘
-                </div>
-
-                <h3>
-                    Unified Emergency
-                </h3>
-
-                <p>
-                    A single emergency number for
-                    accessing multiple emergency services.
-                </p>
-
-                <div class="service-number">
-                    112
-                </div>
-
-                <a href="tel:112"
-                   class="service-call">
-
-                    📞 Call 112
-
-                </a>
-
-            </div>
-
-
-        </div>
-
-    </section>
-
-
-
-    <!-- =====================================================
-         SOS SECTION
-    ====================================================== -->
-
-    <section class="sos-section">
-
-        <div class="sos-container">
-
-
-            <div class="sos-content">
-
-                <span class="sos-label">
-                    QUICK ACTION
+                <span class="card-label">
+                    EMERGENCY HOTLINES
                 </span>
 
                 <h2>
-                    Need Immediate Help?
+                    Important Emergency Numbers
                 </h2>
 
                 <p>
-                    Use the emergency action buttons below
-                    to quickly access emergency services.
+                    Tap the call button to contact the
+                    appropriate emergency service.
                 </p>
 
-
-                <div class="sos-buttons">
-
-                    <button
-                        class="sos-button"
-                        onclick="callEmergency()">
-
-                        🆘 Emergency Call
-
-                    </button>
+            </div>
 
 
-                    <button
-                        class="location-button"
-                        onclick="shareLocation()">
+            <div class="emergency-grid">
 
-                        📍 Get My Location
 
-                    </button>
+                <!-- ==============================
+                     112
+                =============================== -->
+
+                <article class="emergency-card primary-emergency">
+
+                    <div class="emergency-card-top">
+
+                        <span class="emergency-number">
+                            112
+                        </span>
+
+                        <span class="emergency-tag">
+                            NATIONAL EMERGENCY
+                        </span>
+
+                    </div>
+
+                    <h3>
+                        National Emergency
+                    </h3>
+
+                    <p>
+                        Unified emergency assistance for
+                        police, fire and ambulance services.
+                    </p>
+
+                    <a
+                        href="tel:112"
+                        class="call-button">
+
+                        Call 112
+
+                    </a>
+
+                </article>
+
+
+                <!-- ==============================
+                     108
+                =============================== -->
+
+                <article class="emergency-card">
+
+                    <div class="emergency-card-top">
+
+                        <span class="emergency-number">
+                            108
+                        </span>
+
+                        <span class="emergency-tag">
+                            MEDICAL
+                        </span>
+
+                    </div>
+
+                    <h3>
+                        Ambulance
+                    </h3>
+
+                    <p>
+                        Emergency ambulance assistance for
+                        serious medical conditions and accidents.
+                    </p>
+
+                    <a
+                        href="tel:108"
+                        class="call-button">
+
+                        Call 108
+
+                    </a>
+
+                </article>
+
+
+                <!-- ==============================
+                     100
+                =============================== -->
+
+                <article class="emergency-card">
+
+                    <div class="emergency-card-top">
+
+                        <span class="emergency-number">
+                            100
+                        </span>
+
+                        <span class="emergency-tag">
+                            POLICE
+                        </span>
+
+                    </div>
+
+                    <h3>
+                        Police
+                    </h3>
+
+                    <p>
+                        Contact the police for crimes, threats,
+                        public safety incidents and urgent
+                        police assistance.
+                    </p>
+
+                    <a
+                        href="tel:100"
+                        class="call-button">
+
+                        Call 100
+
+                    </a>
+
+                </article>
+
+
+                <!-- ==============================
+                     101
+                =============================== -->
+
+                <article class="emergency-card">
+
+                    <div class="emergency-card-top">
+
+                        <span class="emergency-number">
+                            101
+                        </span>
+
+                        <span class="emergency-tag">
+                            FIRE & RESCUE
+                        </span>
+
+                    </div>
+
+                    <h3>
+                        Fire & Rescue
+                    </h3>
+
+                    <p>
+                        Contact fire and rescue services for
+                        fires and other rescue emergencies.
+                    </p>
+
+                    <a
+                        href="tel:101"
+                        class="call-button">
+
+                        Call 101
+
+                    </a>
+
+                </article>
+
+
+                <!-- ==============================
+                     1091 / 181
+                =============================== -->
+
+                <article class="emergency-card">
+
+                    <div class="emergency-card-top">
+
+                        <span class="emergency-number">
+                            1091
+                        </span>
+
+                        <span class="emergency-tag">
+                            WOMEN'S SAFETY
+                        </span>
+
+                    </div>
+
+                    <h3>
+                        Women's Helpline
+                    </h3>
+
+                    <p>
+                        Assistance for women facing violence,
+                        harassment or domestic abuse.
+                    </p>
+
+                    <div class="dual-call-buttons">
+
+                        <a
+                            href="tel:1091"
+                            class="call-button">
+
+                            Call 1091
+
+                        </a>
+
+                        <a
+                            href="tel:181"
+                            class="secondary-call-button">
+
+                            Call 181
+
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- ==============================
+                     1098
+                =============================== -->
+
+                <article class="emergency-card">
+
+                    <div class="emergency-card-top">
+
+                        <span class="emergency-number">
+                            1098
+                        </span>
+
+                        <span class="emergency-tag">
+                            CHILD SAFETY
+                        </span>
+
+                    </div>
+
+                    <h3>
+                        Childline
+                    </h3>
+
+                    <p>
+                        Assistance for children who are in
+                        distress, danger or require protection
+                        and support.
+                    </p>
+
+                    <a
+                        href="tel:1098"
+                        class="call-button">
+
+                        Call 1098
+
+                    </a>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- ==============================
+             PERSONAL EMERGENCY CONTACTS
+        =============================== -->
+
+        <section class="emergency-contacts">
+
+            <div class="section-heading">
+
+                <span class="card-label">
+                    PERSONAL SAFETY
+                </span>
+
+                <h2>
+                    Your Emergency Contacts
+                </h2>
+
+                <p>
+                    Quickly contact a family member or trusted
+                    person saved in your Emergency Contacts.
+                </p>
+
+            </div>
+
+
+            <div
+                id="emergencyContactsList"
+                class="emergency-contacts-list">
+
+                <div class="empty-contacts">
+
+                    <p>
+                        No emergency contacts have been added yet.
+                    </p>
+
+                    <a href="contacts.html">
+                        Add Emergency Contacts
+                    </a>
 
                 </div>
 
             </div>
 
+        </section>
 
-            <div class="sos-visual">
 
-                <div class="sos-circle">
+        <!-- ==============================
+             LOCATION ASSISTANCE
+        =============================== -->
 
-                    <span>
-                        SOS
-                    </span>
+        <section class="location-section">
+
+            <div class="location-content">
+
+                <span class="card-label">
+                    LOCATION ASSISTANCE
+                </span>
+
+                <h2>
+                    Get Your Current Location
+                </h2>
+
+                <p>
+                    Use your device location to obtain your
+                    current coordinates. You can provide these
+                    details to emergency services or a trusted
+                    person.
+                </p>
+
+                <button
+                    type="button"
+                    class="location-button"
+                    onclick="getCurrentLocation()">
+
+                    Get My Current Location
+
+                </button>
+
+
+                <div
+                    id="locationResult"
+                    class="location-result">
+
+                    Your location has not been requested.
 
                 </div>
 
             </div>
 
-        </div>
-
-    </section>
+        </section>
 
 
+        <!-- ==============================
+             DURING AN EMERGENCY
+        =============================== -->
 
-    <!-- =====================================================
-         EMERGENCY STEPS
-    ====================================================== -->
+        <section class="emergency-instructions">
 
-    <section class="emergency-steps">
-
-        <div class="section-header">
-
-            <span class="section-label">
-                STAY CALM
+            <span class="card-label">
+                DURING AN EMERGENCY
             </span>
 
             <h2>
-                What To Do During an Emergency
+                Important Actions
             </h2>
 
-        </div>
+
+            <div class="instruction-grid">
 
 
-        <div class="emergency-step-grid">
+                <div class="instruction-item">
 
+                    <span class="instruction-number">
+                        01
+                    </span>
 
-            <div class="emergency-step-card">
+                    <div>
 
-                <div class="emergency-step-number">
-                    01
+                        <h3>
+                            Stay Calm
+                        </h3>
+
+                        <p>
+                            Stay calm and assess the situation
+                            before taking action.
+                        </p>
+
+                    </div>
+
                 </div>
 
-                <h3>
-                    Stay Calm
-                </h3>
 
-                <p>
-                    Take a breath and assess the situation
-                    before taking action.
-                </p>
+                <div class="instruction-item">
+
+                    <span class="instruction-number">
+                        02
+                    </span>
+
+                    <div>
+
+                        <h3>
+                            Give Your Location
+                        </h3>
+
+                        <p>
+                            Provide your address, nearby
+                            landmark or current location clearly.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="instruction-item">
+
+                    <span class="instruction-number">
+                        03
+                    </span>
+
+                    <div>
+
+                        <h3>
+                            Follow Instructions
+                        </h3>
+
+                        <p>
+                            Carefully follow the instructions
+                            provided by emergency personnel.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="instruction-item">
+
+                    <span class="instruction-number">
+                        04
+                    </span>
+
+                    <div>
+
+                        <h3>
+                            Protect Yourself
+                        </h3>
+
+                        <p>
+                            Do not enter dangerous areas or put
+                            yourself at risk while helping others.
+                        </p>
+
+                    </div>
+
+                </div>
+
 
             </div>
 
-
-            <div class="emergency-step-card">
-
-                <div class="emergency-step-number">
-                    02
-                </div>
-
-                <h3>
-                    Call for Help
-                </h3>
-
-                <p>
-                    Contact the appropriate emergency
-                    service as soon as possible.
-                </p>
-
-            </div>
+        </section>
 
 
-            <div class="emergency-step-card">
+        <!-- ==============================
+             FIRST AID LINK
+        =============================== -->
 
-                <div class="emergency-step-number">
-                    03
-                </div>
+        <section class="emergency-action">
 
-                <h3>
-                    Follow Instructions
-                </h3>
+            <h2>
+                Need First Aid Information?
+            </h2>
 
-                <p>
-                    Clearly explain the situation and
-                    follow instructions from professionals.
-                </p>
+            <p>
+                Find quick instructions for bleeding, choking,
+                burns, CPR, snakebite and heatstroke.
+            </p>
 
-            </div>
+            <a
+                href="first-aid.html"
+                class="emergency-action-button">
 
+                Open First Aid Guide
 
-            <div class="emergency-step-card">
+            </a>
 
-                <div class="emergency-step-number">
-                    04
-                </div>
-
-                <h3>
-                    Stay Safe
-                </h3>
-
-                <p>
-                    Move to a safe location if possible
-                    and avoid unnecessary risks.
-                </p>
-
-            </div>
+        </section>
 
 
-        </div>
-
-    </section>
+    </main>
 
 
-
-    <!-- =====================================================
+    <!-- ==============================
          FOOTER
-    ====================================================== -->
+    =============================== -->
 
     <footer class="footer">
 
         <p>
-
-            © <span class="current-year"></span>
-
-            <strong>
-                Digital Emergency Assistant
-            </strong>.
-
-            Stay safe, stay prepared.
-
+            &copy;
+            <span class="current-year"></span>
+            Digital Emergency Assistant.
+            Stay informed. Stay safe.
         </p>
 
     </footer>
 
 
-
-    <!-- =====================================================
+    <!-- ==============================
          JAVASCRIPT
-    ====================================================== -->
+    =============================== -->
 
     <script src="js/app.js"></script>
-
     <script src="js/emergency.js"></script>
-
 
 </body>
 

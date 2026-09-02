@@ -1,185 +1,156 @@
 /* =========================================================
    DIGITAL EMERGENCY ASSISTANT
-   CONTACTS PAGE
+   CONTACTS / MEDICAL CARD
+   contacts.css
 ========================================================= */
 
 
 /* =========================================================
-   1. HEADER
+   PAGE
 ========================================================= */
 
-.contacts-header {
-
-    padding: 70px 7% 55px;
-
-    text-align: center;
-
-    background: #fff5f5;
-
+.contacts-page {
+    width: 86%;
+    max-width: 1250px;
+    margin: 0 auto;
+    padding: 70px 0 80px;
 }
 
-.contacts-label {
 
-    margin-bottom: 10px;
+/* =========================================================
+   INTRODUCTION
+========================================================= */
 
-    color: #dc2626;
-
-    font-size: 11px;
-
-    font-weight: 800;
-
-    letter-spacing: 2px;
-
+.contacts-intro {
+    max-width: 850px;
+    margin-bottom: 50px;
 }
 
-.contacts-header h1 {
-
-    margin-bottom: 12px;
+.contacts-intro h1 {
+    margin: 22px 0 18px;
 
     color: #111827;
 
-    font-size: 48px;
-
+    font-size: 50px;
+    line-height: 1.15;
 }
 
-.contacts-header h1 span {
-
+.contacts-intro h1 span {
     color: #dc2626;
-
 }
 
-.contacts-header p:last-child {
+.contacts-intro p {
+    max-width: 750px;
 
-    color: #6b7280;
+    color: #526b88;
 
-    font-size: 14px;
-
-}
-
-
-/* =========================================================
-   2. MAIN SECTION
-========================================================= */
-
-.contacts-section {
-
-    padding: 65px 7%;
-
-    background: #f7f9fc;
-
-}
-
-.contacts-layout {
-
-    max-width: 1150px;
-
-    margin: auto;
-
-    display: grid;
-
-    grid-template-columns: 360px 1fr;
-
-    gap: 35px;
-
-    align-items: start;
-
+    font-size: 17px;
+    line-height: 1.7;
 }
 
 
 /* =========================================================
-   3. FORM CARD
+   MEDICAL CARD
 ========================================================= */
 
-.contact-form-card {
+.medical-card-section {
+    margin-bottom: 45px;
+}
 
-    padding: 30px;
+.medical-card {
+    padding: 40px;
 
     background: #ffffff;
 
     border: 1px solid #e5e7eb;
 
-    border-radius: 16px;
+    border-radius: 18px;
 
-    box-shadow:
-        0 5px 15px rgba(0, 0, 0, 0.05);
-
-}
-
-.form-icon {
-
-    width: 60px;
-
-    height: 60px;
-
-    margin-bottom: 18px;
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: center;
-
-    border-radius: 14px;
-
-    background: #fee2e2;
-
-    font-size: 30px;
-
-}
-
-.contact-form-card h2 {
-
-    margin-bottom: 8px;
-
-    color: #111827;
-
-    font-size: 21px;
-
-}
-
-.contact-form-card > p {
-
-    margin-bottom: 25px;
-
-    color: #6b7280;
-
-    font-size: 12px;
-
-    line-height: 1.6;
-
+    box-shadow: 0 10px 30px rgba(17, 24, 39, 0.07);
 }
 
 
 /* =========================================================
-   4. FORM
+   MEDICAL CARD HEADER
+========================================================= */
+
+.medical-card-header {
+    margin-bottom: 32px;
+
+    padding-bottom: 22px;
+
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.card-label {
+    display: inline-block;
+
+    color: #dc2626;
+
+    font-size: 12px;
+    font-weight: 800;
+
+    letter-spacing: 1.5px;
+}
+
+.medical-card-header h2 {
+    margin: 10px 0 0;
+
+    color: #111827;
+
+    font-size: 28px;
+}
+
+
+/* =========================================================
+   FORM GRID
+========================================================= */
+
+.form-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 24px;
+}
+
+
+/* =========================================================
+   FORM GROUP
 ========================================================= */
 
 .form-group {
+    display: flex;
 
-    margin-bottom: 17px;
+    flex-direction: column;
 
+    gap: 8px;
 }
 
 .form-group label {
-
-    display: block;
-
-    margin-bottom: 7px;
-
     color: #374151;
 
-    font-size: 12px;
+    font-size: 14px;
 
     font-weight: 700;
-
 }
+
+
+/* =========================================================
+   INPUTS
+========================================================= */
 
 .form-group input,
 .form-group select {
-
     width: 100%;
 
-    padding: 11px 13px;
+    box-sizing: border-box;
+
+    padding: 14px 15px;
+
+    background: #ffffff;
+
+    color: #111827;
 
     border: 1px solid #d1d5db;
 
@@ -187,503 +158,829 @@
 
     outline: none;
 
-    background: #ffffff;
+    font-family: inherit;
 
-    color: #111827;
+    font-size: 14px;
 
-    font-size: 13px;
+    transition:
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
 
-    transition: 0.3s;
-
+.form-group input::placeholder {
+    color: #9ca3af;
 }
 
 .form-group input:focus,
 .form-group select:focus {
-
     border-color: #dc2626;
 
-    box-shadow:
-        0 0 0 3px rgba(220, 38, 38, 0.08);
-
+    box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.10);
 }
 
 
 /* =========================================================
-   5. ADD BUTTON
+   MEDICAL CARD BUTTONS
 ========================================================= */
 
-.add-contact-btn {
+.form-actions {
+    display: flex;
 
-    width: 100%;
+    flex-wrap: wrap;
 
-    padding: 12px;
+    gap: 14px;
 
-    border: none;
+    margin-top: 30px;
+}
 
-    border-radius: 8px;
+.save-button {
+    padding: 14px 24px;
 
     background: #dc2626;
 
     color: #ffffff;
 
-    font-size: 13px;
+    border: none;
 
-    font-weight: 700;
+    border-radius: 8px;
 
     cursor: pointer;
 
-    transition: all 0.3s ease;
+    font-family: inherit;
 
+    font-size: 14px;
+
+    font-weight: 700;
+
+    transition:
+        background 0.3s ease,
+        transform 0.2s ease;
 }
 
-.add-contact-btn:hover {
-
+.save-button:hover {
     background: #b91c1c;
 
     transform: translateY(-2px);
+}
 
-    box-shadow:
-        0 8px 18px rgba(220, 38, 38, 0.2);
+.clear-button {
+    padding: 14px 24px;
 
+    background: #ffffff;
+
+    color: #374151;
+
+    border: 1px solid #d1d5db;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    font-family: inherit;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    transition:
+        background 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.clear-button:hover {
+    background: #f9fafb;
+
+    border-color: #9ca3af;
 }
 
 
 /* =========================================================
-   6. CONTACT LIST
+   SAVE STATUS
 ========================================================= */
 
-.contact-list-area {
+.save-status {
+    min-height: 20px;
 
-    min-width: 0;
+    margin: 18px 0 0;
 
+    color: #15803d;
+
+    font-size: 14px;
+
+    font-weight: 600;
 }
 
-.list-heading {
 
-    margin-bottom: 20px;
+/* =========================================================
+   SAVED MEDICAL INFORMATION
+========================================================= */
 
+.saved-card-section {
+    margin-bottom: 60px;
+}
+
+.saved-card {
+    padding: 35px;
+
+    background: #f8fafc;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 18px;
+}
+
+.saved-header {
+    margin-bottom: 28px;
+}
+
+.saved-header h2 {
+    margin: 9px 0 0;
+
+    color: #111827;
+
+    font-size: 27px;
+}
+
+.saved-grid {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 16px;
+}
+
+.saved-item {
+    min-height: 80px;
+
+    padding: 18px;
+
+    box-sizing: border-box;
+
+    background: #ffffff;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 10px;
+}
+
+.saved-item span {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: #64748b;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.7px;
+}
+
+.saved-item strong {
+    display: block;
+
+    color: #111827;
+
+    font-size: 15px;
+
+    line-height: 1.5;
+
+    word-break: break-word;
+}
+
+
+/* =========================================================
+   TRUSTED EMERGENCY CONTACTS
+========================================================= */
+
+.trusted-contacts-section {
+    margin-bottom: 55px;
+}
+
+
+/* =========================================================
+   CONTACT SECTION HEADER
+========================================================= */
+
+.trusted-contacts-header {
+    display: flex;
+
+    align-items: flex-end;
+
+    justify-content: space-between;
+
+    gap: 30px;
+
+    margin-bottom: 28px;
+}
+
+.trusted-contacts-header h2 {
+    margin: 9px 0 10px;
+
+    color: #111827;
+
+    font-size: 30px;
+}
+
+.trusted-contacts-header p {
+    max-width: 700px;
+
+    margin: 0;
+
+    color: #526b88;
+
+    font-size: 15px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   ADD CONTACT BUTTON
+========================================================= */
+
+.add-contact-button {
+    flex-shrink: 0;
+
+    padding: 13px 20px;
+
+    background: #dc2626;
+
+    color: #ffffff;
+
+    border: none;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    font-family: inherit;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    white-space: nowrap;
+
+    transition:
+        background 0.3s ease,
+        transform 0.2s ease;
+}
+
+.add-contact-button:hover {
+    background: #b91c1c;
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   ADD CONTACT FORM
+========================================================= */
+
+.contact-form-container {
+    display: none;
+
+    margin-bottom: 25px;
+
+    padding: 30px;
+
+    background: #f8fafc;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 14px;
+}
+
+.contact-form-container.show {
+    display: block;
+}
+
+.contact-form-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+.contact-form-actions {
+    display: flex;
+
+    gap: 12px;
+
+    margin-top: 25px;
+}
+
+
+/* Save Contact */
+
+.save-contact-button {
+    padding: 13px 22px;
+
+    background: #dc2626;
+
+    color: #ffffff;
+
+    border: none;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    font-family: inherit;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    transition: background 0.3s ease;
+}
+
+.save-contact-button:hover {
+    background: #b91c1c;
+}
+
+
+/* Cancel */
+
+.cancel-contact-button {
+    padding: 13px 22px;
+
+    background: #ffffff;
+
+    color: #374151;
+
+    border: 1px solid #d1d5db;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    font-family: inherit;
+
+    font-size: 14px;
+
+    font-weight: 700;
+}
+
+.cancel-contact-button:hover {
+    background: #f9fafb;
+}
+
+
+/* =========================================================
+   CONTACT LIST
+========================================================= */
+
+.contacts-list {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 15px;
+}
+
+
+/* =========================================================
+   CONTACT ITEM
+========================================================= */
+
+.contact-item {
     display: flex;
 
     align-items: center;
 
     justify-content: space-between;
 
-}
+    gap: 20px;
 
-.list-heading span {
-
-    color: #dc2626;
-
-    font-size: 10px;
-
-    font-weight: 800;
-
-    letter-spacing: 2px;
-
-}
-
-.list-heading h2 {
-
-    margin-top: 5px;
-
-    color: #111827;
-
-    font-size: 25px;
-
-}
-
-.contact-count {
-
-    width: 40px;
-
-    height: 40px;
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: center;
-
-    border-radius: 50%;
-
-    background: #fee2e2;
-
-    color: #dc2626;
-
-    font-size: 14px;
-
-    font-weight: 800;
-
-}
-
-
-/* =========================================================
-   7. CONTACT GRID
-========================================================= */
-
-.contacts-grid {
-
-    display: grid;
-
-    grid-template-columns: repeat(2, 1fr);
-
-    gap: 18px;
-
-}
-
-
-/* =========================================================
-   8. CONTACT CARD
-========================================================= */
-
-.contact-card {
-
-    padding: 22px;
+    padding: 22px 25px;
 
     background: #ffffff;
 
     border: 1px solid #e5e7eb;
 
-    border-radius: 14px;
+    border-radius: 12px;
 
-    transition: all 0.3s ease;
+    box-shadow: 0 5px 18px rgba(17, 24, 39, 0.05);
 
+    transition:
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
 }
 
-.contact-card:hover {
-
-    transform: translateY(-5px);
-
+.contact-item:hover {
     border-color: #fecaca;
 
-    box-shadow:
-        0 12px 25px rgba(0, 0, 0, 0.08);
-
+    box-shadow: 0 8px 22px rgba(17, 24, 39, 0.08);
 }
 
 
-/* =========================================================
-   9. CONTACT TOP
-========================================================= */
+/* Contact information */
 
-.contact-top {
-
-    display: flex;
-
-    align-items: center;
-
-    gap: 13px;
-
-    margin-bottom: 17px;
-
+.contact-info {
+    min-width: 0;
 }
 
-.contact-avatar {
-
-    width: 48px;
-
-    height: 48px;
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: center;
-
-    border-radius: 50%;
-
-    background: #fee2e2;
-
-    color: #dc2626;
-
-    font-size: 18px;
-
-    font-weight: 800;
-
-}
-
-.contact-name {
+.contact-info h3 {
+    margin: 0 0 5px;
 
     color: #111827;
 
-    font-size: 16px;
-
-    font-weight: 800;
-
+    font-size: 18px;
 }
 
-.contact-relation {
+.contact-info p {
+    margin: 0;
 
-    margin-top: 3px;
+    color: #64748b;
 
-    color: #6b7280;
-
-    font-size: 11px;
-
+    font-size: 14px;
 }
-
-
-/* =========================================================
-   10. PHONE
-========================================================= */
 
 .contact-phone {
+    margin-top: 7px !important;
 
-    margin-bottom: 17px;
+    color: #374151 !important;
 
-    padding: 10px;
-
-    border-radius: 8px;
-
-    background: #f9fafb;
-
-    color: #374151;
-
-    font-size: 13px;
-
+    font-weight: 600;
 }
 
 
 /* =========================================================
-   11. CONTACT ACTIONS
+   CONTACT ACTIONS
 ========================================================= */
 
 .contact-actions {
-
     display: flex;
 
-    gap: 8px;
+    align-items: center;
 
+    gap: 10px;
+
+    flex-shrink: 0;
 }
 
-.call-contact {
 
-    flex: 1;
+/* Call */
 
-    padding: 9px;
+.call-button {
+    display: inline-block;
 
-    border-radius: 7px;
+    padding: 10px 18px;
 
-    background: #111827;
+    background: #15803d;
 
     color: #ffffff;
 
-    text-align: center;
+    border-radius: 7px;
 
-    font-size: 11px;
+    text-decoration: none;
+
+    font-size: 13px;
 
     font-weight: 700;
 
-    transition: 0.3s;
-
+    transition: background 0.3s ease;
 }
 
-.call-contact:hover {
-
-    background: #dc2626;
-
+.call-button:hover {
+    background: #166534;
 }
 
-.delete-contact {
 
-    padding: 9px 12px;
+/* Delete */
+
+.delete-contact-button {
+    padding: 10px 16px;
+
+    background: #ffffff;
+
+    color: #dc2626;
 
     border: 1px solid #fecaca;
 
     border-radius: 7px;
 
-    background: #fff5f5;
+    cursor: pointer;
 
-    color: #dc2626;
+    font-family: inherit;
 
-    font-size: 11px;
+    font-size: 13px;
 
     font-weight: 700;
 
-    cursor: pointer;
-
-    transition: 0.3s;
-
+    transition:
+        background 0.3s ease,
+        border-color 0.3s ease;
 }
 
-.delete-contact:hover {
+.delete-contact-button:hover {
+    background: #fef2f2;
+
+    border-color: #dc2626;
+}
+
+
+/* =========================================================
+   NO CONTACTS
+========================================================= */
+
+.no-contacts {
+    padding: 35px;
+
+    background: #f8fafc;
+
+    border: 1px dashed #cbd5e1;
+
+    border-radius: 12px;
+
+    text-align: center;
+}
+
+.no-contacts h3 {
+    margin: 0 0 8px;
+
+    color: #374151;
+
+    font-size: 18px;
+}
+
+.no-contacts p {
+    margin: 0;
+
+    color: #64748b;
+
+    font-size: 14px;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   PRIVACY NOTICE
+========================================================= */
+
+.privacy-notice {
+    margin-bottom: 45px;
+
+    padding: 25px 28px;
+
+    background: #f9fafb;
+
+    border-left: 4px solid #64748b;
+
+    border-radius: 8px;
+}
+
+.privacy-notice h2 {
+    margin: 0 0 10px;
+
+    color: #111827;
+
+    font-size: 20px;
+}
+
+.privacy-notice p {
+    margin: 8px 0;
+
+    color: #526b88;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   EMERGENCY SECTION
+========================================================= */
+
+.contact-emergency {
+    padding: 35px;
+
+    background: #fff5f5;
+
+    border: 1px solid #fecaca;
+
+    border-radius: 14px;
+
+    text-align: center;
+}
+
+.contact-emergency h2 {
+    margin: 0 0 10px;
+
+    color: #111827;
+
+    font-size: 27px;
+}
+
+.contact-emergency p {
+    margin: 0 auto 22px;
+
+    max-width: 650px;
+
+    color: #526b88;
+
+    font-size: 15px;
+
+    line-height: 1.7;
+}
+
+.emergency-button {
+    display: inline-block;
+
+    padding: 13px 22px;
 
     background: #dc2626;
 
     color: #ffffff;
 
+    border-radius: 8px;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    transition:
+        background 0.3s ease,
+        transform 0.2s ease;
+}
+
+.emergency-button:hover {
+    background: #b91c1c;
+
+    transform: translateY(-2px);
 }
 
 
 /* =========================================================
-   12. EMPTY STATE
+   TABLET
 ========================================================= */
 
-.empty-contacts {
+@media (max-width: 1000px) {
 
-    grid-column: 1 / -1;
+    .contacts-intro h1 {
+        font-size: 44px;
+    }
 
-    padding: 50px 25px;
+    .saved-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
 
-    text-align: center;
-
-    background: #ffffff;
-
-    border: 1px dashed #d1d5db;
-
-    border-radius: 14px;
-
-}
-
-.empty-icon {
-
-    margin-bottom: 12px;
-
-    font-size: 38px;
-
-}
-
-.empty-contacts h3 {
-
-    margin-bottom: 6px;
-
-    color: #374151;
-
-    font-size: 17px;
-
-}
-
-.empty-contacts p {
-
-    color: #9ca3af;
-
-    font-size: 12px;
+    .contact-form-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
 
 }
 
 
 /* =========================================================
-   13. SAFETY TIP
+   MOBILE
 ========================================================= */
 
-.contact-tip {
+@media (max-width: 700px) {
 
-    padding: 35px 7%;
+    .contacts-page {
+        width: 90%;
 
-    background: #ffffff;
+        padding: 50px 0 60px;
+    }
 
-}
+    .contacts-intro h1 {
+        font-size: 36px;
+    }
 
-.tip-box {
+    .contacts-intro p {
+        font-size: 15px;
+    }
 
-    max-width: 1000px;
+    .medical-card {
+        padding: 25px;
+    }
 
-    margin: auto;
-
-    padding: 20px 25px;
-
-    display: flex;
-
-    align-items: center;
-
-    gap: 15px;
-
-    background: #eff6ff;
-
-    border: 1px solid #bfdbfe;
-
-    border-radius: 12px;
-
-}
-
-.tip-icon {
-
-    flex-shrink: 0;
-
-    font-size: 28px;
-
-}
-
-.tip-box h3 {
-
-    margin-bottom: 4px;
-
-    color: #1e40af;
-
-    font-size: 15px;
-
-}
-
-.tip-box p {
-
-    color: #6b7280;
-
-    font-size: 12px;
-
-    line-height: 1.6;
-
-}
-
-
-/* =========================================================
-   14. MOBILE
-========================================================= */
-
-@media (max-width: 900px) {
-
-    .contacts-layout {
-
+    .form-grid {
         grid-template-columns: 1fr;
 
+        gap: 20px;
     }
 
-}
-
-
-@media (max-width: 650px) {
-
-    .contacts-header {
-
-        padding: 55px 6% 40px;
-
+    .form-actions {
+        flex-direction: column;
     }
 
-    .contacts-header h1 {
-
-        font-size: 38px;
-
+    .save-button,
+    .clear-button {
+        width: 100%;
     }
 
-    .contacts-section {
-
-        padding: 45px 6%;
-
+    .saved-card {
+        padding: 25px;
     }
 
-    .contacts-grid {
-
+    .saved-grid {
         grid-template-columns: 1fr;
-
     }
 
-    .list-heading h2 {
 
-        font-size: 21px;
+    /* Trusted contacts */
 
-    }
-
-    .contact-tip {
-
-        padding: 25px 6%;
-
-    }
-
-    .tip-box {
+    .trusted-contacts-header {
+        flex-direction: column;
 
         align-items: flex-start;
 
-        padding: 18px;
+        gap: 20px;
+    }
 
+    .add-contact-button {
+        width: 100%;
+    }
+
+    .contact-form-container {
+        padding: 22px;
+    }
+
+    .contact-form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-form-actions {
+        flex-direction: column;
+    }
+
+    .save-contact-button,
+    .cancel-contact-button {
+        width: 100%;
+    }
+
+
+    /* Contact item */
+
+    .contact-item {
+        align-items: flex-start;
+
+        flex-direction: column;
+
+        padding: 20px;
+    }
+
+    .contact-actions {
+        width: 100%;
+    }
+
+    .call-button,
+    .delete-contact-button {
+        flex: 1;
+
+        text-align: center;
+    }
+
+
+    .contact-emergency {
+        padding: 28px 20px;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 420px) {
+
+    .contacts-intro h1 {
+        font-size: 31px;
+    }
+
+    .medical-card {
+        padding: 20px;
+    }
+
+    .saved-card {
+        padding: 20px;
+    }
+
+    .trusted-contacts-header h2 {
+        font-size: 25px;
+    }
+
+    .contact-actions {
+        flex-direction: column;
+    }
+
+    .call-button,
+    .delete-contact-button {
+        width: 100%;
+        box-sizing: border-box;
     }
 
 }

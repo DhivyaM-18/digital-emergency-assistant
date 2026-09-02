@@ -2,706 +2,610 @@
 <html lang="en">
 
 <head>
-
     <meta charset="UTF-8">
-
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>First Aid | Digital Emergency Assistant</title>
 
     <link rel="stylesheet" href="css/common.css">
-
     <link rel="stylesheet" href="css/firstaid.css">
-
 </head>
-
 
 <body>
 
+    <!-- ==============================
+         NAVIGATION
+    =============================== -->
 
-    <!-- =====================================================
-         NAVBAR
-    ====================================================== -->
+    <header class="navbar">
 
-    <nav class="navbar">
-
-        <a href="index.html" class="logo">
-
-            <span class="logo-icon">+</span>
-
-            Digital Emergency Assistant
-
-        </a>
-
-
-        <ul class="nav-links">
-
-            <li>
-                <a href="index.html">
-                    Home
-                </a>
-            </li>
-
-            <li>
-                <a href="emergency.html">
-                    Emergency
-                </a>
-            </li>
-
-            <li>
-                <a href="first-aid.html" class="active">
-                    First Aid
-                </a>
-            </li>
-
-            <li>
-                <a href="contacts.html">
-                    Contacts
-                </a>
-            </li>
-
-            <li>
-                <a href="guide.html">
-                    Safety Guide
-                </a>
-            </li>
-
-        </ul>
-
-    </nav>
-
-
-
-    <!-- =====================================================
-         FIRST AID HEADER
-    ====================================================== -->
-
-    <section class="firstaid-header">
-
-        <p>
-            FIRST AID INFORMATION
-        </p>
-
-        <h1>
-            Learn. Respond. <span>Stay Safe.</span>
-        </h1>
-
-        <span>
-            Simple first-aid information for common
-            emergency situations.
-        </span>
-
-    </section>
-
-
-
-    <!-- =====================================================
-         IMPORTANT NOTICE
-    ====================================================== -->
-
-    <section class="firstaid-notice">
-
-        <div class="notice-content">
-
-            <div class="notice-icon">
-                ⚠️
-            </div>
-
-            <div>
-
-                <h3>
-                    Important Safety Notice
-                </h3>
-
-                <p>
-                    First-aid information is provided for
-                    general guidance only. In a serious
-                    emergency, contact qualified medical
-                    professionals immediately.
-                </p>
-
-            </div>
-
+        <div class="logo">
+            <div class="logo-icon">+</div>
+            <span>Digital Emergency Assistant</span>
         </div>
+    <nav class="nav-links">
 
-    </section>
+    <a href="index.html">
+        Home
+    </a>
 
+    <a href="emergency.html">
+        Emergency
+    </a>
 
+    <a href="first-aid.html" class="active">
+        First Aid
+    </a>
 
-    <!-- =====================================================
-         SEARCH AND FILTER
-    ====================================================== -->
+    <a href="contacts.html">
+        Contacts
+    </a>
 
-    <section class="firstaid-tools">
+    <a href="guide.html">
+        Safety Guide
+    </a>
 
-        <div class="search-box">
+    <a href="shelters.html">
+        Nearby Help
+    </a>
+     <a href="sos.html">SOS</a>
 
-            <input
-                type="text"
-                id="firstAidSearch"
-                placeholder="🔎 Search first aid topics..."
-                onkeyup="searchFirstAid()">
+</nav>
 
-        </div>
-
-
-        <div class="category-buttons">
-
-            <button
-                class="category-btn active-category"
-                onclick="filterFirstAid('all', this)">
-
-                All
-
-            </button>
-
-
-            <button
-                class="category-btn"
-                onclick="filterFirstAid('injury', this)">
-
-                Injuries
-
-            </button>
+    </header>
 
 
-            <button
-                class="category-btn"
-                onclick="filterFirstAid('burn', this)">
+    <!-- ==============================
+         MAIN CONTENT
+    =============================== -->
 
-                Burns
-
-            </button>
+    <main class="firstaid-page">
 
 
-            <button
-                class="category-btn"
-                onclick="filterFirstAid('medical', this)">
+        <!-- INTRODUCTION -->
 
-                Medical
+        <section class="firstaid-intro">
 
-            </button>
+            <span class="section-label">
+                FIRST AID INFORMATION
+            </span>
 
+            <h1>
+                First Aid<br>
+                <span>Quick Reference</span>
+            </h1>
 
-            <button
-                class="category-btn"
-                onclick="filterFirstAid('bite', this)">
+            <p>
+                Simple first-aid instructions for common emergency
+                situations. Use these steps as immediate guidance
+                while arranging professional medical assistance.
+            </p>
 
-                Bites & Stings
-
-            </button>
-
-        </div>
-
-    </section>
-
-
-
-    <!-- =====================================================
-         FIRST AID CARDS
-    ====================================================== -->
-
-    <section class="firstaid-container">
-
-        <div class="firstaid-grid">
+        </section>
 
 
-            <!-- =================================================
-                 BURNS
-            ================================================== -->
+        <!-- IMPORTANT NOTICE -->
 
-            <div class="firstaid-card"
-                 data-category="burn">
+        <section class="firstaid-notice">
 
-                <div class="firstaid-icon">
-                    🔥
-                </div>
+            <strong>
+                Important:
+            </strong>
+
+            <span>
+                First aid does not replace professional medical care.
+                In a serious or life-threatening situation, contact
+                emergency services immediately.
+            </span>
+
+        </section>
+
+
+        <!-- ==============================
+             FIRST AID GUIDES
+        =============================== -->
+
+        <section class="firstaid-section">
+
+            <div class="section-heading">
+
+                <span class="card-label">
+                    QUICK RESPONSE
+                </span>
 
                 <h2>
-                    Burns
+                    Common Emergency Situations
                 </h2>
 
                 <p>
-                    Basic first-aid steps for minor burns
-                    caused by heat or hot objects.
+                    Follow the appropriate steps and avoid actions
+                    that could make the situation worse.
                 </p>
 
-
-                <button
-                    class="learn-button"
-                    onclick="toggleAid(this)">
-
-                    View Instructions
-
-                </button>
+            </div>
 
 
-                <div class="aid-details">
+            <div class="firstaid-grid">
+
+
+                <!-- SEVERE BLEEDING -->
+
+                <article class="firstaid-card">
+
+                    <div class="firstaid-number">
+                        01
+                    </div>
+
+                    <h3>
+                        Severe Bleeding
+                    </h3>
+
+                    <p>
+                        Heavy bleeding requires immediate attention.
+                        Act quickly while arranging emergency medical
+                        assistance.
+                    </p>
 
                     <h4>
                         What to do
                     </h4>
 
                     <ol>
+                        <li>
+                            Call emergency medical services.
+                        </li>
 
+                        <li>
+                            Apply firm, direct pressure to the wound
+                            using clean cloth or gauze.
+                        </li>
+
+                        <li>
+                            Keep continuous pressure on the wound.
+                        </li>
+
+                        <li>
+                            If blood soaks through the material,
+                            add more material without removing the
+                            original layer.
+                        </li>
+
+                        <li>
+                            Keep the person as still and comfortable
+                            as possible.
+                        </li>
+                    </ol>
+
+                    <div class="avoid-box">
+
+                        <strong>
+                            Avoid
+                        </strong>
+
+                        <span>
+                            Do not remove an object that is deeply
+                            embedded in the wound.
+                        </span>
+
+                    </div>
+
+                </article>
+
+
+                <!-- CHOKING -->
+
+                <article class="firstaid-card">
+
+                    <div class="firstaid-number">
+                        02
+                    </div>
+
+                    <h3>
+                        Choking
+                    </h3>
+
+                    <p>
+                        If a person cannot breathe, speak or cough
+                        effectively, immediate action may be required.
+                    </p>
+
+                    <h4>
+                        What to do
+                    </h4>
+
+                    <ol>
+                        <li>
+                            Encourage the person to cough if they
+                            can cough effectively.
+                        </li>
+
+                        <li>
+                            If they cannot breathe or cough effectively,
+                            call emergency services.
+                        </li>
+
+                        <li>
+                            Give appropriate back blows and abdominal
+                            thrusts according to first-aid training.
+                        </li>
+
+                        <li>
+                            If the person becomes unresponsive,
+                            begin CPR and follow emergency dispatcher
+                            instructions.
+                        </li>
+                    </ol>
+
+                    <div class="avoid-box">
+
+                        <strong>
+                            Avoid
+                        </strong>
+
+                        <span>
+                            Do not blindly put your fingers into the
+                            person's mouth to search for an object.
+                        </span>
+
+                    </div>
+
+                </article>
+
+
+                <!-- BURNS -->
+
+                <article class="firstaid-card">
+
+                    <div class="firstaid-number">
+                        03
+                    </div>
+
+                    <h3>
+                        Burns
+                    </h3>
+
+                    <p>
+                        Cool minor thermal burns promptly and seek
+                        medical care for serious or extensive burns.
+                    </p>
+
+                    <h4>
+                        What to do
+                    </h4>
+
+                    <ol>
                         <li>
                             Move away from the source of heat.
                         </li>
 
                         <li>
-                            Cool the affected area with
-                            clean running water.
+                            Cool the affected area with cool running
+                            water for about 20 minutes.
                         </li>
 
                         <li>
-                            Remove tight items near the
-                            affected area if possible.
+                            Remove jewellery or loose items near the
+                            affected area if they are not stuck.
                         </li>
 
                         <li>
-                            Cover the burn with a clean
-                            non-stick dressing.
+                            Cover the burn loosely with a clean,
+                            non-stick dressing or material.
                         </li>
-
                     </ol>
 
+                    <div class="avoid-box">
 
-                    <div class="aid-warning">
+                        <strong>
+                            Avoid
+                        </strong>
 
-                        Seek medical help for serious,
-                        deep or extensive burns.
+                        <span>
+                            Do not apply ice, butter, toothpaste or
+                            other household substances to a burn.
+                        </span>
 
                     </div>
 
-                </div>
-
-            </div>
+                </article>
 
 
+                <!-- CPR -->
 
-            <!-- =================================================
-                 CUTS
-            ================================================== -->
+                <article class="firstaid-card">
 
-            <div class="firstaid-card"
-                 data-category="injury">
+                    <div class="firstaid-number">
+                        04
+                    </div>
 
-                <div class="firstaid-icon">
-                    🩹
-                </div>
+                    <h3>
+                        CPR & Cardiac Emergency
+                    </h3>
 
-                <h2>
-                    Cuts & Wounds
-                </h2>
-
-                <p>
-                    Basic care for minor cuts, scratches
-                    and small wounds.
-                </p>
-
-
-                <button
-                    class="learn-button"
-                    onclick="toggleAid(this)">
-
-                    View Instructions
-
-                </button>
-
-
-                <div class="aid-details">
+                    <p>
+                        If a person is unresponsive and not breathing
+                        normally, treat the situation as an emergency.
+                    </p>
 
                     <h4>
                         What to do
                     </h4>
 
                     <ol>
-
                         <li>
-                            Wash your hands before helping.
+                            Check that the area is safe.
                         </li>
 
                         <li>
-                            Rinse the wound gently with
-                            clean water.
+                            Check responsiveness and normal breathing.
                         </li>
 
                         <li>
-                            Apply gentle pressure with
-                            clean gauze to control bleeding.
+                            Call emergency medical services and ask
+                            someone to get an AED if available.
                         </li>
 
                         <li>
-                            Cover the wound with a clean
-                            dressing.
+                            Begin chest compressions if the person is
+                            not breathing normally.
                         </li>
 
+                        <li>
+                            Follow instructions from the emergency
+                            dispatcher and use an AED when available
+                            and appropriate.
+                        </li>
                     </ol>
 
+                    <div class="avoid-box">
 
-                    <div class="aid-warning">
+                        <strong>
+                            Important
+                        </strong>
 
-                        Get medical attention if bleeding
-                        does not stop or the wound is deep.
+                        <span>
+                            If you are not trained in CPR, follow the
+                            emergency dispatcher's instructions.
+                        </span>
 
                     </div>
 
-                </div>
-
-            </div>
+                </article>
 
 
+                <!-- SNAKEBITE -->
 
-            <!-- =================================================
-                 FRACTURES
-            ================================================== -->
+                <article class="firstaid-card">
 
-            <div class="firstaid-card"
-                 data-category="injury">
+                    <div class="firstaid-number">
+                        05
+                    </div>
 
-                <div class="firstaid-icon">
-                    🦴
-                </div>
+                    <h3>
+                        Snakebite
+                    </h3>
 
-                <h2>
-                    Fractures
-                </h2>
-
-                <p>
-                    Basic guidance for suspected broken
-                    bones or serious injuries.
-                </p>
-
-
-                <button
-                    class="learn-button"
-                    onclick="toggleAid(this)">
-
-                    View Instructions
-
-                </button>
-
-
-                <div class="aid-details">
+                    <p>
+                        A suspected venomous snakebite requires
+                        urgent medical evaluation.
+                    </p>
 
                     <h4>
                         What to do
                     </h4>
 
                     <ol>
-
                         <li>
-                            Keep the injured person as still
-                            as possible.
+                            Move away from the snake and keep a safe
+                            distance.
                         </li>
-
-                        <li>
-                            Do not try to straighten the
-                            injured body part.
-                        </li>
-
-                        <li>
-                            Support the injured area without
-                            moving it unnecessarily.
-                        </li>
-
-                        <li>
-                            Contact emergency medical
-                            services.
-                        </li>
-
-                    </ol>
-
-
-                    <div class="aid-warning">
-
-                        Suspected fractures require
-                        professional medical evaluation.
-
-                    </div>
-
-                </div>
-
-            </div>
-
-
-
-            <!-- =================================================
-                 BLEEDING
-            ================================================== -->
-
-            <div class="firstaid-card"
-                 data-category="medical">
-
-                <div class="firstaid-icon">
-                    🩸
-                </div>
-
-                <h2>
-                    Severe Bleeding
-                </h2>
-
-                <p>
-                    Basic actions to take when someone has
-                    significant external bleeding.
-                </p>
-
-
-                <button
-                    class="learn-button"
-                    onclick="toggleAid(this)">
-
-                    View Instructions
-
-                </button>
-
-
-                <div class="aid-details">
-
-                    <h4>
-                        What to do
-                    </h4>
-
-                    <ol>
 
                         <li>
                             Call emergency medical services.
                         </li>
 
                         <li>
-                            Apply firm, direct pressure
-                            using clean cloth or gauze.
+                            Keep the affected person calm and still.
                         </li>
 
                         <li>
-                            Keep pressure on the wound
-                            until help arrives.
+                            Keep the bitten limb as still as possible.
                         </li>
 
                         <li>
-                            Keep the person as calm and
-                            still as possible.
+                            Remove rings, watches or tight items near
+                            the affected limb before swelling increases.
                         </li>
-
                     </ol>
 
+                    <div class="avoid-box">
 
-                    <div class="aid-warning">
+                        <strong>
+                            Avoid
+                        </strong>
 
-                        Severe bleeding is a medical emergency.
-                        Get professional help immediately.
+                        <span>
+                            Do not cut or suck the wound, apply ice,
+                            or attempt to catch or handle the snake.
+                        </span>
 
                     </div>
 
-                </div>
-
-            </div>
+                </article>
 
 
+                <!-- HEATSTROKE -->
 
-            <!-- =================================================
-                 FAINTING
-            ================================================== -->
+                <article class="firstaid-card">
 
-            <div class="firstaid-card"
-                 data-category="medical">
+                    <div class="firstaid-number">
+                        06
+                    </div>
 
-                <div class="firstaid-icon">
-                    😵
-                </div>
+                    <h3>
+                        Heatstroke
+                    </h3>
 
-                <h2>
-                    Fainting
-                </h2>
-
-                <p>
-                    Basic steps for helping someone who has
-                    briefly lost consciousness.
-                </p>
-
-
-                <button
-                    class="learn-button"
-                    onclick="toggleAid(this)">
-
-                    View Instructions
-
-                </button>
-
-
-                <div class="aid-details">
+                    <p>
+                        Heatstroke is a medical emergency and can
+                        become life-threatening quickly.
+                    </p>
 
                     <h4>
                         What to do
                     </h4>
 
                     <ol>
-
                         <li>
-                            Check whether the person is
-                            breathing normally.
+                            Call emergency medical services immediately.
                         </li>
 
                         <li>
-                            Help them lie down safely.
+                            Move the person to a cool or shaded area.
                         </li>
 
                         <li>
-                            Loosen tight clothing around
-                            the neck.
+                            Remove unnecessary outer clothing.
                         </li>
 
                         <li>
-                            Allow them to recover calmly.
+                            Cool the person rapidly using cool water,
+                            wet cloths, fans or other appropriate methods.
                         </li>
 
+                        <li>
+                            Monitor the person until medical help arrives.
+                        </li>
                     </ol>
 
+                    <div class="avoid-box">
 
-                    <div class="aid-warning">
+                        <strong>
+                            Important
+                        </strong>
 
-                        If the person does not regain
-                        consciousness or is not breathing
-                        normally, call emergency services.
+                        <span>
+                            Do not delay emergency medical care when
+                            heatstroke is suspected.
+                        </span>
 
                     </div>
 
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==============================
+             GENERAL FIRST AID RULES
+        =============================== -->
+
+        <section class="general-firstaid">
+
+            <span class="card-label">
+                GENERAL GUIDELINES
+            </span>
+
+            <h2>
+                Before Providing First Aid
+            </h2>
+
+            <div class="general-grid">
+
+                <div>
+                    <strong>01. Check the scene</strong>
+                    <p>
+                        Make sure the area is safe before approaching
+                        an injured person.
+                    </p>
+                </div>
+
+                <div>
+                    <strong>02. Get help</strong>
+                    <p>
+                        Contact emergency services when the condition
+                        is serious or life-threatening.
+                    </p>
+                </div>
+
+                <div>
+                    <strong>03. Protect yourself</strong>
+                    <p>
+                        Use gloves or other protective barriers when
+                        available, especially when dealing with blood.
+                    </p>
+                </div>
+
+                <div>
+                    <strong>04. Stay calm</strong>
+                    <p>
+                        Speak calmly and reassure the injured person
+                        while waiting for professional help.
+                    </p>
                 </div>
 
             </div>
 
+        </section>
 
 
-            <!-- =================================================
-                 INSECT BITES
-            ================================================== -->
+        <!-- ==============================
+             EMERGENCY ACTION
+        =============================== -->
 
-            <div class="firstaid-card"
-                 data-category="bite">
+        <section class="firstaid-emergency">
 
-                <div class="firstaid-icon">
-                    🐝
-                </div>
-
-                <h2>
-                    Bites & Stings
-                </h2>
-
-                <p>
-                    Basic care for common insect bites
-                    and stings.
-                </p>
-
-
-                <button
-                    class="learn-button"
-                    onclick="toggleAid(this)">
-
-                    View Instructions
-
-                </button>
-
-
-                <div class="aid-details">
-
-                    <h4>
-                        What to do
-                    </h4>
-
-                    <ol>
-
-                        <li>
-                            Move away from the source of
-                            the bite or sting.
-                        </li>
-
-                        <li>
-                            Wash the affected area gently.
-                        </li>
-
-                        <li>
-                            Apply a cool compress to reduce
-                            swelling.
-                        </li>
-
-                        <li>
-                            Monitor for signs of a serious
-                            allergic reaction.
-                        </li>
-
-                    </ol>
-
-
-                    <div class="aid-warning">
-
-                        Seek emergency help if there is
-                        difficulty breathing or severe
-                        swelling.
-
-                    </div>
-
-                </div>
-
-            </div>
-
-
-
-        </div>
-
-
-        <!-- NO RESULTS -->
-
-        <div class="no-results" id="noResults">
-
-            <div>
-                🔎
-            </div>
-
-            <h3>
-                No results found
-            </h3>
+            <h2>
+                Is Someone in Immediate Danger?
+            </h2>
 
             <p>
-                Try searching for another first-aid topic.
+                Contact emergency services immediately for
+                life-threatening situations.
             </p>
 
-        </div>
+            <a
+                href="emergency.html"
+                class="firstaid-emergency-button">
 
-    </section>
+                Go to Emergency Services
+
+            </a>
+
+        </section>
 
 
+    </main>
 
-    <!-- =====================================================
+
+    <!-- ==============================
          FOOTER
-    ====================================================== -->
+    =============================== -->
 
     <footer class="footer">
 
         <p>
 
-            © <span class="current-year"></span>
+            &copy;
 
-            <strong>
-                Digital Emergency Assistant
-            </strong>.
+            <span class="current-year"></span>
 
-            Stay safe, stay prepared.
+            Digital Emergency Assistant.
+            Stay informed. Stay safe.
 
         </p>
 
     </footer>
 
 
-
-    <!-- =====================================================
+    <!-- ==============================
          JAVASCRIPT
-    ====================================================== -->
+    =============================== -->
 
     <script src="js/app.js"></script>
-
     <script src="js/firstaid.js"></script>
-
 
 </body>
 

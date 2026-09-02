@@ -1,41 +1,149 @@
 /* =========================================================
    DIGITAL EMERGENCY ASSISTANT
-   SAFETY GUIDE JAVASCRIPT
+   SAFETY GUIDE
+   guide.js
 ========================================================= */
 
 
 /* =========================================================
-   1. SHOW / HIDE GUIDE DETAILS
+   STORAGE
 ========================================================= */
 
-function toggleGuide(button) {
+const CHECKLIST_STORAGE_KEY =
+    "digitalEmergencyPreparednessChecklist";
 
-    const card =
-        button.closest(".guide-card");
 
-    if (!card) {
+/* =========================================================
+   PAGE LOAD
+========================================================= */
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    loadChecklist();
+
+    setupChecklist();
+
+});
+
+
+/* =========================================================
+   SETUP CHECKBOXES
+========================================================= */
+
+function setupChecklist() {
+
+    const checkboxes =
+        document.querySelectorAll(".preparedness-check");
+
+
+    checkboxes.forEach(function (checkbox) {
+
+        checkbox.addEventListener(
+            "change",
+            function () {
+
+                saveChecklist();
+
+                updateChecklistProgress();
+
+            }
+        );
+
+    });
+
+
+    updateChecklistProgress();
+
+}
+
+
+/* =========================================================
+   SAVE CHECKLIST
+========================================================= */
+
+function saveChecklist() {
+
+    const checkboxes =
+        document.querySelectorAll(".preparedness-check");
+
+
+    const checklistData = {};
+
+
+    checkboxes.forEach(function (checkbox) {
+
+        const item =
+            checkbox.dataset.item;
+
+
+        checklistData[item] =
+            checkbox.checked;
+
+    });
+
+
+    localStorage.setItem(
+
+        CHECKLIST_STORAGE_KEY,
+
+        JSON.stringify(checklistData)
+
+    );
+
+}
+
+
+/* =========================================================
+   LOAD CHECKLIST
+========================================================= */
+
+function loadChecklist() {
+
+    const savedData =
+        localStorage.getItem(
+            CHECKLIST_STORAGE_KEY
+        );
+
+
+    if (!savedData) {
+        updateChecklistProgress();
         return;
     }
 
 
-    const details =
-        card.querySelector(".guide-details");
+    try {
 
-    if (!details) {
-        return;
-    }
+        const checklistData =
+            JSON.parse(savedData);
 
 
-    details.classList.toggle("show");
+        const checkboxes =
+            document.querySelectorAll(
+                ".preparedness-check"
+            );
 
 
-    if (details.classList.contains("show")) {
+        checkboxes.forEach(function (checkbox) {
 
-        button.textContent = "Hide";
+            const item =
+                checkbox.dataset.item;
 
-    } else {
 
-        button.textContent = "Read More";
+            checkbox.checked =
+                checklistData[item] === true;
+
+        });
+
+
+        updateChecklistProgress();
+
+
+    } catch (error) {
+
+        console.error(
+            "Unable to load preparedness checklist:",
+            error
+        );
 
     }
 
@@ -43,22 +151,30 @@ function toggleGuide(button) {
 
 
 /* =========================================================
-   2. CHECKLIST
+   UPDATE PROGRESS
 ========================================================= */
 
-const safetyChecks =
-    document.querySelectorAll(".safety-check");
+function updateChecklistProgress() {
 
-const progressFill =
-    document.getElementById("progressFill");
-
-const progressPercent =
-    document.getElementById("progressPercent");
+    const checkboxes =
+        document.querySelectorAll(
+            ".preparedness-check"
+        );
 
 
-function updateProgress() {
+    const progressText =
+        document.getElementById(
+            "checklistProgress"
+        );
 
-    if (safetyChecks.length === 0) {
+
+    const progressFill =
+        document.getElementById(
+            "progressFill"
+        );
+
+
+    if (!checkboxes.length) {
         return;
     }
 
@@ -66,7 +182,7 @@ function updateProgress() {
     let completed = 0;
 
 
-    safetyChecks.forEach(function (checkbox) {
+    checkboxes.forEach(function (checkbox) {
 
         if (checkbox.checked) {
 
@@ -77,38 +193,73 @@ function updateProgress() {
     });
 
 
+    const total =
+        checkboxes.length;
+
+
     const percentage =
         Math.round(
-            (completed / safetyChecks.length) * 100
+            (completed / total) * 100
         );
 
 
-    progressFill.style.width =
-        percentage + "%";
+    /* Update percentage text */
+
+    if (progressText) {
+
+        progressText.textContent =
+            percentage + "%";
+
+    }
 
 
-    progressPercent.textContent =
-        percentage + "%";
+    /* Update progress bar */
+
+    if (progressFill) {
+
+        progressFill.style.width =
+            percentage + "%";
+
+    }
 
 }
 
 
 /* =========================================================
-   3. CHECKBOX EVENT
+   RESET CHECKLIST
 ========================================================= */
 
-safetyChecks.forEach(function (checkbox) {
+function resetChecklist() {
 
-    checkbox.addEventListener(
-        "change",
-        updateProgress
+    const confirmed =
+        confirm(
+            "Are you sure you want to reset the preparedness checklist?"
+        );
+
+
+    if (!confirmed) {
+        return;
+    }
+
+
+    const checkboxes =
+        document.querySelectorAll(
+            ".preparedness-check"
+        );
+
+
+    checkboxes.forEach(function (checkbox) {
+
+        checkbox.checked = false;
+
+    });
+
+
+    localStorage.removeItem(
+        CHECKLIST_STORAGE_KEY
     );
 
-});
 
+    updateChecklistProgress();
 
-/* =========================================================
-   4. INITIAL PROGRESS
-========================================================= */
-
-updateProgress();
+}

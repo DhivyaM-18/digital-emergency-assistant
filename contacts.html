@@ -2,304 +2,621 @@
 <html lang="en">
 
 <head>
-
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
-
-    <title>Emergency Contacts | Digital Emergency Assistant</title>
+    <title>Contacts | Digital Emergency Assistant</title>
 
     <link rel="stylesheet" href="css/common.css">
-
     <link rel="stylesheet" href="css/contacts.css">
-
 </head>
 
 <body>
 
-    <!-- ================= NAVBAR ================= -->
+    <!-- ==============================
+         NAVIGATION
+    =============================== -->
 
-    <nav class="navbar">
+    <header class="navbar">
 
-        <a href="index.html" class="logo">
+        <div class="logo">
+            <div class="logo-icon">+</div>
+            <span>Digital Emergency Assistant</span>
+        </div>
 
-            <span class="logo-icon">+</span>
+    <nav class="nav-links">
 
-            Digital Emergency Assistant
+    <a href="index.html">
+        Home
+    </a>
 
-        </a>
+    <a href="emergency.html">
+        Emergency
+    </a>
 
-        <ul class="nav-links">
+    <a href="first-aid.html">
+        First Aid
+    </a>
 
-            <li>
-                <a href="index.html">Home</a>
-            </li>
+    <a href="contacts.html" class="active">
+        Contacts
+    </a>
 
-            <li>
-                <a href="emergency.html">Emergency</a>
-            </li>
+    <a href="guide.html">
+        Safety Guide
+    </a>
 
-            <li>
-                <a href="first-aid.html">First Aid</a>
-            </li>
-
-            <li>
-                <a href="contacts.html" class="active">
-                    Contacts
-                </a>
-            </li>
-
-            <li>
-                <a href="guide.html">Safety Guide</a>
-            </li>
-
-        </ul>
+    <a href="shelters.html">
+        Nearby Help
+    </a>
+    
+ <a href="sos.html">SOS</a>
 
     </nav>
 
-
-    <!-- ================= HEADER ================= -->
-
-    <section class="contacts-header">
-
-        <p class="contacts-label">
-            PERSONAL SAFETY
-        </p>
-
-        <h1>
-            Emergency <span>Contacts</span>
-        </h1>
-
-        <p>
-            Keep important people close when you need
-            help quickly.
-        </p>
-
-    </section>
+    </header>
 
 
-    <!-- ================= MAIN CONTENT ================= -->
+    <!-- ==============================
+         MAIN CONTENT
+    =============================== -->
 
-    <section class="contacts-section">
-
-        <div class="contacts-layout">
+    <main class="contacts-page">
 
 
-            <!-- ================= ADD CONTACT ================= -->
+        <!-- ==============================
+             INTRODUCTION
+        =============================== -->
 
-            <div class="contact-form-card">
+        <section class="contacts-intro">
 
-                <div class="form-icon">
-                    👤
+            <span class="section-label">
+                EMERGENCY INFORMATION
+            </span>
+
+            <h1>
+                Emergency<br>
+                <span>Medical Card</span>
+            </h1>
+
+            <p>
+                Store important medical information and trusted
+                emergency contacts that may help during an
+                emergency situation.
+            </p>
+
+        </section>
+
+
+        <!-- ==============================
+             MEDICAL CARD
+        =============================== -->
+
+        <section class="medical-card-section">
+
+            <div class="medical-card">
+
+                <div class="medical-card-header">
+
+                    <div>
+
+                        <span class="card-label">
+                            PERSONAL MEDICAL INFORMATION
+                        </span>
+
+                        <h2>
+                            Emergency Medical Card
+                        </h2>
+
+                    </div>
+
                 </div>
 
-                <h2>
-                    Add Emergency Contact
-                </h2>
 
-                <p>
-                    Save a trusted person who can be contacted
-                    during an emergency.
-                </p>
+                <!-- MEDICAL FORM -->
+
+                <form id="medicalForm">
+
+                    <div class="form-grid">
+
+
+                        <!-- FULL NAME -->
+
+                        <div class="form-group">
+
+                            <label for="personName">
+                                Full Name
+                            </label>
+
+                            <input
+                                type="text"
+                                id="personName"
+                                placeholder="Enter your full name"
+                            >
+
+                        </div>
+
+
+                        <!-- BLOOD GROUP -->
+
+                        <div class="form-group">
+
+                            <label for="bloodGroup">
+                                Blood Group
+                            </label>
+
+                            <select id="bloodGroup">
+
+                                <option value="">
+                                    Select blood group
+                                </option>
+
+                                <option value="A+">A+</option>
+                                <option value="A-">A-</option>
+                                <option value="B+">B+</option>
+                                <option value="B-">B-</option>
+                                <option value="AB+">AB+</option>
+                                <option value="AB-">AB-</option>
+                                <option value="O+">O+</option>
+                                <option value="O-">O-</option>
+
+                            </select>
+
+                        </div>
+
+
+                        <!-- ALLERGIES -->
+
+                        <div class="form-group">
+
+                            <label for="allergies">
+                                Allergies
+                            </label>
+
+                            <input
+                                type="text"
+                                id="allergies"
+                                placeholder="Example: Penicillin, peanuts"
+                            >
+
+                        </div>
+
+
+                        <!-- MEDICATIONS -->
+
+                        <div class="form-group">
+
+                            <label for="medications">
+                                Current Medications
+                            </label>
+
+                            <input
+                                type="text"
+                                id="medications"
+                                placeholder="Enter current medications"
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- BUTTONS -->
+
+                    <div class="form-actions">
+
+                        <button
+                            type="submit"
+                            class="save-button">
+                            Save Medical Card
+                        </button>
+
+                        <button
+                            type="button"
+                            class="clear-button"
+                            onclick="clearMedicalCard()">
+                            Clear Information
+                        </button>
+
+                    </div>
+
+
+                    <!-- STATUS -->
+
+                    <p
+                        id="save-status"
+                        class="save-status"
+                        aria-live="polite">
+                    </p>
+
+                </form>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==============================
+             SAVED MEDICAL INFORMATION
+        =============================== -->
+
+        <section class="saved-card-section">
+
+            <div class="saved-card">
+
+                <div class="saved-header">
+
+                    <span class="card-label">
+                        SAVED INFORMATION
+                    </span>
+
+                    <h2>
+                        Your Emergency Details
+                    </h2>
+
+                </div>
+
+
+                <div class="saved-grid">
+
+
+                    <!-- NAME -->
+
+                    <div class="saved-item">
+
+                        <span>
+                            Name
+                        </span>
+
+                        <strong id="displayName">
+                            Not provided
+                        </strong>
+
+                    </div>
+
+
+                    <!-- BLOOD GROUP -->
+
+                    <div class="saved-item">
+
+                        <span>
+                            Blood Group
+                        </span>
+
+                        <strong id="displayBlood">
+                            Not provided
+                        </strong>
+
+                    </div>
+
+
+                    <!-- ALLERGIES -->
+
+                    <div class="saved-item">
+
+                        <span>
+                            Allergies
+                        </span>
+
+                        <strong id="displayAllergies">
+                            Not provided
+                        </strong>
+
+                    </div>
+
+
+                    <!-- MEDICATIONS -->
+
+                    <div class="saved-item">
+
+                        <span>
+                            Medications
+                        </span>
+
+                        <strong id="displayMedications">
+                            Not provided
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             TRUSTED EMERGENCY CONTACTS
+        ================================================== -->
+
+        <section class="trusted-contacts-section">
+
+            <div class="trusted-contacts-header">
+
+                <div>
+
+                    <span class="card-label">
+                        TRUSTED PEOPLE
+                    </span>
+
+                    <h2>
+                        Emergency Contacts
+                    </h2>
+
+                    <p>
+                        Add family members, friends or guardians
+                        who can be contacted if you are in difficulty
+                        or unable to handle an emergency yourself.
+                    </p>
+
+                </div>
+
+
+                <!-- ADD CONTACT BUTTON -->
+
+                <button
+                    type="button"
+                    class="add-contact-button"
+                    onclick="showContactForm()">
+
+                    + Add Emergency Contact
+
+                </button>
+
+            </div>
+
+
+            <!-- =================================================
+                 ADD CONTACT FORM
+            ================================================== -->
+
+            <div
+                id="contact-form-container"
+                class="contact-form-container">
 
 
                 <form id="contactForm">
 
-                    <div class="form-group">
 
-                        <label for="contactName">
-                            Contact Name
-                        </label>
+                    <div class="contact-form-grid">
 
-                        <input
-                            type="text"
-                            id="contactName"
-                            placeholder="Enter name"
-                            required>
+
+                        <!-- CONTACT NAME -->
+
+                        <div class="form-group">
+
+                            <label for="contactName">
+                                Contact Name
+                            </label>
+
+                            <input
+                                type="text"
+                                id="contactName"
+                                placeholder="Example: Priya"
+                                required
+                            >
+
+                        </div>
+
+
+                        <!-- RELATIONSHIP -->
+
+                        <div class="form-group">
+
+                            <label for="contactRelationship">
+                                Relationship
+                            </label>
+
+                            <select
+                                id="contactRelationship"
+                                required>
+
+                                <option value="">
+                                    Select relationship
+                                </option>
+
+                                <option value="Mother">
+                                    Mother
+                                </option>
+
+                                <option value="Father">
+                                    Father
+                                </option>
+
+                                <option value="Brother">
+                                    Brother
+                                </option>
+
+                                <option value="Sister">
+                                    Sister
+                                </option>
+
+                                <option value="Spouse">
+                                    Spouse
+                                </option>
+
+                                <option value="Guardian">
+                                    Guardian
+                                </option>
+
+                                <option value="Friend">
+                                    Friend
+                                </option>
+
+                                <option value="Relative">
+                                    Relative
+                                </option>
+
+                                <option value="Other">
+                                    Other
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <!-- PHONE -->
+
+                        <div class="form-group">
+
+                            <label for="contactPhone">
+                                Phone Number
+                            </label>
+
+                            <input
+                                type="tel"
+                                id="contactPhone"
+                                placeholder="Enter phone number"
+                                required
+                            >
+
+                        </div>
 
                     </div>
 
 
-                    <div class="form-group">
+                    <div class="contact-form-actions">
 
-                        <label for="contactRelation">
-                            Relationship
-                        </label>
+                        <button
+                            type="submit"
+                            class="save-contact-button">
 
-                        <select id="contactRelation" required>
+                            Save Contact
 
-                            <option value="">
-                                Select relationship
-                            </option>
+                        </button>
 
-                            <option value="Parent">
-                                Parent
-                            </option>
 
-                            <option value="Sibling">
-                                Sibling
-                            </option>
+                        <button
+                            type="button"
+                            class="cancel-contact-button"
+                            onclick="hideContactForm()">
 
-                            <option value="Friend">
-                                Friend
-                            </option>
+                            Cancel
 
-                            <option value="Relative">
-                                Relative
-                            </option>
-
-                            <option value="Other">
-                                Other
-                            </option>
-
-                        </select>
+                        </button>
 
                     </div>
-
-
-                    <div class="form-group">
-
-                        <label for="contactPhone">
-                            Phone Number
-                        </label>
-
-                        <input
-                            type="tel"
-                            id="contactPhone"
-                            placeholder="Enter phone number"
-                            required>
-
-                    </div>
-
-
-                    <button
-                        type="submit"
-                        class="add-contact-btn">
-
-                        + Add Contact
-
-                    </button>
 
                 </form>
 
             </div>
 
 
-            <!-- ================= CONTACT LIST ================= -->
+            <!-- =================================================
+                 CONTACT LIST
+            ================================================== -->
 
-            <div class="contact-list-area">
+            <div
+                id="contacts-list"
+                class="contacts-list">
 
-                <div class="list-heading">
+                <!-- Contacts will be displayed here by JavaScript -->
 
-                    <div>
+                <div class="no-contacts">
 
-                        <span>
-                            SAVED CONTACTS
-                        </span>
+                    <h3>
+                        No Emergency Contacts Added
+                    </h3>
 
-                        <h2>
-                            Your Trusted People
-                        </h2>
-
-                    </div>
-
-                    <div
-                        class="contact-count"
-                        id="contactCount">
-
-                        0
-
-                    </div>
-
-                </div>
-
-
-                <div
-                    class="contacts-grid"
-                    id="contactsGrid">
-
-
-                    <!-- DEFAULT CONTACT -->
-
-                    <div class="empty-contacts"
-                         id="emptyContacts">
-
-                        <div class="empty-icon">
-                            📱
-                        </div>
-
-                        <h3>
-                            No contacts added
-                        </h3>
-
-                        <p>
-                            Add a trusted emergency contact
-                            using the form.
-                        </p>
-
-                    </div>
+                    <p>
+                        Add a trusted family member or friend
+                        so they can be contacted during an emergency.
+                    </p>
 
                 </div>
 
             </div>
 
-        </div>
-
-    </section>
+        </section>
 
 
-    <!-- ================= SAFETY TIP ================= -->
+        <!-- ==============================
+             PRIVACY NOTICE
+        =============================== -->
 
-    <section class="contact-tip">
+        <section class="privacy-notice">
 
-        <div class="tip-box">
+            <h2>
+                Privacy
+            </h2>
 
-            <div class="tip-icon">
-                💡
-            </div>
+            <p>
+                Medical information and emergency contacts are
+                stored locally in this browser using local storage.
+            </p>
 
-            <div>
+            <p>
+                Your information is not automatically sent to
+                an external server by this page.
+            </p>
 
-                <h3>
-                    Safety Tip
-                </h3>
+            <p>
+                Do not rely on this application as a replacement
+                for official medical records or emergency services.
+            </p>
 
-                <p>
-                    Add people you trust and make sure
-                    they know they are listed as your
-                    emergency contacts.
-                </p>
-
-            </div>
-
-        </div>
-
-    </section>
+        </section>
 
 
-    <!-- ================= FOOTER ================= -->
+        <!-- ==============================
+             EMERGENCY SECTION
+        ============================== -->
+
+        <section class="contact-emergency">
+
+            <h2>
+                Need Immediate Help?
+            </h2>
+
+            <p>
+                If you are facing a life-threatening emergency,
+                contact emergency services immediately.
+            </p>
+
+            <a
+                href="emergency.html"
+                class="emergency-button">
+
+                Emergency Hotlines
+
+            </a>
+
+        </section>
+
+
+    </main>
+
+
+    <!-- ==============================
+         FOOTER
+    ============================== -->
 
     <footer class="footer">
 
         <p>
 
-            © <span class="current-year"></span>
+            &copy;
 
-            <strong>
-                Digital Emergency Assistant
-            </strong>.
+            <span class="current-year"></span>
 
-            Stay safe, stay prepared.
+            Digital Emergency Assistant.
+            Stay informed. Stay safe.
 
         </p>
 
     </footer>
 
 
+    <!-- ==============================
+         JAVASCRIPT
+    ============================== -->
+
     <script src="js/app.js"></script>
 
     <script src="js/contacts.js"></script>
+
 
 </body>
 

@@ -1,452 +1,397 @@
 /* =========================================================
    DIGITAL EMERGENCY ASSISTANT
-   SAFETY GUIDE PAGE
+   SAFETY GUIDE
+   guide.css
 ========================================================= */
 
 
 /* =========================================================
-   1. HEADER
+   PAGE
 ========================================================= */
 
-.guide-header {
-
-    padding: 70px 7% 55px;
-
-    text-align: center;
-
-    background: #fff5f5;
-
+.guide-page {
+    width: 86%;
+    max-width: 1250px;
+    margin: 0 auto;
+    padding: 70px 0 80px;
 }
 
-.guide-header p {
 
-    margin-bottom: 10px;
+/* =========================================================
+   INTRODUCTION
+========================================================= */
 
-    color: #dc2626;
-
-    font-size: 11px;
-
-    font-weight: 800;
-
-    letter-spacing: 2px;
-
+.guide-intro {
+    max-width: 850px;
+    margin-bottom: 60px;
 }
 
-.guide-header h1 {
-
-    margin-bottom: 12px;
+.guide-intro h1 {
+    margin: 22px 0 18px;
 
     color: #111827;
 
-    font-size: 48px;
-
+    font-size: 50px;
+    line-height: 1.15;
 }
 
-.guide-header h1 span {
-
+.guide-intro h1 span {
     color: #dc2626;
-
 }
 
-.guide-header div {
+.guide-intro p {
+    max-width: 780px;
 
-    color: #6b7280;
+    color: #526b88;
 
-    font-size: 14px;
-
+    font-size: 17px;
+    line-height: 1.7;
 }
 
 
 /* =========================================================
-   2. GUIDE SECTION
+   SECTION HEADING
 ========================================================= */
 
-.guide-section {
-
-    padding: 65px 7%;
-
-    background: #f7f9fc;
-
+.section-heading {
+    margin-bottom: 30px;
 }
 
-.guide-title {
-
-    max-width: 1100px;
-
-    margin: 0 auto 35px;
-
-}
-
-.guide-title p {
-
-    margin-bottom: 5px;
+.card-label {
+    display: inline-block;
 
     color: #dc2626;
 
-    font-size: 10px;
-
+    font-size: 12px;
     font-weight: 800;
 
-    letter-spacing: 2px;
-
+    letter-spacing: 1.5px;
 }
 
-.guide-title h2 {
+.section-heading h2 {
+    margin: 9px 0 10px;
 
     color: #111827;
 
     font-size: 30px;
+}
 
+.section-heading p {
+    max-width: 700px;
+
+    margin: 0;
+
+    color: #526b88;
+
+    font-size: 15px;
+    line-height: 1.7;
 }
 
 
 /* =========================================================
-   3. GUIDE GRID
+   GUIDE GRID
 ========================================================= */
 
 .guide-grid {
-
-    max-width: 1100px;
-
-    margin: auto;
-
     display: grid;
 
     grid-template-columns: repeat(3, 1fr);
 
     gap: 22px;
-
-    align-items: start;
-
 }
 
 
 /* =========================================================
-   4. GUIDE CARD
+   GUIDE CARD
 ========================================================= */
 
 .guide-card {
+    position: relative;
 
-    padding: 25px;
+    padding: 30px;
 
     background: #ffffff;
 
     border: 1px solid #e5e7eb;
 
-    border-radius: 15px;
+    border-radius: 14px;
 
-    box-shadow:
-        0 4px 12px rgba(0, 0, 0, 0.04);
+    box-shadow: 0 7px 22px rgba(17, 24, 39, 0.06);
 
-    transition: all 0.3s ease;
-
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        border-color 0.25s ease;
 }
 
 .guide-card:hover {
+    transform: translateY(-4px);
 
-    transform: translateY(-7px);
+    border-color: #fecaca;
 
-    border-color: #dc2626;
-
-    box-shadow:
-        0 14px 30px rgba(220, 38, 38, 0.12);
-
+    box-shadow: 0 12px 30px rgba(17, 24, 39, 0.09);
 }
 
 
-/* =========================================================
-   5. ICON
-========================================================= */
+/* Guide number */
 
-.guide-icon {
-
-    width: 58px;
-
-    height: 58px;
-
-    margin-bottom: 18px;
-
-    display: flex;
+.guide-number {
+    display: inline-flex;
 
     align-items: center;
-
     justify-content: center;
 
-    border-radius: 13px;
+    width: 36px;
+    height: 36px;
 
-    background: #fee2e2;
+    margin-bottom: 20px;
 
-    font-size: 28px;
-
-    transition: 0.3s;
-
-}
-
-.guide-card:hover .guide-icon {
-
-    background: #dc2626;
-
-    transform: scale(1.08);
-
-}
-
-
-/* =========================================================
-   6. TITLE
-========================================================= */
-
-.guide-card h3 {
-
-    margin-bottom: 9px;
-
-    color: #111827;
-
-    font-size: 18px;
-
-}
-
-.guide-card:hover h3 {
+    background: #fef2f2;
 
     color: #dc2626;
 
-}
-
-
-/* =========================================================
-   7. DESCRIPTION
-========================================================= */
-
-.guide-card > p {
-
-    min-height: 62px;
-
-    margin-bottom: 17px;
-
-    color: #6b7280;
+    border-radius: 8px;
 
     font-size: 12px;
-
-    line-height: 1.7;
-
-}
-
-
-/* =========================================================
-   8. READ MORE BUTTON
-========================================================= */
-
-.guide-card button {
-
-    padding: 9px 15px;
-
-    border: none;
-
-    border-radius: 7px;
-
-    background: #111827;
-
-    color: #ffffff;
-
-    font-size: 11px;
-
-    font-weight: 700;
-
-    cursor: pointer;
-
-    transition: 0.3s;
-
-}
-
-.guide-card button:hover {
-
-    background: #dc2626;
-
-    transform: translateY(-2px);
-
-}
-
-
-/* =========================================================
-   9. DETAILS
-========================================================= */
-
-.guide-details {
-
-    display: none;
-
-    margin-top: 18px;
-
-    padding-top: 17px;
-
-    border-top: 1px solid #e5e7eb;
-
-}
-
-.guide-details.show {
-
-    display: block;
-
-}
-
-.guide-details ul {
-
-    padding-left: 18px;
-
-}
-
-.guide-details li {
-
-    margin-bottom: 8px;
-
-    color: #4b5563;
-
-    font-size: 12px;
-
-    line-height: 1.6;
-
-}
-
-
-/* =========================================================
-   10. CHECKLIST SECTION
-========================================================= */
-
-.checklist-section {
-
-    padding: 65px 7%;
-
-    background: #ffffff;
-
-}
-
-.checklist-container {
-
-    max-width: 1100px;
-
-    margin: auto;
-
-    display: grid;
-
-    grid-template-columns: 1fr 1fr;
-
-    gap: 50px;
-
-    align-items: center;
-
-}
-
-.checklist-info p {
-
-    margin-bottom: 8px;
-
-    color: #dc2626;
-
-    font-size: 10px;
 
     font-weight: 800;
-
-    letter-spacing: 2px;
-
 }
 
-.checklist-info h2 {
 
-    margin-bottom: 12px;
+/* Guide title */
+
+.guide-card h3 {
+    margin: 0 0 12px;
 
     color: #111827;
 
-    font-size: 32px;
+    font-size: 21px;
 
-}
-
-.checklist-info span {
-
-    color: #6b7280;
-
-    font-size: 13px;
-
-    line-height: 1.7;
-
+    line-height: 1.3;
 }
 
 
-/* =========================================================
-   11. CHECKLIST BOX
-========================================================= */
+/* Guide description */
 
-.checklist-box {
+.guide-card > p {
+    margin: 0 0 20px;
 
-    padding: 25px;
+    color: #526b88;
 
-    background: #f7f9fc;
+    font-size: 14px;
 
-    border: 1px solid #e5e7eb;
-
-    border-radius: 15px;
-
+    line-height: 1.65;
 }
 
 
-/* =========================================================
-   12. CHECK ITEMS
-========================================================= */
+/* Guide list */
 
-.check-item {
+.guide-card ul {
+    margin: 0;
 
-    display: flex;
+    padding-left: 19px;
+}
 
-    align-items: center;
-
-    gap: 12px;
-
-    margin-bottom: 16px;
+.guide-card li {
+    margin-bottom: 9px;
 
     color: #374151;
 
     font-size: 13px;
 
-    cursor: pointer;
-
+    line-height: 1.5;
 }
 
-.check-item input {
-
-    width: 17px;
-
-    height: 17px;
-
-    accent-color: #dc2626;
-
-    cursor: pointer;
-
-}
-
-.check-item input:checked + span {
-
-    color: #9ca3af;
-
-    text-decoration: line-through;
-
+.guide-card li:last-child {
+    margin-bottom: 0;
 }
 
 
 /* =========================================================
-   13. PROGRESS
+   PREPAREDNESS SECTION
 ========================================================= */
 
-.progress-area {
+.preparedness-section {
+    margin-top: 70px;
 
-    margin-top: 22px;
+    padding: 38px;
 
-    padding-top: 20px;
+    background: #f8fafc;
 
-    border-top: 1px solid #e5e7eb;
+    border: 1px solid #e5e7eb;
 
+    border-radius: 18px;
+}
+
+
+/* =========================================================
+   PREPAREDNESS HEADER
+========================================================= */
+
+.preparedness-header {
+    display: flex;
+
+    align-items: flex-end;
+
+    justify-content: space-between;
+
+    gap: 30px;
+
+    margin-bottom: 30px;
+}
+
+.preparedness-header h2 {
+    margin: 9px 0 10px;
+
+    color: #111827;
+
+    font-size: 30px;
+}
+
+.preparedness-header p {
+    max-width: 700px;
+
+    margin: 0;
+
+    color: #526b88;
+
+    font-size: 15px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   RESET BUTTON
+========================================================= */
+
+.reset-checklist-button {
+    flex-shrink: 0;
+
+    padding: 11px 18px;
+
+    background: #ffffff;
+
+    color: #374151;
+
+    border: 1px solid #d1d5db;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    font-family: inherit;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    transition:
+        background 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.reset-checklist-button:hover {
+    background: #fef2f2;
+
+    border-color: #fca5a5;
+
+    color: #b91c1c;
+}
+
+
+/* =========================================================
+   CHECKLIST
+========================================================= */
+
+.checklist {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 12px;
+}
+
+
+/* =========================================================
+   CHECKLIST ITEM
+========================================================= */
+
+.checklist-item {
+    display: flex;
+
+    align-items: center;
+
+    gap: 13px;
+
+    padding: 17px 18px;
+
+    background: #ffffff;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 9px;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.checklist-item:hover {
+    background: #fffafa;
+
+    border-color: #fecaca;
+}
+
+
+/* Checkbox */
+
+.checklist-item input {
+    width: 18px;
+    height: 18px;
+
+    flex-shrink: 0;
+
+    accent-color: #dc2626;
+
+    cursor: pointer;
+}
+
+
+/* Text */
+
+.checklist-item span {
+    color: #374151;
+
+    font-size: 14px;
+
+    line-height: 1.4;
+}
+
+
+/* Checked state */
+
+.checklist-item input:checked + span {
+    color: #64748b;
+
+    text-decoration: line-through;
+}
+
+
+/* =========================================================
+   CHECKLIST PROGRESS
+========================================================= */
+
+.checklist-progress {
+    margin-top: 28px;
 }
 
 .progress-text {
-
     display: flex;
+
+    align-items: center;
 
     justify-content: space-between;
 
@@ -454,251 +399,265 @@
 
     color: #374151;
 
-    font-size: 11px;
+    font-size: 13px;
 
     font-weight: 700;
-
 }
 
 .progress-text strong {
-
     color: #dc2626;
-
 }
 
+
+/* Progress background */
+
 .progress-bar {
-
     width: 100%;
-
-    height: 8px;
+    height: 9px;
 
     overflow: hidden;
 
-    border-radius: 10px;
-
     background: #e5e7eb;
 
+    border-radius: 20px;
 }
 
-.progress-fill {
 
+/* Progress fill */
+
+.progress-fill {
     width: 0%;
 
     height: 100%;
 
-    border-radius: 10px;
-
     background: #dc2626;
 
-    transition: width 0.4s ease;
+    border-radius: 20px;
 
+    transition: width 0.3s ease;
 }
 
 
 /* =========================================================
-   14. DO'S AND DON'TS
+   SAFETY REMINDER
 ========================================================= */
 
-.dos-section {
+.safety-reminder {
+    margin-top: 60px;
 
-    padding: 55px 7%;
-
-    background: #f7f9fc;
-
-}
-
-.dos-container {
-
-    max-width: 1100px;
-
-    margin: auto;
-
-    display: grid;
-
-    grid-template-columns: 1fr 1fr;
-
-    gap: 25px;
-
-}
-
-.dos-card {
-
-    padding: 28px;
+    padding: 30px;
 
     background: #ffffff;
 
-    border-radius: 14px;
+    border: 1px solid #e5e7eb;
 
+    border-left: 4px solid #dc2626;
+
+    border-radius: 10px;
 }
 
-.do-card {
-
-    border: 1px solid #bbf7d0;
-
-}
-
-.dont-card {
-
-    border: 1px solid #fecaca;
-
-}
-
-
-/* =========================================================
-   15. DO HEADING
-========================================================= */
-
-.dos-heading {
-
-    display: flex;
-
-    align-items: center;
-
-    gap: 12px;
-
-    margin-bottom: 18px;
-
-}
-
-.dos-heading span {
-
-    width: 35px;
-
-    height: 35px;
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: center;
-
-    border-radius: 50%;
-
-    font-weight: 800;
-
-}
-
-.do-card .dos-heading span {
-
-    background: #dcfce7;
-
-    color: #15803d;
-
-}
-
-.dont-card .dos-heading span {
-
-    background: #fee2e2;
-
-    color: #dc2626;
-
-}
-
-.dos-heading h2 {
+.safety-reminder h2 {
+    margin: 9px 0 10px;
 
     color: #111827;
 
-    font-size: 20px;
+    font-size: 24px;
+}
 
+.safety-reminder p {
+    max-width: 850px;
+
+    margin: 0;
+
+    color: #526b88;
+
+    font-size: 14px;
+
+    line-height: 1.7;
 }
 
 
 /* =========================================================
-   16. DO LIST
+   EMERGENCY ACTION
 ========================================================= */
 
-.dos-card ul {
+.guide-emergency {
+    margin-top: 40px;
 
-    padding-left: 20px;
+    padding: 38px 30px;
 
+    background: #fff5f5;
+
+    border: 1px solid #fecaca;
+
+    border-radius: 14px;
+
+    text-align: center;
 }
 
-.dos-card li {
+.guide-emergency h2 {
+    margin: 0 0 10px;
 
-    margin-bottom: 10px;
+    color: #111827;
 
-    color: #4b5563;
+    font-size: 27px;
+}
 
-    font-size: 12px;
+.guide-emergency p {
+    max-width: 650px;
 
-    line-height: 1.6;
+    margin: 0 auto 22px;
 
+    color: #526b88;
+
+    font-size: 15px;
+
+    line-height: 1.7;
+}
+
+.guide-emergency-button {
+    display: inline-block;
+
+    padding: 13px 23px;
+
+    background: #dc2626;
+
+    color: #ffffff;
+
+    border-radius: 8px;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    transition:
+        background 0.3s ease,
+        transform 0.2s ease;
+}
+
+.guide-emergency-button:hover {
+    background: #b91c1c;
+
+    transform: translateY(-2px);
 }
 
 
 /* =========================================================
-   17. TABLET
+   TABLET
 ========================================================= */
 
-@media (max-width: 950px) {
+@media (max-width: 1000px) {
+
+    .guide-intro h1 {
+        font-size: 44px;
+    }
 
     .guide-grid {
-
         grid-template-columns: repeat(2, 1fr);
-
-    }
-
-    .checklist-container {
-
-        grid-template-columns: 1fr;
-
     }
 
 }
 
 
 /* =========================================================
-   18. MOBILE
+   MOBILE
 ========================================================= */
 
-@media (max-width: 650px) {
+@media (max-width: 700px) {
 
-    .guide-header {
+    .guide-page {
+        width: 90%;
 
-        padding: 55px 6% 40px;
-
+        padding: 50px 0 60px;
     }
 
-    .guide-header h1 {
-
-        font-size: 37px;
-
+    .guide-intro {
+        margin-bottom: 45px;
     }
 
-    .guide-section {
+    .guide-intro h1 {
+        font-size: 36px;
+    }
 
-        padding: 45px 6%;
-
+    .guide-intro p {
+        font-size: 15px;
     }
 
     .guide-grid {
-
         grid-template-columns: 1fr;
-
     }
 
-    .checklist-section {
-
-        padding: 45px 6%;
-
+    .guide-card {
+        padding: 25px;
     }
 
-    .checklist-info h2 {
 
-        font-size: 27px;
+    /* Preparedness */
 
+    .preparedness-section {
+        margin-top: 50px;
+
+        padding: 25px;
     }
 
-    .dos-section {
+    .preparedness-header {
+        flex-direction: column;
 
-        padding: 40px 6%;
+        align-items: flex-start;
 
+        gap: 20px;
     }
 
-    .dos-container {
+    .preparedness-header h2 {
+        font-size: 26px;
+    }
 
+    .reset-checklist-button {
+        width: 100%;
+    }
+
+    .checklist {
         grid-template-columns: 1fr;
+    }
 
+
+    /* Reminder */
+
+    .safety-reminder {
+        margin-top: 45px;
+
+        padding: 25px;
+    }
+
+    .guide-emergency {
+        padding: 30px 20px;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 420px) {
+
+    .guide-intro h1 {
+        font-size: 31px;
+    }
+
+    .guide-card {
+        padding: 22px;
+    }
+
+    .preparedness-section {
+        padding: 20px;
+    }
+
+    .guide-emergency h2 {
+        font-size: 24px;
     }
 
 }

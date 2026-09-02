@@ -1,392 +1,530 @@
 /* =========================================================
    DIGITAL EMERGENCY ASSISTANT
-   EMERGENCY PAGE CSS
+   EMERGENCY PAGE
+   emergency.css
 ========================================================= */
 
 
 /* =========================================================
-   1. EMERGENCY HEADER
+   PAGE
 ========================================================= */
 
-.emergency-header {
-    padding: 70px 7% 55px;
+.emergency-page {
+    width: 86%;
+    max-width: 1250px;
 
-    text-align: center;
+    margin: 0 auto;
 
-    background: #fff5f5;
+    padding: 70px 0 80px;
 }
 
-.emergency-label {
-    margin-bottom: 10px;
 
-    color: #dc2626;
+/* =========================================================
+   INTRODUCTION
+========================================================= */
 
-    font-size: 11px;
+.emergency-intro {
+    max-width: 850px;
 
-    font-weight: 800;
-
-    letter-spacing: 2px;
+    margin-bottom: 40px;
 }
 
-.emergency-header h1 {
-    margin-bottom: 12px;
+.emergency-intro h1 {
+    margin: 22px 0 18px;
 
     color: #111827;
 
-    font-size: 48px;
+    font-size: 50px;
 
-    line-height: 1.2;
+    line-height: 1.15;
 }
 
-.emergency-header h1 span {
+.emergency-intro h1 span {
     color: #dc2626;
 }
 
-.emergency-header p:last-child {
-    color: #6b7280;
+.emergency-intro p {
+    max-width: 780px;
 
-    font-size: 14px;
+    margin: 0;
+
+    color: #526b88;
+
+    font-size: 17px;
+
+    line-height: 1.7;
 }
 
 
 /* =========================================================
-   2. WARNING
+   IMPORTANT NOTICE
 ========================================================= */
 
-.emergency-warning {
-    padding: 30px 7%;
-
-    background: #ffffff;
-}
-
-.warning-box {
-    max-width: 1000px;
-
-    margin: auto;
-
-    padding: 20px 25px;
-
+.emergency-notice {
     display: flex;
 
-    align-items: center;
+    align-items: flex-start;
 
-    gap: 15px;
+    gap: 10px;
 
-    background: #fff7ed;
+    margin-bottom: 60px;
 
-    border: 1px solid #fed7aa;
+    padding: 18px 20px;
 
-    border-radius: 12px;
-}
+    background: #fef2f2;
 
-.warning-icon {
-    font-size: 30px;
+    border: 1px solid #fecaca;
 
-    flex-shrink: 0;
-}
+    border-left: 4px solid #dc2626;
 
-.warning-box h3 {
-    margin-bottom: 4px;
+    border-radius: 9px;
 
-    color: #9a3412;
+    color: #7f1d1d;
 
-    font-size: 16px;
-}
-
-.warning-box p {
-    color: #6b7280;
-
-    font-size: 13px;
+    font-size: 14px;
 
     line-height: 1.6;
 }
 
+.emergency-notice strong {
+    flex-shrink: 0;
 
-/* =========================================================
-   3. EMERGENCY SERVICES
-========================================================= */
-
-.emergency-services {
-    padding: 70px 7%;
-
-    background: #f7f9fc;
+    color: #b91c1c;
 }
 
-.service-grid {
-    max-width: 1100px;
 
-    margin: auto;
+/* =========================================================
+   SECTION HEADING
+========================================================= */
 
+.section-heading {
+    margin-bottom: 30px;
+}
+
+.card-label {
+    display: inline-block;
+
+    color: #dc2626;
+
+    font-size: 12px;
+
+    font-weight: 800;
+
+    letter-spacing: 1.5px;
+}
+
+.section-heading h2 {
+    margin: 9px 0 10px;
+
+    color: #111827;
+
+    font-size: 30px;
+}
+
+.section-heading p {
+    max-width: 700px;
+
+    margin: 0;
+
+    color: #526b88;
+
+    font-size: 15px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   EMERGENCY SERVICE GRID
+========================================================= */
+
+.emergency-grid {
     display: grid;
 
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(2, 1fr);
 
-    gap: 20px;
-
-    align-items: start;
+    gap: 22px;
 }
 
 
 /* =========================================================
-   4. SERVICE CARD
+   EMERGENCY CARD
 ========================================================= */
 
-.service-card {
-    padding: 28px;
+.emergency-card {
+    padding: 30px;
 
     background: #ffffff;
 
     border: 1px solid #e5e7eb;
 
-    border-radius: 16px;
+    border-radius: 14px;
 
-    text-align: center;
+    box-shadow:
+        0 7px 22px rgba(17, 24, 39, 0.06);
 
-    transition: all 0.3s ease;
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        border-color 0.25s ease;
 }
 
-.service-card:hover {
-    transform: translateY(-8px);
+.emergency-card:hover {
+    transform: translateY(-4px);
 
     border-color: #fecaca;
 
     box-shadow:
-        0 15px 30px rgba(0, 0, 0, 0.08);
+        0 12px 30px rgba(17, 24, 39, 0.09);
 }
 
 
-/* =========================================================
-   5. SERVICE ICON
-========================================================= */
+/* Main 112 card */
 
-.service-icon {
-    width: 65px;
-
-    height: 65px;
-
-    margin: 0 auto 18px;
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: center;
-
-    border-radius: 14px;
-
-    background: #fee2e2;
-
-    font-size: 32px;
-
-    transition: all 0.3s ease;
-}
-
-.service-card:hover .service-icon {
-    background: #dc2626;
-
-    transform: scale(1.08);
-}
-
-
-/* =========================================================
-   6. SERVICE CONTENT
-========================================================= */
-
-.service-card h3 {
-    margin-bottom: 10px;
-
-    color: #111827;
-
-    font-size: 19px;
-}
-
-.service-card p {
-    min-height: 85px;
-
-    margin-bottom: 15px;
-
-    color: #6b7280;
-
-    font-size: 12px;
-
-    line-height: 1.7;
-}
-
-.service-number {
-    margin-bottom: 18px;
-
-    color: #dc2626;
-
-    font-size: 28px;
-
-    font-weight: 800;
-}
-
-
-/* =========================================================
-   7. SERVICE CALL BUTTON
-========================================================= */
-
-.service-call {
-    display: block;
-
-    padding: 11px;
-
-    border-radius: 8px;
-
-    background: #111827;
-
-    color: #ffffff;
-
-    font-size: 12px;
-
-    font-weight: 700;
-
-    transition: all 0.3s ease;
-}
-
-.service-call:hover {
-    background: #dc2626;
-
-    transform: translateY(-2px);
-}
-
-
-/* =========================================================
-   8. HIGHLIGHT CARD
-========================================================= */
-
-.service-card-highlight {
-    border-color: #fecaca;
+.primary-emergency {
+    border: 2px solid #fecaca;
 
     background: #fffafa;
 }
 
 
 /* =========================================================
-   9. SOS SECTION
+   CARD TOP
 ========================================================= */
 
-.sos-section {
-    padding: 75px 7%;
-
-    background: #ffffff;
-}
-
-.sos-container {
-    max-width: 1100px;
-
-    margin: auto;
-
-    padding: 45px;
-
+.emergency-card-top {
     display: flex;
 
     align-items: center;
 
     justify-content: space-between;
 
-    gap: 40px;
+    gap: 15px;
 
-    background: #111827;
-
-    border-radius: 18px;
-
-    color: #ffffff;
-}
-
-.sos-content {
-    max-width: 650px;
-}
-
-.sos-label {
-    display: inline-block;
-
-    margin-bottom: 10px;
-
-    color: #fca5a5;
-
-    font-size: 10px;
-
-    font-weight: 800;
-
-    letter-spacing: 2px;
-}
-
-.sos-content h2 {
-    margin-bottom: 10px;
-
-    font-size: 30px;
-}
-
-.sos-content p {
-    margin-bottom: 25px;
-
-    color: #d1d5db;
-
-    font-size: 13px;
+    margin-bottom: 20px;
 }
 
 
-/* =========================================================
-   10. SOS BUTTONS
-========================================================= */
+/* Emergency number */
 
-.sos-buttons {
-    display: flex;
+.emergency-number {
+    display: inline-flex;
 
-    gap: 12px;
+    align-items: center;
 
-    flex-wrap: wrap;
-}
+    justify-content: center;
 
-.sos-button {
-    padding: 12px 20px;
+    min-width: 68px;
 
-    border: none;
+    height: 48px;
 
-    border-radius: 8px;
+    padding: 0 12px;
 
     background: #dc2626;
 
     color: #ffffff;
 
-    font-size: 12px;
-
-    font-weight: 700;
-
-    cursor: pointer;
-
-    transition: all 0.3s ease;
-}
-
-.sos-button:hover {
-    background: #ef4444;
-
-    transform: translateY(-2px);
-
-    box-shadow:
-        0 8px 20px rgba(220, 38, 38, 0.3);
-}
-
-.location-button {
-    padding: 12px 20px;
-
-    border: 1px solid #4b5563;
-
     border-radius: 8px;
 
-    background: transparent;
+    font-size: 21px;
+
+    font-weight: 800;
+}
+
+
+/* Service tag */
+
+.emergency-tag {
+    color: #64748b;
+
+    font-size: 10px;
+
+    font-weight: 800;
+
+    letter-spacing: 1px;
+
+    text-align: right;
+}
+
+
+/* =========================================================
+   CARD CONTENT
+========================================================= */
+
+.emergency-card h3 {
+    margin: 0 0 12px;
+
+    color: #111827;
+
+    font-size: 22px;
+}
+
+.emergency-card p {
+    min-height: 68px;
+
+    margin: 0 0 22px;
+
+    color: #526b88;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   CALL BUTTON
+========================================================= */
+
+.call-button {
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    width: 100%;
+
+    min-height: 46px;
+
+    padding: 12px 20px;
+
+    background: #dc2626;
 
     color: #ffffff;
 
-    font-size: 12px;
+    border-radius: 8px;
+
+    font-size: 14px;
 
     font-weight: 700;
 
+    transition:
+        background 0.3s ease,
+        transform 0.2s ease;
+}
+
+.call-button:hover {
+    background: #b91c1c;
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   PERSONAL EMERGENCY CONTACTS
+========================================================= */
+
+.emergency-contacts {
+    margin-top: 70px;
+}
+
+.emergency-contacts-list {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 15px;
+}
+
+
+/* Contact card created by JavaScript */
+
+.emergency-contact-card {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    padding: 20px;
+
+    background: #ffffff;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 10px;
+
+    box-shadow:
+        0 5px 16px rgba(17, 24, 39, 0.05);
+}
+
+.emergency-contact-info {
+    min-width: 0;
+}
+
+.emergency-contact-name {
+    margin: 0 0 5px;
+
+    color: #111827;
+
+    font-size: 16px;
+
+    font-weight: 800;
+}
+
+.emergency-contact-relation {
+    margin: 0 0 5px;
+
+    color: #64748b;
+
+    font-size: 13px;
+}
+
+.emergency-contact-phone {
+    color: #374151;
+
+    font-size: 13px;
+
+    font-weight: 600;
+}
+
+
+/* Contact buttons */
+
+.emergency-contact-actions {
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    flex-shrink: 0;
+}
+
+.contact-call-button {
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 9px 14px;
+
+    background: #dc2626;
+
+    color: #ffffff;
+
+    border-radius: 7px;
+
+    font-size: 12px;
+
+    font-weight: 700;
+}
+
+.contact-call-button:hover {
+    background: #b91c1c;
+}
+
+
+/* Empty contacts */
+
+.empty-contacts {
+    padding: 30px;
+
+    background: #f8fafc;
+
+    border: 1px dashed #cbd5e1;
+
+    border-radius: 10px;
+
+    text-align: center;
+}
+
+.empty-contacts p {
+    margin: 0 0 15px;
+
+    color: #64748b;
+
+    font-size: 14px;
+}
+
+.empty-contacts a {
+    color: #dc2626;
+
+    font-size: 14px;
+
+    font-weight: 700;
+}
+
+.empty-contacts a:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================================================
+   LOCATION SECTION
+========================================================= */
+
+.location-section {
+    margin-top: 70px;
+
+    padding: 38px;
+
+    background: #f8fafc;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 18px;
+}
+
+.location-content {
+    max-width: 850px;
+}
+
+.location-content h2 {
+    margin: 9px 0 10px;
+
+    color: #111827;
+
+    font-size: 30px;
+}
+
+.location-content p {
+    max-width: 780px;
+
+    margin: 0 0 24px;
+
+    color: #526b88;
+
+    font-size: 15px;
+
+    line-height: 1.7;
+}
+
+
+/* Location button */
+
+.location-button {
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    min-height: 46px;
+
+    padding: 12px 20px;
+
+    background: #111827;
+
+    color: #ffffff;
+
+    border: none;
+
+    border-radius: 8px;
+
     cursor: pointer;
 
-    transition: all 0.3s ease;
+    font-size: 14px;
+
+    font-weight: 700;
+
+    transition:
+        background 0.3s ease,
+        transform 0.2s ease;
 }
 
 .location-button:hover {
@@ -396,211 +534,383 @@
 }
 
 
-/* =========================================================
-   11. SOS VISUAL
-========================================================= */
+/* Location result */
 
-.sos-visual {
-    display: flex;
+.location-result {
+    display: none;
 
-    align-items: center;
+    margin-top: 20px;
 
-    justify-content: center;
+    padding: 17px;
+
+    background: #ffffff;
+
+    border: 1px solid #dbe3ec;
+
+    border-radius: 8px;
+
+    color: #374151;
+
+    font-size: 13px;
+
+    line-height: 1.7;
 }
 
-.sos-circle {
-    width: 160px;
-
-    height: 160px;
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: center;
-
-    border-radius: 50%;
-
-    background: #dc2626;
-
-    border: 10px solid #374151;
-
-    box-shadow:
-        0 0 0 10px #1f2937;
-
-    animation: sos-pulse 2s infinite;
-}
-
-.sos-circle span {
-    font-size: 35px;
-
-    font-weight: 900;
-}
-
-
-@keyframes sos-pulse {
-
-    0% {
-        transform: scale(1);
-    }
-
-    50% {
-        transform: scale(1.05);
-    }
-
-    100% {
-        transform: scale(1);
-    }
-
+.location-result.show {
+    display: block;
 }
 
 
 /* =========================================================
-   12. EMERGENCY STEPS
+   INSTRUCTIONS
 ========================================================= */
 
-.emergency-steps {
-    padding: 75px 7%;
-
-    background: #f7f9fc;
+.emergency-instructions {
+    margin-top: 70px;
 }
 
-.emergency-step-grid {
-    max-width: 1100px;
+.emergency-instructions h2 {
+    margin: 9px 0 28px;
 
-    margin: auto;
+    color: #111827;
 
+    font-size: 30px;
+}
+
+
+/* Instruction grid */
+
+.instruction-grid {
     display: grid;
 
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(2, 1fr);
 
-    gap: 20px;
+    gap: 18px;
 }
 
-.emergency-step-card {
-    padding: 25px;
+
+/* Instruction item */
+
+.instruction-item {
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 18px;
+
+    padding: 24px;
 
     background: #ffffff;
 
     border: 1px solid #e5e7eb;
 
-    border-radius: 14px;
-
-    transition: all 0.3s ease;
+    border-radius: 10px;
 }
 
-.emergency-step-card:hover {
-    transform: translateY(-5px);
 
-    box-shadow:
-        0 12px 25px rgba(0, 0, 0, 0.07);
-}
+/* Number */
 
-.emergency-step-number {
-    margin-bottom: 15px;
+.instruction-number {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    width: 36px;
+    height: 36px;
+
+    flex-shrink: 0;
+
+    background: #fef2f2;
 
     color: #dc2626;
 
-    font-size: 25px;
+    border-radius: 8px;
+
+    font-size: 11px;
 
     font-weight: 800;
 }
 
-.emergency-step-card h3 {
-    margin-bottom: 8px;
+.instruction-item h3 {
+    margin: 0 0 7px;
 
     color: #111827;
 
     font-size: 16px;
 }
 
-.emergency-step-card p {
-    color: #6b7280;
+.instruction-item p {
+    margin: 0;
 
-    font-size: 12px;
+    color: #526b88;
+
+    font-size: 13px;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   FINAL ACTION
+========================================================= */
+
+.emergency-action {
+    margin-top: 45px;
+
+    padding: 38px 30px;
+
+    background: #fff5f5;
+
+    border: 1px solid #fecaca;
+
+    border-radius: 14px;
+
+    text-align: center;
+}
+
+.emergency-action h2 {
+    margin: 0 0 10px;
+
+    color: #111827;
+
+    font-size: 27px;
+}
+
+.emergency-action p {
+    max-width: 650px;
+
+    margin: 0 auto 22px;
+
+    color: #526b88;
+
+    font-size: 15px;
 
     line-height: 1.7;
 }
 
+.emergency-action-button {
+    display: inline-block;
+
+    padding: 13px 23px;
+
+    background: #dc2626;
+
+    color: #ffffff;
+
+    border-radius: 8px;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    transition:
+        background 0.3s ease,
+        transform 0.2s ease;
+}
+
+.emergency-action-button:hover {
+    background: #b91c1c;
+
+    transform: translateY(-2px);
+}
+
 
 /* =========================================================
-   13. TABLET
+   TABLET
 ========================================================= */
 
-@media (max-width: 1000px) {
+@media (max-width: 900px) {
 
-    .service-grid {
-        grid-template-columns: repeat(2, 1fr);
+    .emergency-intro h1 {
+        font-size: 44px;
     }
 
-    .emergency-step-grid {
-        grid-template-columns: repeat(2, 1fr);
+    .emergency-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .emergency-contacts-list {
+        grid-template-columns: 1fr;
     }
 
 }
 
 
 /* =========================================================
-   14. MOBILE
+   MOBILE
 ========================================================= */
 
-@media (max-width: 650px) {
+@media (max-width: 700px) {
 
-    .emergency-header {
-        padding: 55px 6% 40px;
+    .emergency-page {
+        width: 90%;
+
+        padding: 50px 0 60px;
     }
 
-    .emergency-header h1 {
-        font-size: 38px;
+
+    .emergency-intro {
+        margin-bottom: 35px;
     }
 
-    .emergency-warning {
-        padding: 20px 6%;
+    .emergency-intro h1 {
+        font-size: 36px;
     }
 
-    .warning-box {
-        align-items: flex-start;
-
-        padding: 18px;
+    .emergency-intro p {
+        font-size: 15px;
     }
 
-    .emergency-services {
-        padding: 55px 6%;
-    }
 
-    .service-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .service-card p {
-        min-height: auto;
-    }
-
-    .sos-section {
-        padding: 45px 6%;
-    }
-
-    .sos-container {
-        padding: 30px;
-
+    .emergency-notice {
         flex-direction: column;
 
+        gap: 4px;
+
+        margin-bottom: 45px;
+    }
+
+
+    .emergency-card {
+        padding: 25px;
+    }
+
+
+    .emergency-card-top {
         align-items: flex-start;
     }
 
-    .sos-content h2 {
-        font-size: 25px;
+    .emergency-tag {
+        max-width: 130px;
     }
 
-    .sos-visual {
+
+    .location-section {
+        margin-top: 50px;
+
+        padding: 25px;
+    }
+
+    .location-content h2 {
+        font-size: 26px;
+    }
+
+    .location-button {
         width: 100%;
     }
 
-    .emergency-steps {
-        padding: 55px 6%;
+
+    .emergency-instructions {
+        margin-top: 50px;
     }
 
-    .emergency-step-grid {
+    .emergency-instructions h2 {
+        font-size: 26px;
+    }
+
+    .instruction-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .emergency-action {
+        padding: 30px 20px;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 420px) {
+
+    .emergency-intro h1 {
+        font-size: 31px;
+    }
+
+    .emergency-card {
+        padding: 22px;
+    }
+
+    .emergency-number {
+        min-width: 60px;
+
+        height: 44px;
+
+        font-size: 19px;
+    }
+
+    .emergency-card h3 {
+        font-size: 20px;
+    }
+
+    .location-section {
+        padding: 20px;
+    }
+
+    .emergency-action h2 {
+        font-size: 24px;
+    }
+
+}
+/* =========================================================
+   MULTIPLE HELPLINE BUTTONS
+========================================================= */
+
+.dual-call-buttons {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 10px;
+
+    margin-top: 10px;
+}
+
+.secondary-call-button {
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    min-height: 46px;
+
+    padding: 12px 15px;
+
+    background: #ffffff;
+
+    color: #dc2626;
+
+    border: 1px solid #fecaca;
+
+    border-radius: 8px;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    transition:
+        background 0.3s ease,
+        color 0.3s ease;
+}
+
+.secondary-call-button:hover {
+    background: #fef2f2;
+
+    color: #b91c1c;
+}
+
+
+/* Mobile */
+
+@media (max-width: 500px) {
+
+    .dual-call-buttons {
         grid-template-columns: 1fr;
     }
 

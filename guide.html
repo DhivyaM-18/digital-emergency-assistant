@@ -2,647 +2,556 @@
 <html lang="en">
 
 <head>
-
     <meta charset="UTF-8">
-
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Safety Guide | Digital Emergency Assistant</title>
 
     <link rel="stylesheet" href="css/common.css">
-
     <link rel="stylesheet" href="css/guide.css">
-
 </head>
-
 
 <body>
 
+    <!-- ==============================
+         NAVIGATION
+    =============================== -->
 
-    <!-- ================= NAVBAR ================= -->
+    <header class="navbar">
 
-    <nav class="navbar">
-
-        <a href="index.html" class="logo">
-
-            <span class="logo-icon">+</span>
-
-            Digital Emergency Assistant
-
-        </a>
-
-
-        <ul class="nav-links">
-
-            <li>
-                <a href="index.html">
-                    Home
-                </a>
-            </li>
-
-            <li>
-                <a href="emergency.html">
-                    Emergency
-                </a>
-            </li>
-
-            <li>
-                <a href="first-aid.html">
-                    First Aid
-                </a>
-            </li>
-
-            <li>
-                <a href="contacts.html">
-                    Contacts
-                </a>
-            </li>
-
-            <li>
-                <a href="guide.html" class="active">
-                    Safety Guide
-                </a>
-            </li>
-
-        </ul>
-
-    </nav>
-
-
-
-    <!-- ================= HEADER ================= -->
-
-    <section class="guide-header">
-
-        <p>
-            BE PREPARED
-        </p>
-
-        <h1>
-            Emergency <span>Safety Guide</span>
-        </h1>
-
-        <div>
-            Simple habits and preparation can help you
-            respond better during an emergency.
+        <div class="logo">
+            <div class="logo-icon">+</div>
+            <span>Digital Emergency Assistant</span>
         </div>
 
-    </section>
+       <nav class="nav-links">
+
+    <a href="index.html">
+        Home
+    </a>
+
+    <a href="emergency.html">
+        Emergency
+    </a>
+
+    <a href="first-aid.html">
+        First Aid
+    </a>
+
+    <a href="contacts.html">
+        Contacts
+    </a>
+
+    <a href="guide.html" class="active">
+        Safety Guide
+    </a>
+
+    <a href="shelters.html">
+        Nearby Help
+    </a>
+ <a href="sos.html">SOS</a>
+</nav>
 
 
+    </header>
 
-    <!-- ================= SAFETY CARDS ================= -->
 
-    <section class="guide-section">
+    <!-- ==============================
+         MAIN CONTENT
+    =============================== -->
 
-        <div class="guide-title">
+    <main class="guide-page">
+
+
+        <!-- ==============================
+             INTRODUCTION
+        =============================== -->
+
+        <section class="guide-intro">
+
+            <span class="section-label">
+                SAFETY & PREPAREDNESS
+            </span>
+
+            <h1>
+                Emergency<br>
+                <span>Safety Guide</span>
+            </h1>
 
             <p>
-                QUICK GUIDANCE
+                Practical safety information for common emergencies
+                and disaster situations. Stay calm, move to a safe
+                location and follow instructions from emergency
+                authorities.
             </p>
 
-            <h2>
-                Know What To Do
-            </h2>
+        </section>
 
-        </div>
 
+        <!-- ==============================
+             QUICK SAFETY GUIDES
+        =============================== -->
 
-        <div class="guide-grid">
+        <section class="safety-guides">
 
+            <div class="section-heading">
 
-            <!-- CARD 1 -->
-
-            <div class="guide-card">
-
-                <div class="guide-icon">
-                    🚨
-                </div>
-
-                <h3>
-                    Stay Calm
-                </h3>
-
-                <p>
-                    Take a breath and assess the situation
-                    before taking action.
-                </p>
-
-                <button
-                    onclick="toggleGuide(this)">
-
-                    Read More
-
-                </button>
-
-
-                <div class="guide-details">
-
-                    <ul>
-
-                        <li>
-                            Avoid panic.
-                        </li>
-
-                        <li>
-                            Look for immediate dangers.
-                        </li>
-
-                        <li>
-                            Move to a safer location if necessary.
-                        </li>
-
-                    </ul>
-
-                </div>
-
-            </div>
-
-
-
-            <!-- CARD 2 -->
-
-            <div class="guide-card">
-
-                <div class="guide-icon">
-                    📞
-                </div>
-
-                <h3>
-                    Call for Help
-                </h3>
-
-                <p>
-                    Contact the appropriate emergency service
-                    when professional assistance is needed.
-                </p>
-
-                <button
-                    onclick="toggleGuide(this)">
-
-                    Read More
-
-                </button>
-
-
-                <div class="guide-details">
-
-                    <ul>
-
-                        <li>
-                            Explain what happened clearly.
-                        </li>
-
-                        <li>
-                            Give your location.
-                        </li>
-
-                        <li>
-                            Follow the operator's instructions.
-                        </li>
-
-                    </ul>
-
-                </div>
-
-            </div>
-
-
-
-            <!-- CARD 3 -->
-
-            <div class="guide-card">
-
-                <div class="guide-icon">
-                    🧰
-                </div>
-
-                <h3>
-                    Emergency Kit
-                </h3>
-
-                <p>
-                    Keep essential supplies ready so you can
-                    respond quickly.
-                </p>
-
-                <button
-                    onclick="toggleGuide(this)">
-
-                    Read More
-
-                </button>
-
-
-                <div class="guide-details">
-
-                    <ul>
-
-                        <li>
-                            Keep a first-aid kit available.
-                        </li>
-
-                        <li>
-                            Keep a flashlight and batteries.
-                        </li>
-
-                        <li>
-                            Keep drinking water available.
-                        </li>
-
-                    </ul>
-
-                </div>
-
-            </div>
-
-
-
-            <!-- CARD 4 -->
-
-            <div class="guide-card">
-
-                <div class="guide-icon">
-                    🏠
-                </div>
-
-                <h3>
-                    Home Safety
-                </h3>
-
-                <p>
-                    Make your home safer by identifying
-                    possible hazards.
-                </p>
-
-                <button
-                    onclick="toggleGuide(this)">
-
-                    Read More
-
-                </button>
-
-
-                <div class="guide-details">
-
-                    <ul>
-
-                        <li>
-                            Know emergency exits.
-                        </li>
-
-                        <li>
-                            Keep important numbers accessible.
-                        </li>
-
-                        <li>
-                            Avoid blocking escape routes.
-                        </li>
-
-                    </ul>
-
-                </div>
-
-            </div>
-
-
-
-            <!-- CARD 5 -->
-
-            <div class="guide-card">
-
-                <div class="guide-icon">
-                    🚗
-                </div>
-
-                <h3>
-                    Road Safety
-                </h3>
-
-                <p>
-                    Follow basic safety practices when
-                    travelling by road.
-                </p>
-
-                <button
-                    onclick="toggleGuide(this)">
-
-                    Read More
-
-                </button>
-
-
-                <div class="guide-details">
-
-                    <ul>
-
-                        <li>
-                            Wear a seat belt.
-                        </li>
-
-                        <li>
-                            Follow traffic signals.
-                        </li>
-
-                        <li>
-                            Avoid distracted driving.
-                        </li>
-
-                    </ul>
-
-                </div>
-
-            </div>
-
-
-
-            <!-- CARD 6 -->
-
-            <div class="guide-card">
-
-                <div class="guide-icon">
-                    🌧️
-                </div>
-
-                <h3>
-                    Severe Weather
-                </h3>
-
-                <p>
-                    Take precautions when severe weather
-                    conditions occur.
-                </p>
-
-                <button
-                    onclick="toggleGuide(this)">
-
-                    Read More
-
-                </button>
-
-
-                <div class="guide-details">
-
-                    <ul>
-
-                        <li>
-                            Follow official alerts.
-                        </li>
-
-                        <li>
-                            Stay indoors when advised.
-                        </li>
-
-                        <li>
-                            Avoid dangerous flooded areas.
-                        </li>
-
-                    </ul>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-
-    <!-- ================= CHECKLIST ================= -->
-
-    <section class="checklist-section">
-
-        <div class="checklist-container">
-
-
-            <div class="checklist-info">
-
-                <p>
-                    EMERGENCY PREPARATION
-                </p>
-
-                <h2>
-                    Are You Prepared?
-                </h2>
-
-                <span>
-                    Use this checklist to check whether
-                    you have some basic emergency
-                    preparations ready.
+                <span class="card-label">
+                    QUICK REFERENCE
                 </span>
 
-            </div>
+                <h2>
+                    Common Emergency Situations
+                </h2>
 
-
-            <div class="checklist-box">
-
-
-                <label class="check-item">
-
-                    <input
-                        type="checkbox"
-                        class="safety-check">
-
-                    <span>
-                        I know important emergency numbers.
-                    </span>
-
-                </label>
-
-
-                <label class="check-item">
-
-                    <input
-                        type="checkbox"
-                        class="safety-check">
-
-                    <span>
-                        I have a basic first-aid kit.
-                    </span>
-
-                </label>
-
-
-                <label class="check-item">
-
-                    <input
-                        type="checkbox"
-                        class="safety-check">
-
-                    <span>
-                        I have saved emergency contacts.
-                    </span>
-
-                </label>
-
-
-                <label class="check-item">
-
-                    <input
-                        type="checkbox"
-                        class="safety-check">
-
-                    <span>
-                        I know the emergency exits in my home.
-                    </span>
-
-                </label>
-
-
-                <label class="check-item">
-
-                    <input
-                        type="checkbox"
-                        class="safety-check">
-
-                    <span>
-                        I have basic emergency supplies.
-                    </span>
-
-                </label>
-
-
-                <div class="progress-area">
-
-                    <div class="progress-text">
-
-                        <span>
-                            Preparation Progress
-                        </span>
-
-                        <strong id="progressPercent">
-                            0%
-                        </strong>
-
-                    </div>
-
-
-                    <div class="progress-bar">
-
-                        <div
-                            class="progress-fill"
-                            id="progressFill">
-                        </div>
-
-                    </div>
-
-                </div>
-
+                <p>
+                    Select a situation to learn the important
+                    steps to take and actions to avoid.
+                </p>
 
             </div>
 
-        </div>
 
-    </section>
-
+            <div class="guide-grid">
 
 
-    <!-- ================= DO'S AND DON'TS ================= -->
+                <!-- FIRE -->
 
-    <section class="dos-section">
+                <article class="guide-card">
 
-        <div class="dos-container">
+                    <span class="guide-number">
+                        01
+                    </span>
+
+                    <h3>
+                        Fire Emergency
+                    </h3>
+
+                    <p>
+                        Leave the building quickly, use the safest
+                        available exit and never use an elevator
+                        during a fire.
+                    </p>
+
+                    <ul>
+                        <li>Raise the alarm and call emergency services.</li>
+                        <li>Stay low if there is smoke.</li>
+                        <li>Never return to a burning building.</li>
+                        <li>Stop, drop and roll if clothing catches fire.</li>
+                    </ul>
+
+                </article>
 
 
-            <div class="dos-card do-card">
+                <!-- FLOOD -->
 
-                <div class="dos-heading">
-                    <span>✓</span>
+                <article class="guide-card">
+
+                    <span class="guide-number">
+                        02
+                    </span>
+
+                    <h3>
+                        Flood
+                    </h3>
+
+                    <p>
+                        Move to higher ground and stay away from
+                        rapidly moving or contaminated water.
+                    </p>
+
+                    <ul>
+                        <li>Follow evacuation instructions.</li>
+                        <li>Avoid walking through floodwater.</li>
+                        <li>Never drive through flooded roads.</li>
+                        <li>Stay away from fallen electrical wires.</li>
+                    </ul>
+
+                </article>
+
+
+                <!-- EARTHQUAKE -->
+
+                <article class="guide-card">
+
+                    <span class="guide-number">
+                        03
+                    </span>
+
+                    <h3>
+                        Earthquake
+                    </h3>
+
+                    <p>
+                        Protect yourself from falling objects while
+                        the ground is shaking.
+                    </p>
+
+                    <ul>
+                        <li>Drop, cover and hold on.</li>
+                        <li>Stay away from windows and glass.</li>
+                        <li>Do not use elevators.</li>
+                        <li>After shaking stops, move carefully to a safe area.</li>
+                    </ul>
+
+                </article>
+
+
+                <!-- CYCLONE -->
+
+                <article class="guide-card">
+
+                    <span class="guide-number">
+                        04
+                    </span>
+
+                    <h3>
+                        Cyclone & Severe Storm
+                    </h3>
+
+                    <p>
+                        Stay indoors and monitor official warnings
+                        throughout the storm.
+                    </p>
+
+                    <ul>
+                        <li>Secure doors and windows.</li>
+                        <li>Stay away from windows during strong winds.</li>
+                        <li>Keep emergency supplies nearby.</li>
+                        <li>Follow evacuation orders from authorities.</li>
+                    </ul>
+
+                </article>
+
+
+                <!-- HEATSTROKE -->
+
+                <article class="guide-card">
+
+                    <span class="guide-number">
+                        05
+                    </span>
+
+                    <h3>
+                        Heatstroke
+                    </h3>
+
+                    <p>
+                        Heatstroke can become life-threatening quickly.
+                        Move the person to a cooler environment and seek
+                        medical assistance.
+                    </p>
+
+                    <ul>
+                        <li>Move the person to a cool or shaded place.</li>
+                        <li>Remove unnecessary outer clothing.</li>
+                        <li>Cool the person with appropriate methods.</li>
+                        <li>Seek emergency medical help immediately.</li>
+                    </ul>
+
+                </article>
+
+
+                <!-- GAS LEAK -->
+
+                <article class="guide-card">
+
+                    <span class="guide-number">
+                        06
+                    </span>
+
+                    <h3>
+                        Gas Leak
+                    </h3>
+
+                    <p>
+                        If you suspect a gas leak, move away from
+                        the area and avoid anything that could create
+                        a spark.
+                    </p>
+
+                    <ul>
+                        <li>Do not switch electrical appliances on or off.</li>
+                        <li>Do not use matches, lighters or open flames.</li>
+                        <li>Move outside to fresh air.</li>
+                        <li>Contact the appropriate emergency service.</li>
+                    </ul>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==============================
+             PREPAREDNESS CHECKLIST
+        =============================== -->
+
+        <section class="preparedness-section">
+
+            <div class="preparedness-header">
+
+                <div>
+
+                    <span class="card-label">
+                        BE PREPARED
+                    </span>
 
                     <h2>
-                        Do
+                        Emergency Preparedness Checklist
                     </h2>
+
+                    <p>
+                        Keep essential supplies ready before an
+                        emergency happens. Tick each item as you
+                        prepare it.
+                    </p>
+
                 </div>
 
-                <ul>
+                <button
+                    type="button"
+                    class="reset-checklist-button"
+                    onclick="resetChecklist()">
 
-                    <li>
-                        Stay calm and assess the situation.
-                    </li>
+                    Reset Checklist
 
-                    <li>
-                        Contact professional help when necessary.
-                    </li>
-
-                    <li>
-                        Follow official instructions.
-                    </li>
-
-                    <li>
-                        Help others only when it is safe.
-                    </li>
-
-                </ul>
+                </button>
 
             </div>
 
 
-            <div class="dos-card dont-card">
+            <!-- CHECKLIST -->
 
-                <div class="dos-heading">
-                    <span>✕</span>
+            <div class="checklist">
 
-                    <h2>
-                        Don't
-                    </h2>
-                </div>
 
-                <ul>
+                <label class="checklist-item">
 
-                    <li>
-                        Do not panic or create unnecessary confusion.
-                    </li>
+                    <input
+                        type="checkbox"
+                        class="preparedness-check"
+                        data-item="water">
 
-                    <li>
-                        Do not put yourself in additional danger.
-                    </li>
+                    <span>
+                        Drinking water
+                    </span>
 
-                    <li>
-                        Do not ignore serious symptoms or injuries.
-                    </li>
+                </label>
 
-                    <li>
-                        Do not delay contacting emergency services
-                        when needed.
-                    </li>
 
-                </ul>
+                <label class="checklist-item">
+
+                    <input
+                        type="checkbox"
+                        class="preparedness-check"
+                        data-item="firstaid">
+
+                    <span>
+                        First-aid kit
+                    </span>
+
+                </label>
+
+
+                <label class="checklist-item">
+
+                    <input
+                        type="checkbox"
+                        class="preparedness-check"
+                        data-item="flashlight">
+
+                    <span>
+                        Flashlight and spare batteries
+                    </span>
+
+                </label>
+
+
+                <label class="checklist-item">
+
+                    <input
+                        type="checkbox"
+                        class="preparedness-check"
+                        data-item="powerbank">
+
+                    <span>
+                        Charged phone and power bank
+                    </span>
+
+                </label>
+
+
+                <label class="checklist-item">
+
+                    <input
+                        type="checkbox"
+                        class="preparedness-check"
+                        data-item="medicines">
+
+                    <span>
+                        Essential medicines
+                    </span>
+
+                </label>
+
+
+                <label class="checklist-item">
+
+                    <input
+                        type="checkbox"
+                        class="preparedness-check"
+                        data-item="contacts">
+
+                    <span>
+                        Emergency contact numbers
+                    </span>
+
+                </label>
+
+
+                <label class="checklist-item">
+
+                    <input
+                        type="checkbox"
+                        class="preparedness-check"
+                        data-item="documents">
+
+                    <span>
+                        Copies of important documents
+                    </span>
+
+                </label>
+
+
+                <label class="checklist-item">
+
+                    <input
+                        type="checkbox"
+                        class="preparedness-check"
+                        data-item="food">
+
+                    <span>
+                        Basic non-perishable food
+                    </span>
+
+                </label>
 
             </div>
 
 
-        </div>
+            <!-- PROGRESS -->
 
-    </section>
+            <div class="checklist-progress">
+
+                <div class="progress-text">
+
+                    <span>
+                        Preparation Progress
+                    </span>
+
+                    <strong id="checklistProgress">
+                        0%
+                    </strong>
+
+                </div>
+
+                <div class="progress-bar">
+
+                    <div
+                        id="progressFill"
+                        class="progress-fill">
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
 
 
+        <!-- ==============================
+             IMPORTANT SAFETY REMINDER
+        =============================== -->
 
-    <!-- ================= FOOTER ================= -->
+        <section class="safety-reminder">
+
+            <span class="card-label">
+                IMPORTANT
+            </span>
+
+            <h2>
+                Follow Official Instructions
+            </h2>
+
+            <p>
+                This guide provides general safety information.
+                During an actual emergency, follow instructions
+                from local emergency services and government
+                authorities. If someone is seriously injured or
+                in immediate danger, contact emergency services
+                without delay.
+            </p>
+
+        </section>
+
+
+        <!-- ==============================
+             EMERGENCY ACTION
+        =============================== -->
+
+        <section class="guide-emergency">
+
+            <h2>
+                Facing an Emergency Now?
+            </h2>
+
+            <p>
+                Go to the Emergency page for important emergency
+                numbers and immediate assistance options.
+            </p>
+
+            <a
+                href="emergency.html"
+                class="guide-emergency-button">
+
+                Go to Emergency Services
+
+            </a>
+
+        </section>
+
+
+    </main>
+
+
+    <!-- ==============================
+         FOOTER
+    ============================== -->
 
     <footer class="footer">
 
         <p>
 
-            © <span class="current-year"></span>
+            &copy;
 
-            <strong>
-                Digital Emergency Assistant
-            </strong>.
+            <span class="current-year"></span>
 
-            Stay safe, stay prepared.
+            Digital Emergency Assistant.
+            Stay informed. Stay safe.
 
         </p>
 
     </footer>
 
 
+    <!-- ==============================
+         JAVASCRIPT
+    ============================== -->
 
     <script src="js/app.js"></script>
-
     <script src="js/guide.js"></script>
-
 
 </body>
 

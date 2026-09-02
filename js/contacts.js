@@ -1,127 +1,602 @@
 /* =========================================================
    DIGITAL EMERGENCY ASSISTANT
-   CONTACTS JAVASCRIPT
+   CONTACTS / MEDICAL CARD
+   contacts.js
 ========================================================= */
 
 
 /* =========================================================
-   1. GET ELEMENTS
+   STORAGE KEYS
 ========================================================= */
 
-const contactForm =
-    document.getElementById("contactForm");
-
-const contactsGrid =
-    document.getElementById("contactsGrid");
-
-const contactCount =
-    document.getElementById("contactCount");
-
-const emptyContacts =
-    document.getElementById("emptyContacts");
+const MEDICAL_CARD_KEY = "digitalEmergencyMedicalCard";
+const EMERGENCY_CONTACTS_KEY = "digitalEmergencyContacts";
 
 
 /* =========================================================
-   2. LOAD CONTACTS
+   PAGE LOAD
 ========================================================= */
 
-let contacts =
-    JSON.parse(
-        localStorage.getItem("emergencyContacts")
-    ) || [];
+document.addEventListener("DOMContentLoaded", function () {
+
+    loadMedicalCard();
+
+    loadEmergencyContacts();
+
+    setupMedicalForm();
+
+    setupContactForm();
+
+});
 
 
 /* =========================================================
-   3. DISPLAY CONTACTS
+   MEDICAL CARD
 ========================================================= */
 
-function displayContacts() {
 
-    /*
-       Remove old contact cards.
-    */
+/* Setup Medical Card Form */
 
-    const oldCards =
-        contactsGrid.querySelectorAll(".contact-card");
+function setupMedicalForm() {
 
-    oldCards.forEach(function (card) {
+    const form = document.getElementById("medicalForm");
 
-        card.remove();
+    if (!form) {
+        return;
+    }
+
+    form.addEventListener("submit", function (event) {
+
+        event.preventDefault();
+
+        saveMedicalCard();
 
     });
 
-
-    /*
-       Update contact count.
-    */
-
-    contactCount.textContent =
-        contacts.length;
+}
 
 
-    /*
-       Show empty message if there
-       are no contacts.
-    */
+/* Save Medical Card */
 
-    if (contacts.length === 0) {
+function saveMedicalCard() {
 
-        emptyContacts.style.display = "block";
+    const name = document
+        .getElementById("personName")
+        .value
+        .trim();
+
+    const bloodGroup = document
+        .getElementById("bloodGroup")
+        .value;
+
+    const allergies = document
+        .getElementById("allergies")
+        .value
+        .trim();
+
+    const medications = document
+        .getElementById("medications")
+        .value
+        .trim();
+
+
+    const medicalData = {
+
+        name: name,
+
+        bloodGroup: bloodGroup,
+
+        allergies: allergies,
+
+        medications: medications
+
+    };
+
+
+    localStorage.setItem(
+        MEDICAL_CARD_KEY,
+        JSON.stringify(medicalData)
+    );
+
+
+    displayMedicalCard(medicalData);
+
+
+    const status = document.getElementById("save-status");
+
+    if (status) {
+
+        status.textContent =
+            "Medical information saved successfully.";
+
+    }
+
+}
+
+
+/* Load Medical Card */
+
+function loadMedicalCard() {
+
+    const savedData =
+        localStorage.getItem(MEDICAL_CARD_KEY);
+
+    if (!savedData) {
+        return;
+    }
+
+
+    try {
+
+        const medicalData =
+            JSON.parse(savedData);
+
+
+        /* Put saved information back into form */
+
+        const nameInput =
+            document.getElementById("personName");
+
+        const bloodInput =
+            document.getElementById("bloodGroup");
+
+        const allergiesInput =
+            document.getElementById("allergies");
+
+        const medicationsInput =
+            document.getElementById("medications");
+
+
+        if (nameInput) {
+            nameInput.value = medicalData.name || "";
+        }
+
+        if (bloodInput) {
+            bloodInput.value =
+                medicalData.bloodGroup || "";
+        }
+
+        if (allergiesInput) {
+            allergiesInput.value =
+                medicalData.allergies || "";
+        }
+
+        if (medicationsInput) {
+            medicationsInput.value =
+                medicalData.medications || "";
+        }
+
+
+        displayMedicalCard(medicalData);
+
+
+    } catch (error) {
+
+        console.error(
+            "Unable to load medical card:",
+            error
+        );
+
+    }
+
+}
+
+
+/* Display Medical Card */
+
+function displayMedicalCard(data) {
+
+    const displayName =
+        document.getElementById("displayName");
+
+    const displayBlood =
+        document.getElementById("displayBlood");
+
+    const displayAllergies =
+        document.getElementById("displayAllergies");
+
+    const displayMedications =
+        document.getElementById("displayMedications");
+
+
+    if (displayName) {
+
+        displayName.textContent =
+            data.name || "Not provided";
+
+    }
+
+
+    if (displayBlood) {
+
+        displayBlood.textContent =
+            data.bloodGroup || "Not provided";
+
+    }
+
+
+    if (displayAllergies) {
+
+        displayAllergies.textContent =
+            data.allergies || "Not provided";
+
+    }
+
+
+    if (displayMedications) {
+
+        displayMedications.textContent =
+            data.medications || "Not provided";
+
+    }
+
+}
+
+
+/* Clear Medical Card */
+
+function clearMedicalCard() {
+
+    const confirmed =
+        confirm(
+            "Are you sure you want to clear your medical information?"
+        );
+
+
+    if (!confirmed) {
+        return;
+    }
+
+
+    localStorage.removeItem(MEDICAL_CARD_KEY);
+
+
+    const form =
+        document.getElementById("medicalForm");
+
+
+    if (form) {
+        form.reset();
+    }
+
+
+    const data = {
+
+        name: "",
+
+        bloodGroup: "",
+
+        allergies: "",
+
+        medications: ""
+
+    };
+
+
+    displayMedicalCard(data);
+
+
+    const status =
+        document.getElementById("save-status");
+
+
+    if (status) {
+
+        status.textContent =
+            "Medical information cleared.";
+
+    }
+
+}
+
+
+/* =========================================================
+   EMERGENCY CONTACTS
+========================================================= */
+
+
+/* Setup Contact Form */
+
+function setupContactForm() {
+
+    const form =
+        document.getElementById("contactForm");
+
+
+    if (!form) {
+        return;
+    }
+
+
+    form.addEventListener("submit", function (event) {
+
+        event.preventDefault();
+
+        addEmergencyContact();
+
+    });
+
+}
+
+
+/* Show Contact Form */
+
+function showContactForm() {
+
+    const container =
+        document.getElementById(
+            "contact-form-container"
+        );
+
+
+    if (!container) {
+        return;
+    }
+
+
+    container.classList.add("show");
+
+
+    const nameInput =
+        document.getElementById("contactName");
+
+
+    if (nameInput) {
+
+        nameInput.focus();
+
+    }
+
+}
+
+
+/* Hide Contact Form */
+
+function hideContactForm() {
+
+    const container =
+        document.getElementById(
+            "contact-form-container"
+        );
+
+
+    if (container) {
+
+        container.classList.remove("show");
+
+    }
+
+
+    const form =
+        document.getElementById("contactForm");
+
+
+    if (form) {
+
+        form.reset();
+
+    }
+
+}
+
+
+/* Add Emergency Contact */
+
+function addEmergencyContact() {
+
+    const nameInput =
+        document.getElementById("contactName");
+
+    const relationshipInput =
+        document.getElementById(
+            "contactRelationship"
+        );
+
+    const phoneInput =
+        document.getElementById("contactPhone");
+
+
+    if (
+        !nameInput ||
+        !relationshipInput ||
+        !phoneInput
+    ) {
+        return;
+    }
+
+
+    const name =
+        nameInput.value.trim();
+
+    const relationship =
+        relationshipInput.value;
+
+    const phone =
+        phoneInput.value.trim();
+
+
+    /* Basic validation */
+
+    if (!name || !relationship || !phone) {
+
+        alert(
+            "Please fill in all emergency contact details."
+        );
 
         return;
 
     }
 
 
-    emptyContacts.style.display = "none";
+    /* Get existing contacts */
+
+    let contacts =
+        getEmergencyContacts();
 
 
-    /*
-       Create a card for each contact.
-    */
+    /* Create new contact */
 
-    contacts.forEach(function (contact, index) {
+    const newContact = {
 
-        const card =
-            document.createElement("div");
+        id: Date.now(),
 
-        card.className = "contact-card";
+        name: name,
 
+        relationship: relationship,
 
-        /*
-           First letter for avatar.
-        */
+        phone: phone
 
-        const firstLetter =
-            contact.name.charAt(0).toUpperCase();
+    };
 
 
-        card.innerHTML = `
+    contacts.push(newContact);
 
-            <div class="contact-top">
 
-                <div class="contact-avatar">
-                    ${firstLetter}
-                </div>
+    /* Save contacts */
 
-                <div>
+    localStorage.setItem(
 
-                    <div class="contact-name">
-                        ${contact.name}
-                    </div>
+        EMERGENCY_CONTACTS_KEY,
 
-                    <div class="contact-relation">
-                        ${contact.relation}
-                    </div>
+        JSON.stringify(contacts)
 
-                </div>
+    );
+
+
+    /* Update display */
+
+    displayEmergencyContacts(contacts);
+
+
+    /* Close form */
+
+    hideContactForm();
+
+}
+
+
+/* Get Emergency Contacts */
+
+function getEmergencyContacts() {
+
+    const savedContacts =
+        localStorage.getItem(
+            EMERGENCY_CONTACTS_KEY
+        );
+
+
+    if (!savedContacts) {
+
+        return [];
+
+    }
+
+
+    try {
+
+        return JSON.parse(savedContacts);
+
+    } catch (error) {
+
+        console.error(
+            "Unable to load emergency contacts:",
+            error
+        );
+
+        return [];
+
+    }
+
+}
+
+
+/* Load Emergency Contacts */
+
+function loadEmergencyContacts() {
+
+    const contacts =
+        getEmergencyContacts();
+
+
+    displayEmergencyContacts(contacts);
+
+}
+
+
+/* Display Emergency Contacts */
+
+function displayEmergencyContacts(contacts) {
+
+    const container =
+        document.getElementById(
+            "contacts-list"
+        );
+
+
+    if (!container) {
+        return;
+    }
+
+
+    /* No contacts */
+
+    if (contacts.length === 0) {
+
+        container.innerHTML = `
+
+            <div class="no-contacts">
+
+                <h3>
+                    No Emergency Contacts Added
+                </h3>
+
+                <p>
+                    Add a trusted family member or friend
+                    so they can be contacted during an emergency.
+                </p>
 
             </div>
 
+        `;
 
-            <div class="contact-phone">
+        return;
 
-                📞 ${contact.phone}
+    }
+
+
+    /* Clear existing content */
+
+    container.innerHTML = "";
+
+
+    /* Create contact cards */
+
+    contacts.forEach(function (contact) {
+
+
+        const contactItem =
+            document.createElement("div");
+
+
+        contactItem.className =
+            "contact-item";
+
+
+        contactItem.innerHTML = `
+
+            <div class="contact-info">
+
+                <h3>
+                    ${escapeHTML(contact.name)}
+                </h3>
+
+                <p>
+                    ${escapeHTML(contact.relationship)}
+                </p>
+
+                <p class="contact-phone">
+                    ${escapeHTML(contact.phone)}
+                </p>
 
             </div>
 
@@ -129,17 +604,18 @@ function displayContacts() {
             <div class="contact-actions">
 
                 <a
-                    href="tel:${contact.phone}"
-                    class="call-contact">
+                    href="tel:${encodeURIComponent(contact.phone)}"
+                    class="call-button">
 
-                    📞 Call
+                    Call
 
                 </a>
 
 
                 <button
-                    class="delete-contact"
-                    onclick="deleteContact(${index})">
+                    type="button"
+                    class="delete-contact-button"
+                    onclick="deleteEmergencyContact(${contact.id})">
 
                     Delete
 
@@ -150,7 +626,7 @@ function displayContacts() {
         `;
 
 
-        contactsGrid.appendChild(card);
+        container.appendChild(contactItem);
 
     });
 
@@ -158,158 +634,69 @@ function displayContacts() {
 
 
 /* =========================================================
-   4. ADD CONTACT
+   DELETE CONTACT
 ========================================================= */
 
-if (contactForm) {
+function deleteEmergencyContact(contactId) {
 
-    contactForm.addEventListener(
-        "submit",
-        function (event) {
-
-            event.preventDefault();
-
-
-            const name =
-                document.getElementById(
-                    "contactName"
-                ).value.trim();
-
-
-            const relation =
-                document.getElementById(
-                    "contactRelation"
-                ).value;
-
-
-            const phone =
-                document.getElementById(
-                    "contactPhone"
-                ).value.trim();
-
-
-            /*
-               Basic validation.
-            */
-
-            if (
-                name === "" ||
-                relation === "" ||
-                phone === ""
-            ) {
-
-                alert(
-                    "Please fill in all the fields."
-                );
-
-                return;
-
-            }
-
-
-            /*
-               Create contact object.
-            */
-
-            const newContact = {
-
-                name: name,
-
-                relation: relation,
-
-                phone: phone
-
-            };
-
-
-            /*
-               Add to array.
-            */
-
-            contacts.push(newContact);
-
-
-            /*
-               Save to browser storage.
-            */
-
-            localStorage.setItem(
-                "emergencyContacts",
-                JSON.stringify(contacts)
-            );
-
-
-            /*
-               Refresh display.
-            */
-
-            displayContacts();
-
-
-            /*
-               Clear form.
-            */
-
-            contactForm.reset();
-
-
-            alert(
-                "Emergency contact added successfully!"
-            );
-
-        }
-    );
-
-}
-
-
-/* =========================================================
-   5. DELETE CONTACT
-========================================================= */
-
-function deleteContact(index) {
-
-    const confirmDelete =
+    const confirmed =
         confirm(
-            "Are you sure you want to delete this contact?"
+            "Are you sure you want to delete this emergency contact?"
         );
 
 
-    if (!confirmDelete) {
-
+    if (!confirmed) {
         return;
-
     }
 
 
-    /*
-       Remove contact.
-    */
-
-    contacts.splice(index, 1);
+    let contacts =
+        getEmergencyContacts();
 
 
-    /*
-       Update localStorage.
-    */
+    contacts =
+        contacts.filter(function (contact) {
+
+            return contact.id !== contactId;
+
+        });
+
 
     localStorage.setItem(
-        "emergencyContacts",
+
+        EMERGENCY_CONTACTS_KEY,
+
         JSON.stringify(contacts)
+
     );
 
 
-    /*
-       Refresh cards.
-    */
-
-    displayContacts();
+    displayEmergencyContacts(contacts);
 
 }
 
 
 /* =========================================================
-   6. INITIAL DISPLAY
+   SECURITY HELPER
 ========================================================= */
 
-displayContacts();
+/*
+   Prevent user-entered contact information
+   from being interpreted as HTML.
+*/
+
+function escapeHTML(value) {
+
+    return String(value)
+
+        .replace(/&/g, "&amp;")
+
+        .replace(/</g, "&lt;")
+
+        .replace(/>/g, "&gt;")
+
+        .replace(/"/g, "&quot;")
+
+        .replace(/'/g, "&#039;");
+
+}
