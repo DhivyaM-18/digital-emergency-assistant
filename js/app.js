@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", function () {
 /* =========================================================
    2. MOBILE NAVIGATION
 ========================================================= */
- 
+
 function toggleMenu() {
 
     const navLinks = document.querySelector(".nav-links");
@@ -64,7 +64,30 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 /* =========================================================
-   4. BACK TO TOP
+   4. CLOSE MENU WHEN CLICKING OUTSIDE
+========================================================= */
+
+document.addEventListener("click", function (event) {
+
+    const navLinks = document.querySelector(".nav-links");
+    const menuButton = document.querySelector(".menu-toggle");
+
+    if (!navLinks || !menuButton) {
+        return;
+    }
+
+    if (
+        !navLinks.contains(event.target) &&
+        !menuButton.contains(event.target)
+    ) {
+        navLinks.classList.remove("show-menu");
+    }
+
+});
+
+
+/* =========================================================
+   5. BACK TO TOP
 ========================================================= */
 
 function scrollToTop() {
@@ -78,7 +101,7 @@ function scrollToTop() {
 
 
 /* =========================================================
-   5. SHOW / HIDE ELEMENT
+   6. SHOW / HIDE ELEMENT
    Reusable function for future pages
 ========================================================= */
 
@@ -95,7 +118,7 @@ function toggleElement(elementId) {
 
 
 /* =========================================================
-   6. SIMPLE NOTIFICATION
+   7. SIMPLE NOTIFICATION
 ========================================================= */
 
 function showNotification(message) {
