@@ -236,7 +236,6 @@ nav {
     letter-spacing: 1.5px;
 }
 
-
 /* =========================================================
    MOBILE NAVIGATION
 ========================================================= */
@@ -244,40 +243,53 @@ nav {
 @media (max-width: 850px) {
 
     .navbar {
-        min-height: 70px;
+        min-height: auto;
+        padding: 15px 5%;
+    }
 
-        padding: 0 5%;
-
-        flex-wrap: wrap;
-
-        gap: 10px;
+    .nav-container {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 14px;
     }
 
     .logo {
+        width: 100%;
+        justify-content: center;
         font-size: 15px;
     }
 
     .logo-icon {
         width: 31px;
         height: 31px;
-
         font-size: 20px;
     }
 
+    nav {
+        width: 100%;
+        overflow: visible;
+    }
+
     .nav-links {
-        gap: 18px;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 8px 18px;
     }
 
     .nav-links a {
-        padding: 22px 0;
-
+        padding: 7px 2px;
         font-size: 13px;
+        white-space: nowrap;
     }
 
     .nav-links a.active::after {
-        bottom: 13px;
+        bottom: 1px;
     }
-
 }
 
 
@@ -285,42 +297,65 @@ nav {
    SMALL MOBILE
 ========================================================= */
 
-@media (max-width: 650px) {
+@media (max-width: 600px) {
 
     .navbar {
-        padding: 15px 5%;
+        padding: 14px 4%;
+    }
 
-        flex-direction: column;
-
-        align-items: flex-start;
+    .nav-container {
+        gap: 12px;
     }
 
     .logo {
-        width: 100%;
+        font-size: 14px;
+        gap: 8px;
     }
 
-    nav {
-        width: 100%;
-
-        overflow-x: auto;
+    .logo-icon {
+        width: 30px;
+        height: 30px;
+        font-size: 19px;
     }
 
     .nav-links {
-        width: max-content;
-
-        justify-content: flex-start;
-
-        gap: 22px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        width: 100%;
+        gap: 5px 10px;
     }
 
     .nav-links a {
-        padding: 8px 0;
-
-        font-size: 13px;
+        width: 100%;
+        padding: 7px 2px;
+        text-align: center;
+        font-size: 12px;
     }
 
     .nav-links a.active::after {
+        left: 20%;
+        right: 20%;
         bottom: 0;
+    }
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+========================================================= */
+
+@media (max-width: 380px) {
+
+    .logo {
+        font-size: 13px;
+    }
+
+    .nav-links {
+        gap: 4px 6px;
+    }
+
+    .nav-links a {
+        font-size: 11px;
     }
 
 }
