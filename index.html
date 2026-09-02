@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
 
     <meta name="viewport"
@@ -9,586 +10,977 @@
 
     <title>Digital Emergency Assistant</title>
 
-    <!-- Common CSS -->
+    <!-- COMMON STYLES -->
     <link rel="stylesheet" href="css/common.css">
 
-    <!-- Home Page CSS -->
+    <!-- HOME PAGE STYLES -->
     <link rel="stylesheet" href="css/home.css">
+
 </head>
+
 
 <body>
 
 
-    <!-- =====================================================
-         NAVBAR
-    ====================================================== -->
+<!-- =========================================================
+     NAVBAR
+========================================================= -->
 
-    <nav class="navbar">
+<header class="navbar">
+
+    <div class="nav-container">
 
         <a href="index.html" class="logo">
 
             <span class="logo-icon">+</span>
 
-            Digital Emergency Assistant
+            <span>
+                Digital Emergency Assistant
+            </span>
 
         </a>
 
 
-        <ul class="nav-links">
+        <nav class="nav-links">
 
-            <li>
-                <a href="index.html" class="active">
-                    Home
-                </a>
-            </li>
+            <a href="index.html" class="active">
+                Home
+            </a>
 
-            <li>
-                <a href="emergency.html">
-                    Emergency
-                </a>
-            </li>
+            <a href="emergency.html">
+                Emergency
+            </a>
 
-            <li>
-                <a href="first-aid.html">
-                    First Aid
-                </a>
-            </li>
+            <a href="first-aid.html">
+                First Aid
+            </a>
 
-            <li>
-                <a href="contacts.html">
-                    Contacts
-                </a>
-            </li>
+            <a href="contacts.html">
+                Contacts
+            </a>
 
-            <li>
-                <a href="guide.html">
-                    Safety Guide
-                </a>
-            </li>
-
-        </ul>
-
-    </nav>
-
-
-
-    <!-- =====================================================
-         HERO SECTION
-    ====================================================== -->
-
-    <section class="hero-section">
-
-        <div class="hero-content">
-
-            <p class="hero-badge">
-                YOUR SAFETY MATTERS
-            </p>
-
-            <h1>
-                Stay Calm.
-                <span>Get Help.</span>
-                Stay Safe.
-            </h1>
-
-            <p class="hero-description">
-                Digital Emergency Assistant provides quick access
-                to emergency services, first-aid information,
-                important contacts and safety guidance.
-            </p>
-
-
-            <div class="hero-buttons">
-
-                <a href="emergency.html"
-                   class="primary-button">
-
-                    🚨 Emergency Help
-
-                </a>
-
-                <a href="first-aid.html"
-                   class="secondary-button">
-
-                    🩹 First Aid
-
-                </a>
-
-            </div>
-
-        </div>
-
-
-        <!-- Hero Visual -->
-
-        <div class="hero-visual">
-
-            <div class="hero-circle">
-
-                <div class="hero-shield">
-                    🛡️
-                </div>
-
-            </div>
-
-
-            <div class="floating-card floating-card-one">
-
-                🚑
-                <span>Emergency</span>
-
-            </div>
-
-
-            <div class="floating-card floating-card-two">
-
-                🩹
-                <span>First Aid</span>
-
-            </div>
-
-
-            <div class="floating-card floating-card-three">
-
-                📞
-                <span>Contacts</span>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-
-    <!-- =====================================================
-         EMERGENCY NUMBERS
-    ====================================================== -->
-
-    <section class="home-emergency">
-
-        <div class="section-header">
-
-            <span class="section-label">
-                QUICK ACCESS
-            </span>
-
-            <h2>
-                Emergency Numbers
-            </h2>
-
-            <p>
-                Important emergency services that you can
-                contact when immediate help is required.
-            </p>
-
-        </div>
-
-
-        <div class="emergency-number-grid">
-
-
-            <!-- Police -->
-
-            <div class="number-card">
-
-                <div class="number-icon">
-                    👮
-                </div>
-
-                <div>
-
-                    <h3>
-                        Police
-                    </h3>
-
-                    <strong>
-                        100
-                    </strong>
-
-                </div>
-
-                <a href="tel:100"
-                   class="number-call">
-
-                    Call
-
-                </a>
-
-            </div>
-
-
-            <!-- Ambulance -->
-
-            <div class="number-card">
-
-                <div class="number-icon">
-                    🚑
-                </div>
-
-                <div>
-
-                    <h3>
-                        Ambulance
-                    </h3>
-
-                    <strong>
-                        108
-                    </strong>
-
-                </div>
-
-                <a href="tel:108"
-                   class="number-call">
-
-                    Call
-
-                </a>
-
-            </div>
-
-
-            <!-- Fire -->
-
-            <div class="number-card">
-
-                <div class="number-icon">
-                    🚒
-                </div>
-
-                <div>
-
-                    <h3>
-                        Fire & Rescue
-                    </h3>
-
-                    <strong>
-                        101
-                    </strong>
-
-                </div>
-
-                <a href="tel:101"
-                   class="number-call">
-
-                    Call
-
-                </a>
-
-            </div>
-
-
-            <!-- Unified Emergency -->
-
-            <div class="number-card">
-
-                <div class="number-icon">
-                    🆘
-                </div>
-
-                <div>
-
-                    <h3>
-                        Emergency
-                    </h3>
-
-                    <strong>
-                        112
-                    </strong>
-
-                </div>
-
-                <a href="tel:112"
-                   class="number-call">
-
-                    Call
-
-                </a>
-
-            </div>
-
-
-        </div>
-
-    </section>
-
-
-
-    <!-- =====================================================
-         FEATURES
-    ====================================================== -->
-
-    <section class="features-section">
-
-        <div class="section-header">
-
-            <span class="section-label">
-                WHAT WE PROVIDE
-            </span>
-
-            <h2>
-                Everything You Need During an Emergency
-            </h2>
-
-            <p>
-                Access essential safety information and tools
-                from one simple application.
-            </p>
-
-        </div>
-
-
-        <div class="feature-grid">
-
-
-            <!-- Emergency -->
-
-            <div class="feature-card">
-
-                <div class="feature-icon">
-                    🚨
-                </div>
-
-                <h3>
-                    Emergency Help
-                </h3>
-
-                <p>
-                    Quickly find emergency services and
-                    important emergency numbers.
-                </p>
-
-                <a href="emergency.html">
-                    Get Help →
-                </a>
-
-            </div>
-
-
-            <!-- First Aid -->
-
-            <div class="feature-card">
-
-                <div class="feature-icon">
-                    🩹
-                </div>
-
-                <h3>
-                    First Aid
-                </h3>
-
-                <p>
-                    Learn simple first-aid steps for common
-                    emergency situations.
-                </p>
-
-                <a href="first-aid.html">
-                    Learn First Aid →
-                </a>
-
-            </div>
-
-
-            <!-- Contacts -->
-
-            <div class="feature-card">
-
-                <div class="feature-icon">
-                    👥
-                </div>
-
-                <h3>
-                    Emergency Contacts
-                </h3>
-
-                <p>
-                    Store trusted emergency contacts and
-                    quickly call them when needed.
-                </p>
-
-                <a href="contacts.html">
-                    Manage Contacts →
-                </a>
-
-            </div>
-
-
-            <!-- Safety Guide -->
-
-            <div class="feature-card">
-
-                <div class="feature-icon">
-                    📖
-                </div>
-
-                <h3>
-                    Safety Guide
-                </h3>
-
-                <p>
-                    Explore useful safety tips and emergency
-                    preparedness information.
-                </p>
-
-                <a href="guide.html">
-                    View Guide →
-                </a>
-
-            </div>
-
-
-        </div>
-
-    </section>
-
-
-
-    <!-- =====================================================
-         HOW IT WORKS
-    ====================================================== -->
-
-    <section class="how-section">
-
-        <div class="section-header">
-
-            <span class="section-label">
-                SIMPLE PROCESS
-            </span>
-
-            <h2>
-                How It Works
-            </h2>
-
-            <p>
-                Get the information you need in just a few
-                simple steps.
-            </p>
-
-        </div>
-
-
-        <div class="steps-grid">
-
-
-            <div class="step-card">
-
-                <div class="step-number">
-                    01
-                </div>
-
-                <h3>
-                    Identify the Situation
-                </h3>
-
-                <p>
-                    Understand what kind of emergency or
-                    safety situation you are facing.
-                </p>
-
-            </div>
-
-
-            <div class="step-card">
-
-                <div class="step-number">
-                    02
-                </div>
-
-                <h3>
-                    Find the Right Help
-                </h3>
-
-                <p>
-                    Use emergency numbers, contacts or
-                    first-aid information.
-                </p>
-
-            </div>
-
-
-            <div class="step-card">
-
-                <div class="step-number">
-                    03
-                </div>
-
-                <h3>
-                    Take Action
-                </h3>
-
-                <p>
-                    Follow the appropriate instructions while
-                    waiting for professional help.
-                </p>
-
-            </div>
-
-
-        </div>
-
-    </section>
-
-
-
-    <!-- =====================================================
-         SAFETY CTA
-    ====================================================== -->
-
-    <section class="home-safety">
-
-        <div class="home-safety-content">
-
-            <div class="home-safety-icon">
-                🛡️
-            </div>
-
-            <div>
-
-                <h2>
-                    Be Prepared Before an Emergency Happens
-                </h2>
-
-                <p>
-                    Save important contacts, learn basic
-                    first aid and understand essential safety
-                    procedures.
-                </p>
-
-            </div>
-
-            <a href="guide.html"
-               class="primary-button">
-
+            <a href="guide.html">
                 Safety Guide
+            </a>
+
+            <a href="shelters.html">
+                Nearby Help
+            </a>
+
+            <a href="sos.html">
+                SOS
+            </a>
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+
+<!-- =========================================================
+     MAIN CONTENT
+========================================================= -->
+
+<main>
+
+
+<!-- =========================================================
+     HERO SECTION
+========================================================= -->
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <span class="hero-label">
+            YOUR SAFETY MATTERS
+        </span>
+
+
+        <h1>
+
+            Stay Calm.<br>
+
+            <span>
+                Get Help.
+            </span><br>
+
+            Stay Safe.
+
+        </h1>
+
+
+        <p>
+
+            Digital Emergency Assistant provides quick access to
+            emergency services, first-aid information, important
+            contacts and practical safety guidance when you need it most.
+
+        </p>
+
+
+        <div class="hero-buttons">
+
+            <a href="emergency.html"
+               class="btn btn-primary">
+
+                Emergency Help
+
+            </a>
+
+
+            <a href="first-aid.html"
+               class="btn btn-secondary">
+
+                First Aid
 
             </a>
 
         </div>
 
-    </section>
+    </div>
 
 
 
-    <!-- =====================================================
-         FOOTER
-    ====================================================== -->
+    <div class="hero-visual">
 
-    <footer class="footer">
+        <div class="safety-circle">
+
+            <div class="safety-card">
+
+                <div class="shield">
+                    +
+                </div>
+
+                <h3>
+                    Emergency
+                </h3>
+
+                <p>
+                    Help when you need it
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     EMERGENCY NUMBERS
+========================================================= -->
+
+<section class="emergency-numbers">
+
+    <div class="section-heading">
+
+        <span class="section-label">
+            QUICK ACCESS
+        </span>
+
+        <h2>
+            Emergency Numbers
+        </h2>
 
         <p>
-            © <span class="current-year"></span>
-            <strong>Digital Emergency Assistant</strong>.
-            Stay safe, stay prepared.
+
+            Keep these important emergency services easily accessible.
+            For a serious or life-threatening situation, contact the
+            appropriate emergency service immediately.
+
         </p>
 
-    </footer>
+    </div>
 
 
 
-    <!-- =====================================================
-         JAVASCRIPT
-    ====================================================== -->
+    <div class="numbers-grid">
 
-    <script src="js/app.js"></script>
+
+        <div class="number-card">
+
+            <h3>
+                Emergency Services
+            </h3>
+
+            <strong>
+                112
+            </strong>
+
+            <p>
+                National emergency response service.
+            </p>
+
+            <a href="tel:112"
+               class="call-button">
+
+                Call Now
+
+            </a>
+
+        </div>
+
+
+
+        <div class="number-card">
+
+            <h3>
+                Police
+            </h3>
+
+            <strong>
+                100
+            </strong>
+
+            <p>
+                For police assistance and emergencies.
+            </p>
+
+            <a href="tel:100"
+               class="call-button">
+
+                Call Now
+
+            </a>
+
+        </div>
+
+
+
+        <div class="number-card">
+
+            <h3>
+                Fire & Rescue
+            </h3>
+
+            <strong>
+                101
+            </strong>
+
+            <p>
+                For fire and rescue emergencies.
+            </p>
+
+            <a href="tel:101"
+               class="call-button">
+
+                Call Now
+
+            </a>
+
+        </div>
+
+
+
+        <div class="number-card">
+
+            <h3>
+                Ambulance
+            </h3>
+
+            <strong>
+                108
+            </strong>
+
+            <p>
+                For urgent medical transportation and assistance.
+            </p>
+
+            <a href="tel:108"
+               class="call-button">
+
+                Call Now
+
+            </a>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     QUICK HELP
+========================================================= -->
+
+<section class="quick-help">
+
+    <div class="section-heading">
+
+        <span class="section-label">
+            QUICK ASSISTANCE
+        </span>
+
+        <h2>
+            What Should I Do?
+        </h2>
+
+        <p>
+
+            Select an emergency situation to find basic immediate
+            response information.
+
+        </p>
+
+    </div>
+
+
+
+    <div class="help-grid">
+
+
+        <a href="emergency.html#medical"
+           class="help-card">
+
+            <h3>
+                Medical Emergency
+            </h3>
+
+            <p>
+
+                Basic steps to take while arranging professional
+                medical help.
+
+            </p>
+
+            <span>
+                Learn More →
+            </span>
+
+        </a>
+
+
+
+        <a href="emergency.html#accident"
+           class="help-card">
+
+            <h3>
+                Road Accident
+            </h3>
+
+            <p>
+
+                Important safety steps after a road accident.
+
+            </p>
+
+            <span>
+                Learn More →
+            </span>
+
+        </a>
+
+
+
+        <a href="emergency.html#fire"
+           class="help-card">
+
+            <h3>
+                Fire Emergency
+            </h3>
+
+            <p>
+
+                Learn about evacuation and immediate fire
+                safety actions.
+
+            </p>
+
+            <span>
+                Learn More →
+            </span>
+
+        </a>
+
+
+
+        <a href="first-aid.html#bleeding"
+           class="help-card">
+
+            <h3>
+                Severe Bleeding
+            </h3>
+
+            <p>
+
+                Learn basic first-aid measures for external bleeding.
+
+            </p>
+
+            <span>
+                Learn More →
+            </span>
+
+        </a>
+
+
+
+        <a href="first-aid.html#burns"
+           class="help-card">
+
+            <h3>
+                Burns
+            </h3>
+
+            <p>
+
+                Basic first-aid information for minor thermal burns.
+
+            </p>
+
+            <span>
+                Learn More →
+            </span>
+
+        </a>
+
+
+
+        <a href="first-aid.html#choking"
+           class="help-card">
+
+            <h3>
+                Choking
+            </h3>
+
+            <p>
+
+                Find emergency guidance for a choking situation.
+
+            </p>
+
+            <span>
+                Learn More →
+            </span>
+
+        </a>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     EMERGENCY RESPONSE
+========================================================= -->
+
+<section class="response-section">
+
+    <div class="response-content">
+
+        <span class="section-label">
+            IN AN EMERGENCY
+        </span>
+
+
+        <h2>
+            Stay Calm and Follow These Steps
+        </h2>
+
+
+
+        <div class="response-steps">
+
+
+            <div class="response-step">
+
+                <span>
+                    01
+                </span>
+
+                <div>
+
+                    <h3>
+                        Check Your Safety
+                    </h3>
+
+                    <p>
+
+                        Move away from immediate danger when possible.
+                        Do not put yourself at unnecessary risk.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="response-step">
+
+                <span>
+                    02
+                </span>
+
+                <div>
+
+                    <h3>
+                        Assess the Situation
+                    </h3>
+
+                    <p>
+
+                        Identify what happened, how many people are
+                        affected and whether there are immediate hazards.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="response-step">
+
+                <span>
+                    03
+                </span>
+
+                <div>
+
+                    <h3>
+                        Contact Emergency Services
+                    </h3>
+
+                    <p>
+
+                        For serious or life-threatening emergencies,
+                        call the appropriate emergency service and
+                        follow the operator's instructions.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="response-step">
+
+                <span>
+                    04
+                </span>
+
+                <div>
+
+                    <h3>
+                        Provide Basic Assistance
+                    </h3>
+
+                    <p>
+
+                        If it is safe to do so, provide appropriate
+                        first aid while waiting for professional help.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     FEATURES
+========================================================= -->
+
+<section class="features">
+
+
+    <div class="section-heading">
+
+        <span class="section-label">
+            HOW WE HELP
+        </span>
+
+        <h2>
+            One Place for Emergency Information
+        </h2>
+
+        <p>
+
+            The Digital Emergency Assistant brings essential emergency
+            information together in a simple and accessible interface.
+
+        </p>
+
+    </div>
+
+
+
+    <div class="features-grid">
+
+
+        <div class="feature-card">
+
+            <h3>
+                Emergency Assistance
+            </h3>
+
+            <p>
+
+                Quickly find information for common emergency situations
+                and access important emergency services.
+
+            </p>
+
+        </div>
+
+
+
+        <div class="feature-card">
+
+            <h3>
+                First-Aid Guidance
+            </h3>
+
+            <p>
+
+                Access basic first-aid information for common injuries
+                and situations while waiting for professional assistance.
+
+            </p>
+
+        </div>
+
+
+
+        <div class="feature-card">
+
+            <h3>
+                Emergency Contacts
+            </h3>
+
+            <p>
+
+                Keep important emergency contacts organized and easily
+                accessible when needed.
+
+            </p>
+
+        </div>
+
+
+
+        <div class="feature-card">
+
+            <h3>
+                Safety Guide
+            </h3>
+
+            <p>
+
+                Learn practical safety and emergency-preparedness
+                information for everyday situations.
+
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     REAL-TIME WEATHER
+========================================================= -->
+
+<section class="weather-section">
+
+
+    <div class="weather-container">
+
+
+        <div class="section-label">
+            CURRENT CONDITIONS
+        </div>
+
+
+        <h2>
+            Real-Time <span>Weather</span>
+        </h2>
+
+
+        <p class="weather-intro">
+
+            Check the current weather conditions based on your
+            location and stay prepared for weather-related emergencies.
+
+        </p>
+
+
+
+        <div class="weather-card">
+
+
+            <!-- WEATHER HEADER -->
+
+            <div class="weather-header">
+
+                <div>
+
+                    <h3>
+                        Current Weather
+                    </h3>
+
+                    <p id="weather-location">
+                        Detecting your location...
+                    </p>
+
+                </div>
+
+
+                <button
+                    id="get-weather"
+                    class="weather-refresh">
+
+                    Refresh Weather
+
+                </button>
+
+            </div>
+
+
+
+            <!-- WEATHER INFORMATION -->
+
+            <div class="weather-main">
+
+
+                <div class="weather-temperature">
+
+                    <span id="weather-temperature">
+                        --°C
+                    </span>
+
+                    <p id="weather-condition">
+                        Loading weather...
+                    </p>
+
+                </div>
+
+
+
+                <div class="weather-details">
+
+
+                    <div class="weather-detail">
+
+                        <span>
+                            Feels Like
+                        </span>
+
+                        <strong id="weather-feels">
+                            --°C
+                        </strong>
+
+                    </div>
+
+
+
+                    <div class="weather-detail">
+
+                        <span>
+                            Humidity
+                        </span>
+
+                        <strong id="weather-humidity">
+                            --
+                        </strong>
+
+                    </div>
+
+
+
+                    <div class="weather-detail">
+
+                        <span>
+                            Wind Speed
+                        </span>
+
+                        <strong id="weather-wind">
+                            --
+                        </strong>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+
+            <!-- WEATHER SAFETY -->
+
+            <div class="weather-safety">
+
+                <h4>
+                    Weather Safety
+                </h4>
+
+                <p id="weather-safety-message">
+
+                    Checking current weather conditions...
+
+                </p>
+
+            </div>
+
+
+
+            <!-- LAST UPDATED -->
+
+            <p
+                class="weather-updated"
+                id="weather-updated">
+
+                Loading...
+
+            </p>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     SAFETY CTA
+========================================================= -->
+
+<section class="safety-cta">
+
+
+    <div>
+
+        <span class="section-label">
+            BE PREPARED
+        </span>
+
+        <h2>
+            Prepare Before an Emergency Happens
+        </h2>
+
+        <p>
+
+            Save important contacts, learn basic first aid and understand
+            how to respond safely to common emergencies.
+
+        </p>
+
+    </div>
+
+
+
+    <div class="cta-buttons">
+
+
+        <a href="contacts.html"
+           class="btn btn-primary">
+
+            Manage Contacts
+
+        </a>
+
+
+        <a href="guide.html"
+           class="btn btn-secondary">
+
+            Safety Guide
+
+        </a>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     DISCLAIMER
+========================================================= -->
+
+<section class="disclaimer">
+
+
+    <h3>
+        Important Information
+    </h3>
+
+
+    <p>
+
+        This website provides general educational and preparedness
+        information. It is not a replacement for professional medical,
+        police, fire or emergency services. In a serious or
+        life-threatening emergency, contact the appropriate emergency
+        service immediately.
+
+    </p>
+
+
+</section>
+
+
+</main>
+
+
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
+<footer class="footer">
+
+    <p>
+        © 2026 Digital Emergency Assistant
+    </p>
+
+    <p>
+        Designed for emergency awareness and preparedness.
+    </p>
+
+</footer>
+
+
+
+<!-- =========================================================
+     JAVASCRIPT
+========================================================= -->
+
+<script src="js/app.js"></script>
+
+<script src="js/weather.js"></script>
+
 
 </body>
 

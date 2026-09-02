@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Emergency SOS | Digital Emergency Assistant</title>
+
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/sos.css">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+<header class="navbar">
+
+    <div class="logo">
+    <div class="logo-icon">+</div>
+    <span>Digital Emergency Assistant</span>
+</div>
+
+    <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="emergency.html">Emergency</a>
+        <a href="first-aid.html">First Aid</a>
+        <a href="contacts.html">Contacts</a>
+        <a href="guide.html">Guide</a>
+        <a href="shelters.html">Nearby Help</a>
+        <a href="sos.html" class="active">SOS</a>
+    </nav>
+
+</header>
+
+
+<main class="sos-page">
+
+    <section class="sos-header">
+
+        <h1>
+            <i class="fa-solid fa-triangle-exclamation"></i>
+            Emergency SOS
+        </h1>
+
+        <p>
+            Use the SOS button when you need immediate emergency assistance.
+        </p>
+
+    </section>
+
+
+    <section class="sos-container">
+
+        <!-- MAIN SOS BUTTON -->
+
+        <div class="sos-card">
+
+            <div class="sos-icon">
+                <i class="fa-solid fa-bell"></i>
+            </div>
+
+            <h2>Emergency SOS</h2>
+
+            <p>
+                Press the button below to activate the emergency alert.
+            </p>
+
+            <button id="sos-button" class="sos-button">
+                <i class="fa-solid fa-bell"></i>
+                ACTIVATE SOS
+            </button>
+
+            <p id="sos-status" class="sos-status">
+                SOS is currently inactive.
+            </p>
+
+        </div>
+
+
+        <!-- EMERGENCY ACTIONS -->
+
+        <div class="sos-actions">
+
+            <!-- CALL 112 -->
+
+            <div class="action-card">
+
+                <i class="fa-solid fa-phone"></i>
+
+                <h3>Call Emergency Services</h3>
+
+                <p>
+                    Contact India's emergency number.
+                </p>
+
+                <a href="tel:112" class="action-button">
+                    <i class="fa-solid fa-phone"></i>
+                    Call 112
+                </a>
+
+            </div>
+
+
+            <!-- SHARE LOCATION -->
+
+            <div class="action-card">
+
+                <i class="fa-solid fa-location-dot"></i>
+
+                <h3>Share Location</h3>
+
+                <p>
+                    Get your current location and share it.
+                </p>
+
+                <button id="share-location" class="action-button">
+                    <i class="fa-solid fa-location-dot"></i>
+                    Share Location
+                </button>
+
+            </div>
+
+
+            <!-- WHATSAPP ALERT -->
+
+            <div class="action-card">
+
+                <i class="fa-brands fa-whatsapp"></i>
+
+                <h3>WhatsApp Alert</h3>
+
+                <p>
+                    Send an emergency message through WhatsApp.
+                </p>
+
+                <button id="whatsapp-alert" class="action-button">
+                    <i class="fa-brands fa-whatsapp"></i>
+                    Send Alert
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<footer>
+
+    <p>
+        © <span id="current-year"></span>
+        Digital Emergency Assistant
+    </p>
+
+</footer>
+
+
+<script src="js/app.js"></script>
+<script src="js/sos.js"></script>
+
+</body>
+</html>
