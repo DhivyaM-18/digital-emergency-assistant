@@ -392,3 +392,171 @@ nav {
         font-size: 12px;
     }
 }
+/* =========================================================
+   HAMBURGER MENU
+========================================================= */
+
+.menu-toggle {
+    display: none;
+    border: none;
+    background: transparent;
+    color: #111827;
+    font-size: 28px;
+    cursor: pointer;
+    padding: 5px;
+    line-height: 1;
+}
+
+
+/* =========================================================
+   MOBILE NAVIGATION
+========================================================= */
+
+@media (max-width: 850px) {
+
+    .navbar {
+        min-height: auto;
+        padding: 14px 5%;
+    }
+
+    /* Logo + hamburger stay in one row */
+    .nav-container {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        gap: 0;
+    }
+
+    .logo {
+        width: auto;
+        justify-content: flex-start;
+        font-size: 15px;
+    }
+
+    .logo-icon {
+        width: 31px;
+        height: 31px;
+        font-size: 20px;
+    }
+
+    /* Show hamburger */
+    .menu-toggle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* Navigation takes the full next row */
+    nav {
+        width: 100%;
+        flex-basis: 100%;
+        overflow: visible;
+    }
+
+    /* Hidden until hamburger is clicked */
+    .nav-links {
+        display: none;
+        width: 100%;
+        margin: 12px 0 0;
+        padding: 8px 0;
+
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        gap: 0;
+
+        background: #ffffff;
+        border-top: 1px solid #e5e7eb;
+    }
+
+    /* Open menu */
+    .nav-links.show-menu {
+        display: flex;
+    }
+
+    .nav-links li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-links a {
+        display: block;
+        width: 100%;
+        padding: 11px 10px;
+        text-align: center;
+        font-size: 14px;
+        white-space: nowrap;
+    }
+
+    .nav-links a.active::after {
+        left: 40%;
+        right: 40%;
+        bottom: 4px;
+    }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .navbar {
+        padding: 13px 4%;
+    }
+
+    .logo {
+        font-size: 14px;
+        gap: 8px;
+    }
+
+    .logo-icon {
+        width: 30px;
+        height: 30px;
+        font-size: 19px;
+    }
+
+    .menu-toggle {
+        font-size: 26px;
+    }
+
+    .nav-links {
+        margin-top: 10px;
+    }
+
+    .nav-links a {
+        padding: 10px 8px;
+        font-size: 13px;
+    }
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+========================================================= */
+
+@media (max-width: 380px) {
+
+    .logo {
+        font-size: 13px;
+    }
+
+    .logo-icon {
+        width: 29px;
+        height: 29px;
+        font-size: 18px;
+    }
+
+    .menu-toggle {
+        font-size: 25px;
+    }
+
+    .nav-links a {
+        padding: 9px 6px;
+        font-size: 12px;
+    }
+}
